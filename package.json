@@ -1,0 +1,9 @@
+{
+  "name": "zoomdata-css",
+  "version": "0.1.0",
+  "description": "Zoomdata CSS Module",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-kss": "^0.4.0"
+  }
+}
