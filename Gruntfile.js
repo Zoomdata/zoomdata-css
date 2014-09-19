@@ -41,9 +41,37 @@ module.exports = function(grunt) {
         watch: {
             kss: {
                 files: ['style/**/*.scss', 'style/styleguide.md'],
-                tasks: ['kss']
+                tasks: ['kss'],
+                options: {
+                    livereload: true
+                }
             }
-        }
+        },
+
+        // The actual grunt server settings
+        connect: {
+            options: {
+                port: 9000,
+                open: true,
+                livereload: 35729,
+                hostname: '0.0.0.0'
+            },
+            livereload: {
+                options: {
+                    middleware: function(connect) {
+                        return [
+                            connect.static('styleguide')
+                        ];
+                    }
+                }
+            },
+            dist: {
+                options: {
+                    base: 'style',
+                    livereload: false
+                }
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-sass');
@@ -51,9 +79,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     // A very basic default task.
     grunt.registerTask('default', [
+        'connect:livereload',
         'watch'
     ]);
 
