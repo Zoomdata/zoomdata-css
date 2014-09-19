@@ -1,0 +1,50 @@
+/*
+Buttons
+
+A majority of buttons in the site are built from the same base class.
+
+Markup:
+<button class="button {$modifiers}">Button (button.button)</button>
+
+.primary             - Primary button indicating an action.
+.primary:hover       - Highlight the Primary button when hovered.
+:hover               - Highlight the button when hovered.
+
+Styleguide 1.1
+*/
+
+$button-color: #939393;
+$button-hover-color: #797979;
+$button-primary-color: #0095B6;
+$button-primary-hover-color: #0389A7;
+
+.button {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    border-radius: $border-radius;
+    user-select: none;
+    background-color: $button-color;
+    font-weight: 700;
+    font-size: 14px;
+    outline: none;
+    height: 40px;
+    color: #FFFFFF;
+
+}
+
+.button:hover {
+    background-color: $button-hover-color
+}
+
+.button.primary {
+    background-color: $button-primary-color;
+}
+
+.button.primary:hover {
+    background-color: $button-primary-hover-color;
+}
