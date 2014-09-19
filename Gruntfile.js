@@ -5,6 +5,7 @@ module.exports = function(grunt) {
             options: {
                 includeType: 'scss',
                 includePath: 'style/main.scss',
+                template: 'template'
             },
             dist: {
                 files: {
