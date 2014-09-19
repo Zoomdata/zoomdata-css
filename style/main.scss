@@ -1,0 +1,17 @@
+/*
+Inuit Defaults
+
+The inuitcss defaults module contains a few variables and settings
+that are required for using any of the rest of the framework.
+
+Styleguide 1.
+*/
+@import "style/inuit/inuit-defaults/settings.defaults";
+
+@import "style/inuit/inuit-functions/tools.functions";
+@import "style/inuit/inuit-mixins/tools.mixins";
+
+@import "style/inuit/inuit-normalize/generic.normalize";
+@import "style/inuit/inuit-box-sizing/generic.box-sizing";
+
+@import "style/inuit/inuit-page/base.page";
