@@ -6,9 +6,9 @@ A majority of buttons in the site are built from the same base class.
 Markup:
 <button class="button {$modifiers}">Button (button.button)</button>
 
+:hover               - Highlight the button when hovered.
 .primary             - Primary button indicating an action.
 .primary:hover       - Highlight the Primary button when hovered.
-:hover               - Highlight the button when hovered.
 
 Styleguide 1.1
 */
@@ -32,6 +32,7 @@ $button-primary-hover-color: #0389A7;
     font-weight: 700;
     font-size: 14px;
     outline: none;
+    outline-style: none;
     height: 40px;
     color: #FFFFFF;
 
@@ -47,4 +48,28 @@ $button-primary-hover-color: #0389A7;
 
 .button.primary:hover {
     background-color: $button-primary-hover-color;
+}
+
+/*
+Misc Buttons
+
+Additional buttons that are useful for stuff.
+
+Markup:
+<button class="button {$modifiers}"></button>
+
+.rail:hover          - Highlight the rail button when hovered.
+
+Styleguide 1.1.1
+*/
+
+.button.rail {
+    height: 54px;
+    width: 72px;
+    background-color: #939393;
+    border-radius: 0;
+}
+
+.button.rail:hover {
+    background-color: #767676;
 }
