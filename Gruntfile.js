@@ -83,6 +83,7 @@ module.exports = function(grunt) {
 
     // A very basic default task.
     grunt.registerTask('default', [
+        'kss',
         'connect:livereload',
         'watch'
     ]);
