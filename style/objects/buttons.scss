@@ -13,10 +13,10 @@ Markup:
 Styleguide 1.1
 */
 
-$button-color: #939393;
-$button-hover-color: #797979;
-$button-primary-color: #0095B6;
-$button-primary-hover-color: #0389A7;
+$grey: #939393;
+$grey-dark: #797979;
+$blue: #0095B6;
+$blue-dark: #0389A7;
 
 .button {
     display: inline-block;
@@ -28,7 +28,7 @@ $button-primary-hover-color: #0389A7;
     white-space: nowrap;
     border-radius: $border-radius;
     user-select: none;
-    background-color: $button-color;
+    background-color: $grey;
     font-weight: 700;
     font-size: 14px;
     outline: none;
@@ -39,24 +39,27 @@ $button-primary-hover-color: #0389A7;
 }
 
 .button:hover {
-    background-color: $button-hover-color
+    background-color: $grey-dark;
 }
 
 .button.primary {
-    background-color: $button-primary-color;
+    background-color: $blue;
 }
 
 .button.primary:hover {
-    background-color: $button-primary-hover-color;
+    background-color: $blue-dark;
 }
 
 /*
-Misc Buttons
+Rail Button
 
 Additional buttons that are useful for stuff.
 
 Markup:
-<button class="button {$modifiers}"></button>
+<button class="button rail {$modifiers}">
+    <i class="zd icon palette"></i>
+    <div class="text">Attributes</div>
+</button>
 
 .rail:hover          - Highlight the rail button when hovered.
 
@@ -68,8 +71,104 @@ Styleguide 1.1.1
     width: 72px;
     background-color: #939393;
     border-radius: 0;
+
+    .text {
+        margin: 0 auto;
+        padding-top: 0;
+        text-align: center;
+        font-size: 12px;
+        font-weight: normal;
+    }
 }
 
 .button.rail:hover {
     background-color: #767676;
+}
+
+/*
+Circular Button
+
+Buttons meant to look like a circle.
+
+Markup:
+<button class="button circular {$modifiers}">
+    <i class="zd icon favorites"></i>
+</button>
+
+.circular:hover    - Hover state for circular buttons
+
+Styleguide 1.1.2
+*/
+
+.button.circular {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $grey;
+    box-shadow: 2px 2px rgba(89,89,89,0.4), -1px -1px rgba(255,255,255,0.5);
+}
+
+.button.circular:hover {
+    color: #D6DF23;
+    background-color: #595959;
+}
+
+/*
+Rounded Button
+
+Buttons meant to look rounded.
+
+Markup:
+<button class="button rounded {$modifiers}">
+    <i class="zd icon pause"></i>
+</button>
+
+.rounded:hover    - Hover state for circular buttons
+
+Styleguide 1.1.3
+*/
+
+.button.rounded {
+    width: 40px;
+    height: 40px;
+    background-color: $grey;
+    box-shadow: 2px 2px rgba(89,89,89,0.4), -1px -1px rgba(255,255,255,0.5);
+}
+
+.button.rounded:hover {
+    background-color: #595959;
+}
+
+/*
+Axis Button
+
+Buttons for the axis of visualizations
+
+Markup:
+<button class="button axis {$modifiers}">Button (button.button.axis)</button>
+
+.metric:hover    - Hover state for metric axis label buttons
+.attribute:hover - Hover state for attribute axis label buttons
+
+Styleguide 1.1.4
+*/ 
+.button.axis {
+    padding: 0 12px;
+    background-color: #f1f1f1;
+    color: $grey;
+    z-index: 2;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.button.axis:hover {
+    color: #ffffff;
+}
+
+.button.axis.metric:hover {
+    background-color: $blue;
+}
+
+.button.axis.attribute:hover {
+    background-color: #FBBC00;
 }

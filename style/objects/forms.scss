@@ -1,0 +1,121 @@
+/*
+Forms
+
+Forms and stuff
+
+Styleguide 3.1
+*/
+
+/*
+Checkbox
+
+Checkboxes
+
+Markup:
+<div style="width: 40px; height: 40px; background: black; padding: 10px;">
+	<input class="checkbox" name="checkbox" type="checkbox" {$modifiers}>
+	<label class="checkbox" for="checkbox"></label>
+</div>
+
+checked          - Fill the Checkbox when checked.
+
+Styleguide 3.2.1
+*/
+
+input[type=checkbox].checkbox {
+	width: 20px;
+	height: 20px;
+	padding: 0 3px;
+	border: 1px solid #949494;
+	border-radius: 6px;
+	font-size: 12px;
+	line-height: 18px;
+	appearance: none;
+	display: none;
+}
+
+label.checkbox {
+	user-select: none;
+}
+
+input[type=checkbox].checkbox + label.checkbox:before {
+	content: "1";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	font-size: 16px;
+	font-family: "Zoomdata";
+	color: #ffffff;
+	text-align: center;
+	border: 1px solid white;
+	background-color: white;
+	border-radius: 4px;
+}
+
+input[type=checkbox].checkbox:checked + label.checkbox:before {
+	content: "9";
+	color: #D6E100;
+	background-color: #313131;
+	border: 1px solid #D6E100;
+}
+
+
+/*
+Radio Button
+
+Radio Buttons
+
+Markup:
+<div style="width: 40px; height: 40px; background: black; padding: 10px;">
+	<input class="radio" type="radio" name="radio" {$modifiers}>
+	<label class="radio" for="radio"></label>
+</div>
+
+checked          - Fill the Checkbox when checked.
+
+Styleguide 3.3.1
+*/
+
+input[type=radio].radio {
+	display: none;
+}
+
+label.radio {
+	user-select: none;
+}
+
+input[type=radio].radio + label.radio:before {
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right: 10px;
+	background-color: #FFF;
+}
+
+input[type=radio].radio:checked + label.radio:before {
+	content: "\2022";
+	color: #D6E100;
+	font-size: 30px;
+	text-align: center;
+	line-height: 17px;
+	background-color: black;
+	border: 1px solid #D6E100;
+}
+
+input[type=radio].radio.metric:checked + label.radio:before {
+	color: #0095B6;
+}
+
+input[type=radio].radio.attribute:checked + label.radio:before {
+	color: #FBBC00;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,457 @@
+/*
+Icons
+
+Stuff about icons and stuff.
+
+Markup:
+<i class="zd icon {$modifiers}"></i>
+
+.menu                   - Menu icon
+.settings               - Settings icon
+.help                   - Help icon
+.user                   - User icon
+.back                   - Back icon
+.connectors             - Connectors icon
+.collections            - Collections icon
+.favorites              - Favorites icon
+.share                  - Share icon
+.download               - Download icon
+.upload                 - Upload icon
+.circle-filled          - Full Circle icon
+.circle-empty           - Empty Circle icon
+.plus                   - Plus icon
+.minus                  - Minus icon
+.x-circle               - X with Circle icon
+.x-circle-filled        - X with Filled Circle icon
+.x-circle-empty         - X with Empty Circle icon
+.up-arrow               - Up Arrow icon
+.down-arrow             - Down Arrow icon
+.left-arrow             - Left Arrow icon
+.right-arrow            - Right Arrow icon
+.header                 - Header icon
+.drag                   - Drag icon
+.drag-corner            - Drag Corner icon
+.zoomdata-logo          - Zoomdata Logo icon
+.palette                - Palette icon
+.filter                 - Filter icon
+.compare                - Compare icon
+.sort                   - Sort icon
+.style                  - Style icon
+.colors                 - Colors icon
+.data                   - Data icon
+.kpi                    - KPI icon
+.info-circle-filled     - Info icon
+.time-control           - Time Control icon
+.add-element            - Add Element icon
+.clone                  - Clone icon
+.fullscreen             - Fullscreen icon
+.exit-fullscreen        - Exit Fullscreen icon
+.info                   - Info icon
+.zoom-in                - Zoom In icon
+.zoom-out               - Zoom Out icon
+.magnifying-glass       - Magnifying Glass icon
+.clock                  - Clock icon
+.collections-small      - Small Collections icon
+.pencil                 - Pencil icon
+.calendar               - Calendar icon
+.link                   - Link icon
+.break-link             - Break Link icon
+.comment                - Comment icon
+.zoomdata-logo-z        - Zoomdata Z icon
+.square-outline         - Square Outline icon
+.square-filled          - Square Filled icon
+.stop                   - Stop icon
+.play                   - Play icon
+.pause                  - Pause icon
+.fast-forward           - Fast Forward icon
+.faster-forward         - Faster Forward icon
+.fast-forward-outline   - Faster Forward icon
+.faster-forward-outline - Fasterer Forward icon
+.checkmark              - Checkmark icon
+.sub-menu-down          - Sub Menu Down icon
+.sub-menu-right         - Sub Menu Right icon
+.zoomdata-logo-left     - Zoomdata Logo Left icon
+.zoomdata-logo-right    - Zoomdata Logo Right icon
+.warning                - Warning icon
+.sort-asc               - Sort Ascening icon
+.sort-desc              - Sort Descending icon
+.sort-percent-asc       - Sort Percent Ascending icon
+.sort-percent-desc      - Sort Percent Descending icon
+.sort-alphabetical-asc  - Sort Alphabetical Ascending icon
+.sort-alphabetical-desc - Sort Alphabetical Descending icon
+.left-chevron           - Left Chevron icon
+.right-chevron          - Right Chevron icon
+.minus-circle-filled    - Filled Minus with Circle icon
+.plus-circle-filled     - Filled Plus with Circle icon
+.spinner                - Spinner icon
+.undo                   - Undo icon
+.group                  - Group icon
+.ellipsis               - Ellipsis icon
+.configure              - Configure icon
+.faceted-search         - Faceted Search icon
+.faceted-filter         - Faceted Filter icon
+
+Styleguide 2.1
+*/
+
+@font-face {
+    font-family: "Zoomdata";
+    src: url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.woff) format('woff'),
+         url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.zd.icon {
+    display: inline-block;
+    font-family: 'Zoomdata';
+    font-style: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background:none;
+    background-image:none;
+}
+
+.zd.icon.menu:after {
+    content: 'A';
+}
+
+.zd.icon.settings:after {
+    content: 'B';
+}
+
+.zd.icon.help:after {
+    content: 'C';
+}
+
+.zd.icon.user:after {
+    content: 'D';
+}
+
+.zd.icon.back:after {
+    content: 'E';
+}
+
+.zd.icon.connectors:after {
+    content: 'F';
+}
+
+.zd.icon.collections:after {
+    content: 'G';
+}
+
+.zd.icon.favorites:after {
+    content: 'H';
+}
+
+.zd.icon.share:after {
+    content: 'I';
+}
+
+.zd.icon.download:after {
+    content: 'J';
+}
+
+.zd.icon.upload:after {
+    content: 'K';
+}
+
+.zd.icon.circle-filled:after {
+    content: 'L';
+}
+
+.zd.icon.circle-empty:after {
+    content: 'M';
+}
+
+.zd.icon.plus:after {
+    content: 'N';
+}
+
+.zd.icon.minus:after {
+    content: 'O';
+}
+
+.zd.icon.x-circle:after {
+    content: 'P';
+}
+
+.zd.icon.x-circle-filled:after {
+    content: 'Q';
+}
+
+.zd.icon.x-circle-empty:after {
+    content: 'R';
+}
+
+.zd.icon.up-arrow:after {
+    content: 'S'
+}
+
+.zd.icon.down-arrow:after {
+    content: 'T'
+}
+
+.zd.icon.left-arrow:after {
+    content: 'U'
+}
+
+.zd.icon.right-arrow:after {
+    content: 'V'
+}
+
+.zd.icon.header:after {
+    content: 'W';
+}
+
+.zd.icon.drag:after {
+    content: 'X';
+}
+
+.zd.icon.drag-corner:after {
+    content: 'Y';
+}
+
+.zd.icon.zoomdata-logo:after {
+    content: 'Z';
+}
+
+.zd.icon.palette:after {
+    content: 'a';
+}
+
+.zd.icon.filter:after {
+    content: 'b';
+}
+
+.zd.icon.compare:after {
+    content: 'c';
+}
+
+.zd.icon.sort:after {
+    content: 'd';
+}
+
+.zd.icon.style:after {
+    content: 'e';
+}
+
+.zd.icon.colors:after {
+    content: 'f';
+}
+
+.zd.icon.data:after {
+    content: 'g';
+}
+
+.zd.icon.kpi:after {
+    content: 'h';
+}
+
+.zd.icon.info-circle-filled:after {
+    content: 'i';
+}
+
+.zd.icon.time-control:after {
+    content: 'j';
+}
+
+.zd.icon.add-element:after {
+    content: 'k';
+}
+
+.zd.icon.clone:after {
+    content: 'l';
+}
+
+.zd.icon.fullscreen:after {
+    content: 'm';
+}
+
+.zd.icon.exit-fullscreen:after {
+    content: 'n';
+}
+
+.zd.icon.info:after {
+    content: 'o';
+}
+
+.zd.icon.zoom-in:after {
+    content: 'p';
+}
+
+.zd.icon.zoom-out:after {
+    content: 'q';
+}
+
+.zd.icon.magnifying-glass:after {
+    content: 'r';
+}
+
+.zd.icon.clock:after {
+    content: 's';
+}
+
+.zd.icon.collections-small:after {
+    content: 't';
+}
+
+.zd.icon.pencil:after {
+    content: 'u';
+}
+
+.zd.icon.calendar:after {
+    content: 'v';
+}
+
+.zd.icon.link:after {
+    content: 'w';
+}
+
+.zd.icon.break-link:after {
+    content: 'x';
+}
+
+.zd.icon.comment:after {
+    content: 'y';
+}
+
+.zd.icon.zoomdata-logo-z:after {
+    content: 'z';
+}
+
+.zd.icon.square-outline:after {
+    content: '0';
+}
+
+.zd.icon.square-filled:after {
+    content: '1';
+}
+
+.zd.icon.stop:after {
+    content: '2';
+}
+
+.zd.icon.play:after {
+    content: '3';
+}
+
+.zd.icon.pause:after {
+    content: '4';
+}
+
+.zd.icon.fast-forward:after {
+    content: '5';
+}
+
+.zd.icon.faster-forward:after {
+    content: '6';
+}
+
+.zd.icon.fast-forward-outline:after {
+    content: '7';
+}
+
+.zd.icon.faster-forward-outline:after {
+    content: '8';
+}
+
+.zd.icon.checkmark:after {
+    content: '9';
+}
+
+.zd.icon.sub-menu-down:after {
+    content: '+';
+}
+
+.zd.icon.sub-menu-right:after {
+    content: '=';
+}
+
+.zd.icon.zoomdata-logo-left:after {
+    content: '(';
+}
+
+.zd.icon.zoomdata-logo-right:after {
+    content: ')';
+}
+
+.zd.icon.warning:after {
+    content: '!';
+}
+
+.zd.icon.sort-asc:after {
+    content: '@';
+}
+
+.zd.icon.sort-desc:after {
+    content: '#';
+}
+
+.zd.icon.sort-percent-asc:after {
+    content: '$';
+}
+
+.zd.icon.sort-percent-desc:after {
+    content: '%';
+}
+
+.zd.icon.sort-alphabetical-asc:after {
+    content: '^';
+}
+
+.zd.icon.sort-alphabetical-desc:after {
+    content: '&';
+}
+
+.zd.icon.left-chevron:after {
+    content: '<';
+}
+
+.zd.icon.right-chevron:after {
+    content: '>';
+}
+
+.zd.icon.minus-circle-filled:after {
+    content: '-';
+}
+
+.zd.icon.plus-circle-filled:after {
+    content: '_';
+}
+
+.zd.icon.spinner {
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+}
+.zd.icon.spinner:after {
+    content: ',';
+}
+
+.zd.icon.undo:after {
+    content: '—';
+}
+
+.zd.icon.group:after {
+    content: '–';
+}
+
+.zd.icon.ellipsis:after {
+    content: '';
+}
+
+.zd.icon.configure:after {
+    content: '/';
+}
+
+.zd.icon.faceted-search:after {
+    content: '[';
+}
+
+.zd.icon.faceted-filter:after {
+    content: ']';
+}
