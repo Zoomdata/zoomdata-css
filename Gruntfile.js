@@ -41,14 +41,25 @@ module.exports = function(grunt) {
         watch: {
             kss: {
                 files: ['style/**/*.scss', 'style/styleguide.md'],
-                tasks: ['kss'],
+                tasks: ['kss', 'copy:fonts'],
                 options: {
                     livereload: true
                 }
             }
         },
-
-        // The actual grunt server settings
+        copy: {
+            fonts: {
+                files: [
+                    // includes files within path and its sub-directories
+                    {
+                        expand: true,
+                        cwd: 'style/',
+                        src: ['fonts/**'],
+                        dest: 'styleguide/public/'
+                    }
+                ]
+            }
+        },
         connect: {
             options: {
                 port: 9000,
@@ -76,6 +87,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-kss');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -84,6 +96,7 @@ module.exports = function(grunt) {
     // A very basic default task.
     grunt.registerTask('default', [
         'kss',
+        'copy:fonts',
         'connect:livereload',
         'watch'
     ]);
