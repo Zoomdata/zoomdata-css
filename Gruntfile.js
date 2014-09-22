@@ -83,10 +83,17 @@ module.exports = function(grunt) {
                 }
             }
         },
+        'gh-pages': {
+            options: {
+                base: 'styleguide'
+            },
+            src: ['**']
+        }
     });
 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-kss');
+    grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
