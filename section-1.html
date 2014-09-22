@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>kss-node Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="1">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Buttons</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Icons</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Forms</span></a></li>
+              
+            </ul>
+            
+            <ul class="kss-menu-child">
+              
+              
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Buttons</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1.1"><span class="kss-ref">1.1.1</span><span class="kss-name">Rail Button</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1.2"><span class="kss-ref">1.1.2</span><span class="kss-name">Circular Button</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1.3"><span class="kss-ref">1.1.3</span><span class="kss-name">Rounded Button</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1.4"><span class="kss-ref">1.1.4</span><span class="kss-name">Axis Button</span></a></li>
+              
+              
+            </ul>
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Buttons</h1>
+            
+            
+            <div class="kss-description">
+              <p>Buttons have a few required constraints for proper functionality, accessibility, and styling.</p>
+
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Buttons</h1>
+            
+            
+            <div class="kss-description">
+              <p>A majority of buttons in the site are built from the same base class.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button class="button {$modifiers}">Button (button.button)</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Highlight the button when hovered.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button pseudo-class-hover">Button (button.button)</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.primary</div>
+                  <div class="kss-modifier-description">
+                    <p>Primary button indicating an action.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button primary">Button (button.button)</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.primary:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Highlight the Primary button when hovered.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button primary pseudo-class-hover">Button (button.button)</button>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button class=&quot;button {$modifiers}&quot;&gt;Button (button.button)&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.1.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.1</span> Rail Button</h1>
+            
+            
+            <div class="kss-description">
+              <p>Additional buttons that are useful for stuff.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button class="button rail {$modifiers}">
+    <i class="zd icon palette"></i>
+    <div class="text">Attributes</div>
+</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.rail:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Highlight the rail button when hovered.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button rail rail pseudo-class-hover">
+    <i class="zd icon palette"></i>
+    <div class="text">Attributes</div>
+</button>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button class=&quot;button rail {$modifiers}&quot;&gt;
+    &lt;i class=&quot;zd icon palette&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;text&quot;&gt;Attributes&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.1.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.2</span> Circular Button</h1>
+            
+            
+            <div class="kss-description">
+              <p>Buttons meant to look like a circle.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button class="button circular {$modifiers}">
+    <i class="zd icon favorites"></i>
+</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.circular:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Hover state for circular buttons</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button circular circular pseudo-class-hover">
+    <i class="zd icon favorites"></i>
+</button>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button class=&quot;button circular {$modifiers}&quot;&gt;
+    &lt;i class=&quot;zd icon favorites&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.1.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.3</span> Rounded Button</h1>
+            
+            
+            <div class="kss-description">
+              <p>Buttons meant to look rounded.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button class="button rounded {$modifiers}">
+    <i class="zd icon pause"></i>
+</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.rounded:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Hover state for circular buttons</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button rounded rounded pseudo-class-hover">
+    <i class="zd icon pause"></i>
+</button>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button class=&quot;button rounded {$modifiers}&quot;&gt;
+    &lt;i class=&quot;zd icon pause&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.1.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.4</span> Axis Button</h1>
+            
+            
+            <div class="kss-description">
+              <p>Buttons for the axis of visualizations</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button class="button axis {$modifiers}">Button (button.button.axis)</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.metric:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Hover state for metric axis label buttons</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button axis metric pseudo-class-hover">Button (button.button.axis)</button>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.attribute:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Hover state for attribute axis label buttons</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button class="button axis attribute pseudo-class-hover">Button (button.button.axis)</button>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button class=&quot;button axis {$modifiers}&quot;&gt;Button (button.button.axis)&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+  </body>
+</html>
