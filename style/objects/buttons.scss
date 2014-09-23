@@ -4,7 +4,8 @@ Buttons
 A majority of buttons in the site are built from the same base class.
 
 Markup:
-<button class="button {$modifiers}">Button (button.button)</button>
+<button class="button {$modifiers}">Button</button>
+<button class="button {$modifiers}" disabled>Button</button>
 
 :hover               - Highlight the button when hovered.
 .primary             - Primary button indicating an action.
@@ -52,6 +53,12 @@ $blue-dark: #0389A7;
 
 .button.primary:hover {
     background-color: $blue-dark;
+}
+
+.button:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2!important;
+    color: #FFF;
 }
 
 /*
