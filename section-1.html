@@ -29,6 +29,8 @@
               
               <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Forms</span></a></li>
               
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Tables</span></a></li>
+              
             </ul>
             
             <ul class="kss-menu-child">
@@ -54,6 +56,10 @@
               
               
               <li class="kss-menu-item"><a href="#section-1.1.4"><span class="kss-ref">1.1.4</span><span class="kss-name">Axis Button</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1.5"><span class="kss-ref">1.1.5</span><span class="kss-name">Button Group</span></a></li>
               
               
             </ul>
@@ -89,7 +95,8 @@
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <button class="button {$modifiers}">Button (button.button)</button>
+                  <button class="button {$modifiers}">Button</button>
+<button class="button {$modifiers}" disabled>Button</button>
                 </div>
               </div>
               
@@ -102,7 +109,8 @@
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <button class="button pseudo-class-hover">Button (button.button)</button>
+                  <button class="button pseudo-class-hover">Button</button>
+<button class="button pseudo-class-hover" disabled>Button</button>
                 </div>
               </div>
               
@@ -115,7 +123,8 @@
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <button class="button primary">Button (button.button)</button>
+                  <button class="button primary">Button</button>
+<button class="button primary" disabled>Button</button>
                 </div>
               </div>
               
@@ -128,12 +137,14 @@
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <button class="button primary pseudo-class-hover">Button (button.button)</button>
+                  <button class="button primary pseudo-class-hover">Button</button>
+<button class="button primary pseudo-class-hover" disabled>Button</button>
                 </div>
               </div>
               
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;button class=&quot;button {$modifiers}&quot;&gt;Button (button.button)&lt;/button&gt;</code></pre>
+                <pre><code data-language="html">&lt;button class=&quot;button {$modifiers}&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;button {$modifiers}&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
               </div>
             </div>
             
@@ -312,6 +323,37 @@
               
               <div class="kss-markup">
                 <pre><code data-language="html">&lt;button class=&quot;button axis {$modifiers}&quot;&gt;Button (button.button.axis)&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.1.5" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.5</span> Button Group</h1>
+            
+            
+            <div class="kss-description">
+              <p>A button group is a series of buttons laid out next to each other, all part of one visual button, but separated by rules to be separate.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="button-group">
+    <button type="button" class="button">First</button>
+    <button type="button" class="button">Second</button>
+    <button type="button" class="button">Third</button>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;button-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;First&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Second&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Third&lt;/button&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
             
