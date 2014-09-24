@@ -1,0 +1,53 @@
+/*
+Tables
+
+Tables
+
+Markup:
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Group</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Admin</td>
+            <td><i class="zd icon x-circle-filled"></i></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>Viewer</td>
+            <td><i class="zd icon x-circle-filled"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+Styleguide 4.1.1
+*/
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	border-collapse: separate;
+	border-left: 0;
+	border-radius: 4px;
+
+	thead {
+		background-color: #585858;
+
+		th {
+			color: #FFF;
+			cursor: pointer;
+			padding: 8px 5px;
+			white-space: nowrap;
+		}
+	}
+}
