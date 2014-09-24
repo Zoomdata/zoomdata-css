@@ -37,7 +37,6 @@ Styleguide 4.1.1
 	margin-bottom: 20px;
 	border: 1px solid #ddd;
 	border-collapse: separate;
-	border-left: 0;
 	border-radius: 4px;
 
 	thead {
@@ -48,6 +47,17 @@ Styleguide 4.1.1
 			cursor: pointer;
 			padding: 8px 5px;
 			white-space: nowrap;
+		}
+	}
+
+	tbody {
+
+		td {
+			padding: 8px;
+			line-height: 20px;
+			text-align: center;
+			vertical-align: middle;
+			border-top: 1px solid #ddd;
 		}
 	}
 }
