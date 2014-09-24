@@ -108,6 +108,12 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
+    grunt.registerTask('deploy', [
+        'kss',
+        'copy:fonts',
+        'gh-pages'
+    ]);
+
     grunt.registerTask('pre', [
         'sass',
         'autoprefixer',
