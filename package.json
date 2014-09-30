@@ -1,6 +1,10 @@
 {
   "name": "zoomdata-css",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Zoomdata/zoomdata-css.git"
+  },
   "description": "Zoomdata CSS Module",
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -12,7 +16,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^0.9.1",
     "grunt-kss": "^0.4.0",
-    "grunt-sass": "^0.14.1"
+    "grunt-sass": "^0.14.2"
   },
   "engines": {
     "node": ">=0.10.0",
