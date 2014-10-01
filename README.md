@@ -24,18 +24,18 @@ The code is written in [Sass](http://sass-lang.com/), built using [Grunt.js](htt
 ## Sass for Sublime Text 2
 It may be useful to have syntax highlighting to work with Sass and SCSS files. Sublime Text 2 is a good tool for this. There is steps how to install corresponding plugin:
 * Sublime Package Control should be installed first. The easiest way to do this is just to open sublime console and run a code:
-	import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
-More detailed instruction on Package Control placed here: https://sublime.wbond.net/installation#st2	
+	
+	`import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')`
+  
+  More detailed instruction on Package Control placed here: https://sublime.wbond. net/installation#st2	
 
 * Use plugin from git-project: https://github.com/n00ge/sublime-text-haml-sass
+	
 	INSTALLATION:
 
-	Go to menu bar: "Sublime Text 2 > Preferences > Browse Packages..."
-
-	Alternate method, on OS X, in Terminal:
+	* Go to menu bar: "Sublime Text 2 > Preferences > Browse Packages..."
+	* Alternate method, on OS X, in Terminal:
 	$ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
 	Once that folder is open, close Sublime Text 2.
-
-	Move the two directories: /SASS/, and /Ruby Haml/ to that folder.
-
-	Restart Sublime Text 2.
+	* Move the two directories: /SASS/, and /Ruby Haml/ to that folder.
+	* Restart Sublime Text 2.
