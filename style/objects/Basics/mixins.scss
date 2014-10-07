@@ -1,0 +1,25 @@
+
+@mixin relative() {
+    position: relative;
+}
+
+@mixin absolute() {
+    position: absolute;
+}
+
+@mixin fixed() {
+    position: fixed;
+}
+
+@mixin inline-block() {
+    display: inline-block;
+}
+
+@mixin block() {
+    display: block;
+}
+
+@mixin none() {
+    display: none;
+}
+

@@ -16,7 +16,7 @@ Buttons have a few required constraints for proper functionality, accessibility,
 
 Styleguide 1.
 */
-@import "style/objects/buttons";
+@import "style/objects/Buttons/components.scss";
 
 /*
 Icons
@@ -25,7 +25,7 @@ Icons used throughout the Zoomdata UI.
 
 Styleguide 2.
 */
-@import "style/objects/icons";
+@import "style/objects/Icons/components.scss";
 
 /*
 Forms
@@ -34,7 +34,7 @@ Forms and stuff in forms.
 
 Styleguide 3.
 */
-@import "style/objects/forms";
+@import "style/objects/Forms/components.scss";
 
 /*
 Tables
@@ -43,4 +43,4 @@ Tables for organizing data.
 
 Styleguide 4.
 */
-@import "style/objects/tables";
+@import "style/objects/Tables/components.scss";
