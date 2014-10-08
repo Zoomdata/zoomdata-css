@@ -1,7 +1,11 @@
+@import "../../settings/colors.scss";
+@import "../../settings/basic.scss";
+
+@import "../Basics/vars.scss";
+@import "../Basics/mixins.scss";
+
 /*
 Forms
-
-Forms and stuff
 
 Styleguide 3.1
 */
@@ -9,56 +13,55 @@ Styleguide 3.1
 /*
 Checkbox
 
-Checkboxes
-
-
+Markup:
 <div style="width: 40px; height: 40px; background: black; padding: 10px;">
-	<input class="checkbox" name="checkbox" type="checkbox" {$modifiers}>
-	<label class="checkbox" for="checkbox"></label>
+    <input class="zdss-checkbox" id="checkbox" type="checkbox">
+    <label class="zdss-checkbox" for="checkbox"></label>
 </div>
-
-checked          - Fill the Checkbox when checked.
-
-Styleguide 3.2.1
 */
 
-input[type=checkbox].checkbox {
-	width: 20px;
-	height: 20px;
-	padding: 0 3px;
-	border: 1px solid #949494;
-	border-radius: 6px;
-	font-size: 12px;
-	line-height: 18px;
-	appearance: none;
-	display: none;
+@mixin zdss-checkbox(){
+    &[type="checkbox"]{
+        width: 20px;
+        height: 20px;
+        padding: 0 3px;
+        border: 1px solid #949494;
+        border-radius: 6px;
+        font-size: 12px;
+        line-height: 18px;
+        appearance: none;
+        display: none;
+    }
+    &+label.zdss-checkbox:before {
+        cursor: pointer;
+        user-select: none;
+        content: "1";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        font-size: 14px;
+        font-family: "Zoomdata";
+        color: #ffffff;
+        text-align: center;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 4px;
+    }
+    &:checked{
+        &+label.zdss-checkbox:before {
+            cursor: pointer;
+            user-select: none;
+            content: "9";
+            color: #D6E100;
+            background-color: #313131;
+            border: 1px solid #D6E100;
+        }
+    }
 }
 
-label.checkbox {
-	user-select: none;
+.zdss-checkbox{
+    @include zdss-checkbox();
 }
-
-input[type=checkbox].checkbox + label.checkbox:before {
-	content: "1";
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	font-size: 14px;
-	font-family: "Zoomdata";
-	color: #ffffff;
-	text-align: center;
-	border: 1px solid white;
-	background-color: white;
-	border-radius: 4px;
-}
-
-input[type=checkbox].checkbox:checked + label.checkbox:before {
-	content: "9";
-	color: #D6E100;
-	background-color: #313131;
-	border: 1px solid #D6E100;
-}
-
 
 /*
 Radio Button

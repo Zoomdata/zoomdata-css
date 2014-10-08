@@ -35,8 +35,8 @@ module.exports = function (grunt) {
                 'mixdoc', 
                 'sass', 
                 'copy', 
-                'cssmin', 
-                'connect:livereload'
+                'cssmin' 
+//                'connect:livereload'
             ],
             files: ['*', './style/objects/**/*.scss']
         },

@@ -9,7 +9,13 @@
 
 @import "style/inuit/inuit-page/base.page";
 
-// Components
+body{
+    font-family: source-sans-pro, sans-serif !important;
+}
+
+/*
+Components
+*/
 @import "style/objects/Buttons/components.scss";
 @import "style/objects/Icons/components.scss";
 @import "style/objects/Forms/components.scss";
