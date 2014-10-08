@@ -13,14 +13,14 @@ Buttons
 A majority of buttons in the site are built from the same base class.
 
 Markup:
-<button class="zd-button {$modifiers}">Button</button>
-<button class="zd-button-primary {$modifiers}">Button</button>
-<button class="zd-button-danger {$modifiers}">Button</button>
-<button class="zd-button {$modifiers}" disabled>Button</button>
+<button class="zdss-button {$modifiers}">Button</button>
+<button class="zdss-button-primary {$modifiers}">Button</button>
+<button class="zdss-button-danger {$modifiers}">Button</button>
+<button class="zdss-button {$modifiers}" disabled>Button</button>
 
 */
 
-@mixin zd-button(){
+@mixin zdss-button(){
     font-size: 14px;
     font-weight: 700;
     line-height: 14px;
@@ -41,51 +41,51 @@ Markup:
     white-space: nowrap;
     white-space: nowrap;
 
-    color: $zd-color-white;
+    color: $zdss-color-white;
     border: 1px solid transparent;
-    border-radius: $zd-btn-border-radius;
+    border-radius: $zdss-btn-border-radius;
     outline: none;
     outline-style: none;
-    background-color: $zd-color-iron;
+    background-color: $zdss-color-iron;
 
     -webkit-appearance: none;
     
     &:hover {
-        background-color: $zd-color-charcoal;
+        background-color: $zdss-color-charcoal;
     }
     &:disabled{
         pointer-events: none;
-        background-color: $zd-color-silver !important;
-        color: $zd-color-white;
+        background-color: $zdss-color-silver !important;
+        color: $zdss-color-white;
     }
 }
 
-.zd-button{
-    @include zd-button();
+.zdss-button{
+    @include zdss-button();
 }
 
-@mixin zd-button-primary(){
-    @include zd-button();
-    background-color: $zd-color-blue;
+@mixin zdss-button-primary(){
+    @include zdss-button();
+    background-color: $zdss-color-blue;
     &:hover{
-        background-color: $zd-color-blue-dark;
+        background-color: $zdss-color-blue-dark;
     }
 }
 
-.zd-button-primary {
-    @include zd-button-primary();
+.zdss-button-primary {
+    @include zdss-button-primary();
 }
 
-@mixin zd-button-danger() {
-    @include zd-button();
-    background-color: $zd-color-red;
+@mixin zdss-button-danger() {
+    @include zdss-button();
+    background-color: $zdss-color-red;
     &:hover{
-        background-color: $zd-color-red-dark;
+        background-color: $zdss-color-red-dark;
     }
 }
 
-.zd-button-danger {
-    @include zd-button-danger();
+.zdss-button-danger {
+    @include zdss-button-danger();
 }
 
 
@@ -95,7 +95,7 @@ Rail Button
 Additional buttons that are useful for stuff.
 
 Markup:
-<button class="zd-button-rail {$modifiers}">
+<button class="zdss-button-rail {$modifiers}">
     <i class="zd icon palette"></i>
     <div class="text">Attributes</div>
 </button>
@@ -105,11 +105,11 @@ Markup:
 Styleguide 1.1.1
 */
 
-@mixin zd-button-rail(){
-    @include zd-button();
+@mixin zdss-button-rail(){
+    @include zdss-button();
     height: 54px;
     width: 72px;
-    background-color: $zd-color-iron;
+    background-color: $zdss-color-iron;
     border-radius: 0;
     padding: 7px 0;
     .text {
@@ -120,12 +120,12 @@ Styleguide 1.1.1
         font-weight: normal;
     }
     &:hover{
-        background-color: $zd-color-charcoal;
+        background-color: $zdss-color-charcoal;
     }
 }
 
-.zd-button-rail {
-    @include zd-button-rail();
+.zdss-button-rail {
+    @include zdss-button-rail();
 }
 
 /*
@@ -134,7 +134,10 @@ Circular Button
 Buttons meant to look like a circle.
 
 Markup:
-<button class="zd-button-circular {$modifiers}">
+<button class="zdss-button-circular {$modifiers}">
+    <i class="zd icon favorites"></i>
+</button>
+<button class="zdss-button-circular active {$modifiers}">
     <i class="zd icon favorites"></i>
 </button>
 
@@ -144,28 +147,28 @@ Markup:
 Styleguide 1.1.2
 */
 
-@mixin zd-button-circular(){
-    @include zd-button();
+@mixin zdss-button-circular(){
+    @include zdss-button();
     font-size: 18px;
     line-height: $default-button-height - 2px;
     padding: 0;
     border-radius: 50%;
     width: $default-button-height;
     height: $default-button-height;
-    background-color: $zd-color-iron;
+    background-color: $zdss-color-iron;
     box-shadow: 2px 2px rgba(89,89,89,0.4), -1px -1px rgba(255,255,255,0.5);
     
     &:hover{
-        color: $zd-color-white;
-        background-color: $zd-color-charcoal;
+        color: $zdss-color-white;
+        background-color: $zdss-color-charcoal;
     }
     &.active{
-        color: $zd-color-gold;
+        color: $zdss-color-gold;
     }
 }
 
-.zd-button-circular{
-    @include zd-button-circular();
+.zdss-button-circular{
+    @include zdss-button-circular();
 }
 
 /*
@@ -174,7 +177,7 @@ Rounded Button
 Buttons meant to look rounded.
 
 Markup:
-<button class="zd-button-rounded {$modifiers}">
+<button class="zdss-button-rounded {$modifiers}">
     <i class="zd icon pause"></i>
 </button>
 
@@ -182,21 +185,21 @@ Markup:
 
 Styleguide 1.1.3
 */
-@mixin zd-button-rounded(){
-    @include zd-button();
+@mixin zdss-button-rounded(){
+    @include zdss-button();
     width: $default-button-height;
     height: $default-button-height;
     font-size: 18px;
     line-height: $default-button-height - 2px;
     padding: 0;
-    background-color: $zd-color-iron;
+    background-color: $zdss-color-iron;
     box-shadow: 2px 2px rgba(89,89,89,0.4), -1px -1px rgba(255,255,255,0.5);
     &:hover{
-        background-color: $zd-color-charcoal;
+        background-color: $zdss-color-charcoal;
     }
 }
-.zd-button-rounded{
-    @include zd-button-rounded();
+.zdss-button-rounded{
+    @include zdss-button-rounded();
 }
 
 /*
@@ -205,7 +208,7 @@ Axis Button
 Buttons for the axis of visualizations
 
 Markup:
-<button class="zd-button-axis {$modifiers}">Button (button.button.axis)</button>
+<button class="zdss-button-axis {$modifiers}">Button (button.button.axis)</button>
 
 .metric:hover    - Hover state for metric axis label buttons
 .attribute:hover - Hover state for attribute axis label buttons
@@ -213,26 +216,26 @@ Markup:
 Styleguide 1.1.4
 */ 
 
-@mixin zd-button-axis(){
-    @include zd-button();
+@mixin zdss-button-axis(){
+    @include zdss-button();
     padding: 0 12px;
-    background-color: $zd-color-chromium;
-    color: $zd-color-iron;
+    background-color: $zdss-color-chromium;
+    color: $zdss-color-iron;
     z-index: 2;
     text-transform: capitalize;
     white-space: nowrap;
     &:hover{
-        color: $zd-color-white;
+        color: $zdss-color-white;
         &.metric{
-            background-color: $zd-color-blue;
+            background-color: $zdss-color-blue;
         }
         &.attribute{
             background-color: #FBBC00;
         }
     }
 }
-.zd-button-axis{
-    @include zd-button-axis();
+.zdss-button-axis{
+    @include zdss-button-axis();
 }
 
 /*
@@ -241,16 +244,16 @@ Button Group
 A button group is a series of buttons laid out next to each other, all part of one visual button, but separated by rules to be separate.
 
 Markup:
-<div class="zd-button-group">
-    <button type="button" class="zd-button">First</button>
-    <button type="button" class="zd-button">Second</button>
-    <button type="button" class="zd-button">Third</button>
+<div class="zdss-button-group">
+    <button type="button" class="zdss-button">First</button>
+    <button type="button" class="zdss-button">Second</button>
+    <button type="button" class="zdss-button">Third</button>
 </div>
 
 Styleguide 1.1.5
 */
 
-@mixin zd-button-group(){
+@mixin zdss-button-group(){
     display: inline-block;
     vertical-align: middle;
     &:before {
@@ -263,8 +266,8 @@ Styleguide 1.1.5
         content: "";
     }
     
-    .zd-button{
-        @include zd-button();
+    .zdss-button{
+        @include zdss-button();
         position: relative;
         float: left;
         border-radius: 0;
@@ -284,18 +287,18 @@ Styleguide 1.1.5
         }
         &:active{
             z-index: 2;
-            box-shadow: $zd-btn-pressed-shadow;
+            box-shadow: $zdss-btn-pressed-shadow;
         }
         &.selected{
             z-index: 2;
-            box-shadow: $zd-btn-pressed-shadow;
+            box-shadow: $zdss-btn-pressed-shadow;
         }
     }
-    &+.zd-button-group{
+    &+.zdss-button-group{
         margin-left: 5px;
     }
 }
 
-.zd-button-group{
-    @include zd-button-group();
+.zdss-button-group{
+    @include zdss-button-group();
 }

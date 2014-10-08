@@ -11,12 +11,6 @@
     border-top-right-radius: $radius;
 }
 
-/*
-
-Makes a block rounded at the bottom
-
-*/
-
 @mixin rounded-bottom($radius: $border-radius){
     border-bottom-left-radius: $radius;
     border-bottom-right-radius: $radius;

@@ -123,28 +123,28 @@ Inputs
 
 Markup:
 <div>
-	<input class="zd-input {$modifiers}" type="text" name="zd-input" pattern="valid" placeholder="Zoomdata">
-	<label class="zd-input" for="zd-input"></label>
+	<input class="zdss-input {$modifiers}" type="text" name="zdss-input" pattern="valid" placeholder="Zoomdata">
+	<label class="zdss-input" for="zdss-input"></label>
 </div>
 
 Styleguide 3.4.1
 */
 
-textarea.zd-input,
-input[type="text"].zd-input,
-input[type="password"].zd-input, 
-input[type="datetime"].zd-input, 
-input[type="datetime-local"].zd-input,
+textarea.zdss-input,
+input[type="text"].zdss-input,
+input[type="password"].zdss-input, 
+input[type="datetime"].zdss-input, 
+input[type="datetime-local"].zdss-input,
 input[type="date"],
-input[type="month"].zd-input,
-input[type="time"].zd-input,
-input[type="week"].zd-input,
-input[type="number"].zd-input,
-input[type="email"].zd-input,
-input[type="url"].zd-input,
-input[type="search"].zd-input,
-input[type="tel"].zd-input,
-input[type="color"].zd-input {
+input[type="month"].zdss-input,
+input[type="time"].zdss-input,
+input[type="week"].zdss-input,
+input[type="number"].zdss-input,
+input[type="email"].zdss-input,
+input[type="url"].zdss-input,
+input[type="search"].zdss-input,
+input[type="tel"].zdss-input,
+input[type="color"].zdss-input {
     border-radius: 12px;
     border: 1px solid #999;
     
