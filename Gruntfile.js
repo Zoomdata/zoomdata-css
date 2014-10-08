@@ -1,51 +1,31 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
-        sass: {
-            options: {
-                sourceMap: true,
-                outputStyle: 'nested' //sass sucks at minification, don't use it.
-            },
-            dist: {
-                files: {
-                    'style/main.css': 'style/main.scss'
-                }
-            }
-        },
         cssmin: {
             combine: {
                 files: {
-                    'style/main.css': ['style/main.css']
-                }
-            }
-        },
-        kss: {
-            options: {
-                includeType: 'scss',
-                includePath: 'style/main.scss',
-                template: 'template'
-            },
-            dist: {
-                files: {
-                    'styleguide': ['style']
+                    'style/styles.css': ['./style/styles.css']
                 }
             }
         },
         autoprefixer: {
             dist: {
                 files: {
-                    'style/main.css': 'style/main.css'
+                    './style/styles.css': './style/styles.css'
                 }
             }
         },
-        watch: {
-            kss: {
-                files: ['style/**/*.scss', 'style/styleguide.md'],
-                tasks: ['kss', 'copy:fonts'],
+        mixdoc: {
+            def: {
                 options: {
-                    livereload: true
+                    styles_folder: './style/objects',
+                    dest_folder: './dest',
                 }
             }
+        },  
+        watch: {
+            tasks: ['mixdoc', 'copy', 'cssmin', /*'connect:livereload'*/],
+            files: ['*', './style/objects/**/*.scss']
         },
         copy: {
             fonts: {
@@ -55,7 +35,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'style/',
                         src: ['fonts/**'],
-                        dest: 'styleguide/public/'
+                        dest: 'dest'
                     }
                 ]
             }
@@ -69,9 +49,9 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: {
-                    middleware: function(connect) {
+                    middleware: function (connect) {
                         return [
-                            connect.static('styleguide')
+                            connect.static('dest')
                         ];
                     }
                 }
@@ -79,44 +59,45 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     base: 'style',
-                    livereload: false
+                    livereload: true
                 }
             }
         },
         'gh-pages': {
             options: {
-                base: 'styleguide'
+                base: 'dest'
             },
             src: ['**']
         }
     });
 
+    grunt.loadNpmTasks('grunt-mixdoc');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-kss');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    //grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
     // A very basic default task.
     grunt.registerTask('default', [
-        'kss',
+        'mixdoc',
+        'cssmin',
         'copy:fonts',
-        'connect:livereload',
+        //'connect:livereload',
         'watch'
     ]);
 
     grunt.registerTask('deploy', [
-        'kss',
+        'mixdoc',
         'copy:fonts',
         'gh-pages'
     ]);
 
-    grunt.registerTask('pre', [
-        'sass',
-        'autoprefixer',
-        'cssmin'
-    ]);
+    /*grunt.registerTask('pre', [
+     'sass',
+     'autoprefixer',
+     'cssmin'
+     ]);*/
 };
