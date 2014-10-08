@@ -4,17 +4,24 @@ module.exports = function (grunt) {
         cssmin: {
             combine: {
                 files: {
-                    'style/styles.css': ['./style/styles.css']
+                    'style/style.css': ['./style/style.css']
                 }
             }
         },
-        autoprefixer: {
+        sass: {
+            def: {
+                files: {
+                    './dest/style.css': './style/main.scss'
+                }
+            } 
+        },
+        /*autoprefixer: {
             dist: {
                 files: {
                     './style/styles.css': './style/styles.css'
                 }
             }
-        },
+        },*/
         mixdoc: {
             def: {
                 options: {
@@ -24,7 +31,13 @@ module.exports = function (grunt) {
             }
         },  
         watch: {
-            tasks: ['mixdoc', 'copy', 'cssmin', /*'connect:livereload'*/],
+            tasks: [
+                'mixdoc', 
+                'sass', 
+                'copy', 
+                'cssmin', 
+                'connect:livereload'
+            ],
             files: ['*', './style/objects/**/*.scss']
         },
         copy: {
@@ -72,7 +85,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-mixdoc');
-    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-contrib-copy');
     //grunt.loadNpmTasks('grunt-autoprefixer');
@@ -82,10 +95,11 @@ module.exports = function (grunt) {
 
     // A very basic default task.
     grunt.registerTask('default', [
-        'mixdoc',
+        'mixdoc', 
+        'sass',
         'cssmin',
         'copy:fonts',
-        //'connect:livereload',
+        'connect:livereload',
         'watch'
     ]);
 
