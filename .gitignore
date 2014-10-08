@@ -1,4 +1,3 @@
-node_modules
 dist
 .tmp
 .sass-cache
@@ -9,3 +8,17 @@ styleguide
 style/main.css
 style/main.css.map
 /dest/
+/node_modules/.bin/
+/node_modules/grunt-contrib-watch/
+/node_modules/grunt-contrib-cssmin/
+/node_modules/grunt-contrib-connect/
+/node_modules/grunt-contrib-clean/
+/node_modules/grunt/
+/node_modules/grunt-kss/
+/node_modules/grunt-contrib-copy/
+/node_modules/grunt-autoprefixer/
+/node_modules/grunt-gh-pages/
+/node_modules/grunt-contrib-sass/
+/node_modules/grunt-sass/
+/node_modules/node-sass/
+/npm-debug.log
