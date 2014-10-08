@@ -12,7 +12,6 @@ Buttons
 
 A majority of buttons in the site are built from the same base class.
 
-Markup:
 <button class="zdss-button {$modifiers}">Button</button>
 <button class="zdss-button-primary {$modifiers}">Button</button>
 <button class="zdss-button-danger {$modifiers}">Button</button>
@@ -94,7 +93,6 @@ Rail Button
 
 Additional buttons that are useful for stuff.
 
-Markup:
 <button class="zdss-button-rail {$modifiers}">
     <i class="zd icon palette"></i>
     <div class="text">Attributes</div>
@@ -133,7 +131,6 @@ Circular Button
 
 Buttons meant to look like a circle.
 
-Markup:
 <button class="zdss-button-circular {$modifiers}">
     <i class="zd icon favorites"></i>
 </button>
@@ -176,7 +173,6 @@ Rounded Button
 
 Buttons meant to look rounded.
 
-Markup:
 <button class="zdss-button-rounded {$modifiers}">
     <i class="zd icon pause"></i>
 </button>
@@ -207,7 +203,6 @@ Axis Button
 
 Buttons for the axis of visualizations
 
-Markup:
 <button class="zdss-button-axis {$modifiers}">Button (button.button.axis)</button>
 
 .metric:hover    - Hover state for metric axis label buttons
@@ -243,7 +238,7 @@ Button Group
 
 A button group is a series of buttons laid out next to each other, all part of one visual button, but separated by rules to be separate.
 
-Markup:
+
 <div class="zdss-button-group">
     <button type="button" class="zdss-button">First</button>
     <button type="button" class="zdss-button">Second</button>

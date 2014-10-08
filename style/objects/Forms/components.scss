@@ -11,7 +11,7 @@ Checkbox
 
 Checkboxes
 
-Markup:
+
 <div style="width: 40px; height: 40px; background: black; padding: 10px;">
 	<input class="checkbox" name="checkbox" type="checkbox" {$modifiers}>
 	<label class="checkbox" for="checkbox"></label>
@@ -65,7 +65,7 @@ Radio Button
 
 Radio Buttons
 
-Markup:
+
 <div style="width: 40px; height: 40px; background: black; padding: 10px;">
 	<input class="radio" type="radio" name="radio" {$modifiers}>
 	<label class="radio" for="radio"></label>
@@ -121,7 +121,7 @@ Styleguide 3.4
 /*
 Inputs
 
-Markup:
+
 <div>
 	<input class="zdss-input {$modifiers}" type="text" name="zdss-input" pattern="valid" placeholder="Zoomdata">
 	<label class="zdss-input" for="zdss-input"></label>
