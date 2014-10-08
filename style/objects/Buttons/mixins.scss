@@ -1,0 +1,16 @@
+@mixin rounded-left($radius: $border-radius){
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+@mixin rounded-right($radius: $border-radius){
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+@mixin rounded-top($radius: $border-radius){
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+@mixin rounded-bottom($radius: $border-radius){
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}

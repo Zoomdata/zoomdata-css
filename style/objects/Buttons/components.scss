@@ -1,3 +1,12 @@
+@import "../../settings/colors.scss";
+@import "../../settings/basic.scss";
+
+@import "../Basics/vars.scss";
+@import "../Basics/mixins.scss";
+
+@import "vars.scss";
+@import "mixins.scss";
+
 /*
 Buttons
 
@@ -14,51 +23,54 @@ Markup:
 Styleguide 1.1
 */
 
-$grey: #939393;
-$grey-dark: #797979;
-$blue: #0095B6;
-$blue-dark: #0389A7;
 
 .button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+
     position: relative;
+
     display: inline-block;
+
+    height: 40px;
     margin-bottom: 0;
     padding: 7px 12px;
+
+    cursor: pointer;
+    user-select: none;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid transparent;
+    vertical-align: middle;
     white-space: nowrap;
-    border-radius: $border-radius;
-    user-select: none;
-    -webkit-appearance: none;
-    background-color: $grey;
-    font-weight: 700;
-    font-size: 14px;
+    white-space: nowrap;
+
+    color: $zd-color-white;
+    border: 1px solid transparent;
+    border-radius: $zd-btn-border-radius;
     outline: none;
     outline-style: none;
-    height: 40px;
-    color: #FFFFFF;
-    white-space: nowrap;
-    vertical-align: middle;
+    background-color: $zd-color-iron;
+
+    -webkit-appearance: none;
 }
 
 .button:hover {
-    background-color: $grey-dark;
+    background-color: $zd-color-charcoal;
 }
 
 .button.primary {
-    background-color: $blue;
+    background-color: $zd-color-blue;
 }
 
 .button.primary:hover {
-    background-color: $blue-dark;
+    background-color: $zd-color-blue-dark;
 }
 
 .button:disabled {
     pointer-events: none;
-    background-color: #D2D2D2!important;
-    color: #FFF;
+    background-color: $zd-color-silver !important;
+    color: $zd-color-white;
 }
 
 /*
@@ -80,9 +92,9 @@ Styleguide 1.1.1
 .button.rail {
     height: 54px;
     width: 72px;
-    background-color: #939393;
+    background-color: $zd-color-iron;
     border-radius: 0;
-
+    padding: 7px 0;
     .text {
         margin: 0 auto;
         padding-top: 0;
@@ -93,7 +105,7 @@ Styleguide 1.1.1
 }
 
 .button.rail:hover {
-    background-color: #767676;
+    background-color: $zd-color-charcoal;
 }
 
 /*
@@ -112,16 +124,19 @@ Styleguide 1.1.2
 */
 
 .button.circular {
+    font-size: 18px;
+    line-height: $default-button-height - 2px;
+    padding: 0;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: $grey;
+    width: $default-button-height;
+    height: $default-button-height;
+    background-color: $zd-color-iron;
     box-shadow: 2px 2px rgba(89,89,89,0.4), -1px -1px rgba(255,255,255,0.5);
 }
 
 .button.circular:hover {
-    color: #D6DF23;
-    background-color: #595959;
+    color: $zd-color-gold;
+    background-color: $zd-color-charcoal;
 }
 
 /*
@@ -140,14 +155,17 @@ Styleguide 1.1.3
 */
 
 .button.rounded {
-    width: 40px;
-    height: 40px;
-    background-color: $grey;
+    width: $default-button-height;
+    height: $default-button-height;
+    font-size: 18px;
+    line-height: $default-button-height - 2px;
+    padding: 0;
+    background-color: $zd-color-iron;
     box-shadow: 2px 2px rgba(89,89,89,0.4), -1px -1px rgba(255,255,255,0.5);
 }
 
 .button.rounded:hover {
-    background-color: #595959;
+    background-color: $zd-color-charcoal;
 }
 
 /*
@@ -165,19 +183,19 @@ Styleguide 1.1.4
 */ 
 .button.axis {
     padding: 0 12px;
-    background-color: #f1f1f1;
-    color: $grey;
+    background-color: $zd-color-chromium;
+    color: $zd-color-iron;
     z-index: 2;
     text-transform: capitalize;
     white-space: nowrap;
 }
 
 .button.axis:hover {
-    color: #ffffff;
+    color: $zd-color-white;
 }
 
 .button.axis.metric:hover {
-    background-color: $blue;
+    background-color: $zd-color-blue;
 }
 
 .button.axis.attribute:hover {
@@ -222,13 +240,11 @@ Styleguide 1.1.5
 }
 
 .button-group .button:first-child {
-    border-top-left-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
+    @include rounded-left($border-radius);
 }
 
 .button-group .button:last-child {
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+    @include rounded-right($border-radius);
 }
 
 .button-group .button:hover,.button-group .button:focus,.button-group .button:active,.button-group .button.selected {

@@ -1,0 +1,33 @@
+@import "basic.scss";
+
+$zd-color-lighten-percent: 5%;
+$zd-color-darken-percent: 5%;
+
+$zd-color-white: #FFFFFF;
+$zd-color-black: #000000;
+
+$zd-color-obsidian: #323232;
+$zd-color-charcoal: #595959;
+$zd-color-iron: #939393;
+$zd-color-silver: #D2D2D2;
+$zd-color-mercury: #E6E6E6;
+$zd-color-chromium: #F1F1F1;
+
+$zd-color-zdgreen: #68AD45;
+$zd-color-zdgreen-dark: darken($zd-color-zdgreen, $zd-color-darken-percent);
+
+$zd-color-green: #D6DF23;
+$zd-color-green-dark: darken($zd-color-green, $zd-color-darken-percent);
+
+$zd-color-blue: #0095B6;
+$zd-color-blue-dark: darken($zd-color-blue, $zd-color-darken-percent);
+
+$zd-color-skyblue: #87CEEB;
+$zd-color-skyblue-dark: darken($zd-color-skyblue, $zd-color-darken-percent);
+
+$zd-color-red: #E5683A;
+$zd-color-red-dark: darken($zd-color-red, $zd-color-darken-percent);
+
+$zd-color-gold: #FABC2D;
+$zd-color-gold-dark: darken($zd-color-gold, $zd-color-darken-percent);
+
