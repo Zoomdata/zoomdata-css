@@ -43,7 +43,7 @@ input[type=checkbox].checkbox + label.checkbox:before {
 	width: 20px;
 	height: 20px;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: "Zoomdata";
 	color: #ffffff;
 	text-align: center;
@@ -112,8 +112,78 @@ input[type=radio].radio.attribute:checked + label.radio:before {
 	color: #FBBC00;
 }
 
+/*
+Inputs and Textareas
 
 
+Styleguide 3.4
+*/
+/*
+Inputs
+
+Markup:
+<div>
+	<input class="zd-input {$modifiers}" type="text" name="zd-input" pattern="valid" placeholder="Zoomdata">
+	<label class="zd-input" for="zd-input"></label>
+</div>
+
+Styleguide 3.4.1
+*/
+
+textarea.zd-input,
+input[type="text"].zd-input,
+input[type="password"].zd-input, 
+input[type="datetime"].zd-input, 
+input[type="datetime-local"].zd-input,
+input[type="date"],
+input[type="month"].zd-input,
+input[type="time"].zd-input,
+input[type="week"].zd-input,
+input[type="number"].zd-input,
+input[type="email"].zd-input,
+input[type="url"].zd-input,
+input[type="search"].zd-input,
+input[type="tel"].zd-input,
+input[type="color"].zd-input {
+    border-radius: 12px;
+    border: 1px solid #999;
+    
+    display: inline-block;
+
+    min-height: 30px;
+    padding: 4px 7px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555;
+    vertical-align: middle;
+
+    outline: 0;
+    outline: thin dotted \9;
+    -ms-user-select: text;
+    box-sizing: border-box;
+    transition: border linear .2s,box-shadow linear .2s;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(214,223,35,0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset;
+}
+
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
+    border-color: #e9322d;
+    -webkit-box-shadow: 0 0 6px #f8b9b7;
+    -moz-box-shadow: 0 0 6px #f8b9b7;
+    box-shadow: 0 0 6px #f8b9b7;
+}
 
 
 
