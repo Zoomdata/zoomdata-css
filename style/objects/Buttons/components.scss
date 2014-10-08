@@ -18,9 +18,6 @@ Markup:
 <button class="zd-button-danger {$modifiers}">Button</button>
 <button class="zd-button {$modifiers}" disabled>Button</button>
 
-:hover        - Highlight the button when hovered.
-
-Styleguide 1.1
 */
 
 @mixin zd-button(){
