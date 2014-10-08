@@ -1,0 +1,3 @@
+[submodule "node_modules/grunt-mixdoc"]
+	path = node_modules/grunt-mixdoc
+	url = https://github.com/mikolalex/mixdoc.git
