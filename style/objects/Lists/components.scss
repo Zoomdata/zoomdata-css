@@ -1,0 +1,12 @@
+@mixin vertical-list(){
+    list-style: none;
+    > li:first-child {
+        @include rounded-top();
+    }
+    > li:last-child {
+        @include rounded-bottom();
+    }
+    > li {
+        
+    }
+}

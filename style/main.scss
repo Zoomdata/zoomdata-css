@@ -9,38 +9,9 @@
 
 @import "style/inuit/inuit-page/base.page";
 
-/*
-Buttons
-
-Buttons have a few required constraints for proper functionality, accessibility, and styling.
-
-Styleguide 1.
-*/
+// Components
 @import "style/objects/Buttons/components.scss";
-
-/*
-Icons
-
-Icons used throughout the Zoomdata UI.
-
-Styleguide 2.
-*/
 @import "style/objects/Icons/components.scss";
-
-/*
-Forms
-
-Forms and stuff in forms.
-
-Styleguide 3.
-*/
 @import "style/objects/Forms/components.scss";
-
-/*
-Tables
-
-Tables for organizing data.
-
-Styleguide 4.
-*/
 @import "style/objects/Tables/components.scss";
+@import "style/objects/Lists/components.scss";

@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         sass: {
             def: {
                 files: {
-                    './dest/style.css': './style/main.scss'
+                    './dest/style.css': './dest/mixins-to-classes.scss'
                 }
             } 
         },
