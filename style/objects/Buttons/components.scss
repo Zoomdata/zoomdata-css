@@ -10,10 +10,10 @@ Buttons
 
 A majority of buttons in the site are built from the same base class.
 
-<button class="zdss-button {$modifiers}">Button</button>
-<button class="zdss-button-primary {$modifiers}">Button</button>
-<button class="zdss-button-danger {$modifiers}">Button</button>
-<button class="zdss-button {$modifiers}" disabled>Button</button>
+<button class="zdss-button">Button</button>
+<button class="zdss-button-primary">Button</button>
+<button class="zdss-button-danger">Button</button>
+<button class="zdss-button" disabled>Button</button>
 
 */
 
@@ -91,7 +91,7 @@ Rail Button
 
 Additional buttons that are useful for stuff.
 
-<button class="zdss-button-rail {$modifiers}">
+<button class="zdss-button-rail">
     <i class="zd icon palette"></i>
     <div class="text">Attributes</div>
 </button>
@@ -126,10 +126,10 @@ Circular Button
 
 Buttons meant to look like a circle.
 
-<button class="zdss-button-circular {$modifiers}">
+<button class="zdss-button-circular">
     <i class="zd icon favorites"></i>
 </button>
-<button class="zdss-button-circular active {$modifiers}">
+<button class="zdss-button-circular active">
     <i class="zd icon favorites"></i>
 </button>
 
@@ -164,7 +164,7 @@ Rounded Button
 
 Buttons meant to look rounded.
 
-<button class="zdss-button-rounded {$modifiers}">
+<button class="zdss-button-rounded">
     <i class="zd icon pause"></i>
 </button>
 
@@ -191,7 +191,9 @@ Axis Button
 
 Buttons for the axis of visualizations
 
-<button class="zdss-button-axis {$modifiers}">Button (button.button.axis)</button>
+<button class="zdss-button-axis">
+    Button (button.button.axis)
+</button>
 
 */ 
 
