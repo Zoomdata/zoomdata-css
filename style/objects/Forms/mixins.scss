@@ -1,0 +1,22 @@
+@import "vars.scss";
+
+@mixin zdss-range-track($height: 16px){
+    box-sizing: border-box;
+    height: $height;
+    border-style: solid;
+    border-color: $zdss-color-mercury;
+    border-width: $zdss-range-border-width - 1px;
+    background: $zdss-color-iron;
+    cursor: pointer;
+    @include zdss-rounded($height / 2);
+}
+@mixin zdss-range-thumb($size:28px){
+    -webkit-appearance: none;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    margin-top: -($size/4 + $zdss-range-border-width/2);
+    border: $zdss-range-border-width solid $zdss-color-mercury;
+    background: $zdss-color-iron;
+    cursor: move;
+}

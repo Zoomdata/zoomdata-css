@@ -1,5 +1,6 @@
 @import "../Basics/vars.scss";
 @import "../Basics/mixins.scss";
+@import "mixins.scss";
 
 /*
 Forms
@@ -9,7 +10,7 @@ Forms
 
 Checkbox
 
-<div style="width: 40px; height: 40px; background: black; padding: 10px;">
+<div style="width: 40px; height: 40px; background: rgba(0,0,0,0.7); padding: 10px;">
     <input class="zdss-checkbox" id="checkbox" type="checkbox">
     <label for="checkbox"></label>
 </div>
@@ -59,7 +60,7 @@ Checkbox
 
 Radio Button
 
-<div style="width: 40px; background: black; padding: 9px;">
+<div style="width: 40px; background: rgba(0,0,0,0.7); padding: 9px;">
     <input class="zdss-radio" type="radio" id="radio1" name="radio">
     <label for="radio1"></label>
     <input class="zdss-radio" type="radio" id="radio2" name="radio">
@@ -105,7 +106,7 @@ Radio Button
                 font-size: 50px;
                 text-align: center;
                 line-height: 20px;
-                background-color: black;
+                background-color: rgba(0,0,0,0.7);
                 border: 1px solid #D6E100;
             }
         }
@@ -216,5 +217,52 @@ Search
         background-repeat: no-repeat;
         background-position: 8px 2px;
         padding-left: 30px;        
+    }
+}
+
+/*
+
+Range
+
+<div style="padding: 9px;">
+    <input class="zdss-range" type="range">
+</div>
+<div style="background: rgba(0,0,0,0.7); padding: 9px;">
+    <input class="zdss-range" type="range">
+</div>
+
+*/
+@mixin zdss-range(){
+    &[type="range"]{
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        outline: none;
+        background: transparent;
+        height: 30px;
+        margin-bottom: 10px;
+        &::-webkit-slider-runnable-track{
+            @include zdss-range-track();
+        }
+        &::-webkit-slider-thumb{
+            @include zdss-range-thumb();
+        }
+        
+        &::-moz-range-track{
+            @include zdss-range-track();
+        }
+        &::-moz-range-thumb{
+            @include zdss-range-thumb();
+        }
+        &::-moz-focus-inner {
+            border: 0;
+        }
+        
+        &::-ms-track{
+            @include zdss-range-track();
+        }
+        &::-ms-thumb{
+            @include zdss-range-thumb();
+        }
+        
     }
 }
