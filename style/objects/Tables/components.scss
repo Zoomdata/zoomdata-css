@@ -1,9 +1,9 @@
 /*
 Tables
 
-Tables
+Table
 
-<table class="table">
+<table class="zdss-table">
     <thead>
         <tr>
             <th>#</th>
@@ -17,24 +17,24 @@ Tables
             <td>1</td>
             <td>John</td>
             <td>Admin</td>
-            <td><i class="zd icon x-circle-filled"></i></td>
+            <td><i class="x-circle-filled"></i></td>
         </tr>
         <tr>
             <td>2</td>
             <td>Jane</td>
             <td>Viewer</td>
-            <td><i class="zd icon x-circle-filled"></i></td>
+            <td><i class="x-circle-filled"></i></td>
         </tr>
     </tbody>
 </table>
 
-Styleguide 4.1.1
 */
 
-.table {
+@mixin zdss-table() {
+    $border-color: $zdss-color-silver;
 	width: 100%;
 	margin-bottom: 20px;
-	border: 1px solid #ddd;
+	border: 1px solid $border-color;
 	border-collapse: separate;
 	border-radius: 4px;
 
@@ -42,8 +42,8 @@ Styleguide 4.1.1
 		background-color: #585858;
 
 		th {
-			color: #FFF;
-			cursor: pointer;
+			@include zdss-clickable();
+			color: $zdss-color-chromium;
 			padding: 8px 5px;
 			white-space: nowrap;
 		}
@@ -56,7 +56,7 @@ Styleguide 4.1.1
 			line-height: 20px;
 			text-align: center;
 			vertical-align: middle;
-			border-top: 1px solid #ddd;
+			border-top: 1px solid $border-color;
 		}
 	}
 }

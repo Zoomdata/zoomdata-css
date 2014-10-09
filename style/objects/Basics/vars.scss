@@ -29,21 +29,9 @@ $zdss-color-red-dark: darken($zdss-color-red, $zdss-color-darken-percent);
 $zdss-color-gold: #FABC2D;
 $zdss-color-gold-dark: darken($zdss-color-gold, $zdss-color-darken-percent);
 
-// Main colors - grayscale
 
-$gs1: #111;
-$gs2: #333;
-$gs3: #555;
-$gs5: #777; // just medium gray
-$gs6: #999;
-$gs7: #bbb;
-$gs8: #ddd;
-
-
-$dark-background: $gs3;
-$light-background: $gs8;
-
-$font-color-green: #BED800;
+$dark-background: $zdss-color-charcoal;
+$light-background: $zdss-color-mercury;
 
 $border-radius: 12px;
 $default-button-height: 40px;

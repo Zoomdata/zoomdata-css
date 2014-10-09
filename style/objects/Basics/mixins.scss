@@ -31,3 +31,15 @@
     border-bottom-right-radius: $radius;
 }
 
+@mixin zdss-arrow($size: 40px){
+    width: $size;
+    height: $size;
+    border-top: 2px solid $zdss-color-iron;
+    border-right: 2px solid $zdss-color-iron;
+    content: ' ';
+    transform: rotate(45deg);
+    &:hover {
+        border-color: white;
+    }
+}
+

@@ -16,7 +16,7 @@ Horizontal list without background
     list-style: none;
     > li {
         @include zdss-light-block();
-        color: $gs1;
+        color: $zdss-color-obsidian;
         float: left;
         margin: 0px;
         background: inherit;
@@ -28,10 +28,10 @@ Horizontal list without background
         background-color: $zdss-color-zdgreen;
     }
     > li[disabled] {
-        color: $gs7;
+        color: $zdss-color-mercury;
     }
     > li[disabled]:hover {
-        color: $gs7;
+        color: $zdss-color-mercury;
         background: inherit;
     }
 }
@@ -62,7 +62,7 @@ Vertical list of rounded light elements
         border-radius: 0;
     }
     > li:hover {
-        color: $font-color-green;
+        color: $zdss-color-green;
         background-color: $dark-background;
     }
 }
@@ -86,13 +86,13 @@ The same, but darker
     @include zdss-vertical-list();
     > li {
         @include zdss-dark-block();
-        background-color: $gs3;
+        background-color: $zdss-color-charcoal;
         margin: 1px;
         border-radius: 0;
     }
     > li:hover {
-        color: $font-color-green;
-        background-color: $gs1;
+        color: $zdss-color-green;
+        background-color: $zdss-color-obsidian;
     }
 }
 
@@ -100,7 +100,7 @@ The same, but darker
 
 Accordion list
 
-<ul class="accordion">
+<ul class="zdss-accordion">
     <li>C</li>
     <li>D</li>
     <li>E</li>
@@ -108,7 +108,7 @@ Accordion list
 
 */
 
-@mixin accordion ($height: 40px){
+@mixin zdss-accordion ($height: 40px){
     $size: $height/4;
     list-style: none;
     > li {
@@ -120,21 +120,63 @@ Accordion list
         height: $height;
     }
     > li:hover {
-        color: $font-color-green;
+        color: $zdss-color-green;
         background-color: $dark-background;
     }
+}
+
+/*
+
+Accordion list with arrows on the right
+
+<ul class="zdss-accordion-arrowed">
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+</ul>
+
+*/
+
+@mixin zdss-accordion-arrowed ($height: 40px){
+    @include zdss-accordion($height);
+    $size: $height/4;
     > li:after {
-        width: $size;
-        height: $size;
-        border-top: 2px solid $gs3;
-        border-right: 2px solid $gs3;
+        @include zdss-arrow($size);
         position: absolute;
         right: $size;
         top: ($height/2) - ($size/2);
-        content: ' ';
-        transform: rotate(45deg);
     }
-    > li:hover:after {
+    > li:after:hover {
         border-color: white;
     }
 }
+
+/*
+
+Horizontal menu
+
+<ul class="zdss-horizontal-menu">
+    <li>Sources</li>
+    <li>Visualization Studio</li>
+    <li>Users & Groups</li>
+    <li>Preferences</li>
+</ul>
+
+*/
+
+@mixin zdss-horizontal-menu(){
+    list-style: none;
+    > li {
+        background-color: $zdss-color-mercury;
+        color: $zdss-color-obsidian;
+        float: left;
+        font-size: 13px;
+        padding: 0.5em 1em;
+        @include zdss-clickable;
+    }
+    > li:hover {
+        color: $zdss-color-chromium;
+        background-color: $zdss-color-obsidian;
+    }
+}
+
