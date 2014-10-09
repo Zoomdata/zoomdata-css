@@ -3,18 +3,17 @@
 
 /*
 Forms
-
-Styleguide 3.1
 */
 
 /*
+
 Checkbox
 
-Markup:
 <div style="width: 40px; height: 40px; background: black; padding: 10px;">
     <input class="zdss-checkbox" id="checkbox" type="checkbox">
-    <label class="zdss-checkbox" for="checkbox"></label>
+    <label for="checkbox"></label>
 </div>
+
 */
 
 @mixin zdss-checkbox(){
@@ -29,7 +28,7 @@ Markup:
         appearance: none;
         display: none;
     }
-    &+label.zdss-checkbox:before {
+    &+label:before {
         cursor: pointer;
         user-select: none;
         content: "1";
@@ -45,7 +44,7 @@ Markup:
         border-radius: 4px;
     }
     &:checked{
-        &+label.zdss-checkbox:before {
+        &+label:before {
             cursor: pointer;
             user-select: none;
             content: "9";

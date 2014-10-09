@@ -1,30 +1,4 @@
 
-@mixin relative() {
-    position: relative;
-}
-
-@mixin absolute() {
-    position: absolute;
-}
-
-@mixin fixed() {
-    position: fixed;
-}
-
-@mixin inline-block() {
-    display: inline-block;
-}
-
-@mixin block() {
-    display: block;
-}
-
-@mixin none() {
-    display: none;
-}
-
-
-
 @mixin zdss-rounded($radius: $border-radius){
     border-radius: $radius;
 }
@@ -43,38 +17,5 @@
 @mixin zdss-rounded-bottom($radius: $border-radius){
     border-bottom-left-radius: $radius;
     border-bottom-right-radius: $radius;
-}
-
-
-@mixin zdss-basic-block(){
-    display: block;
-    margin: 0.5em;
-    padding: 0.5em;
-    @include zdss-rounded();
-}
-/*
-
-Typical light block
-
-<div class="zdss-light-block">Lorem ipsum</div>
-
-*/
-
-@mixin zdss-light-block(){
-    background-color: $light-background;
-    @include zdss-basic-block();
-}
-/*
-
-Typical dark block
-
-<div class="zdss-dark-block">Lorem ipsum</div>
-
-*/
-
-@mixin zdss-dark-block(){
-    background-color: $dark-background;
-    color: white;
-    @include zdss-basic-block();
 }
 
