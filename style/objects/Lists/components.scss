@@ -1,6 +1,35 @@
 
 /*
 
+Horizontal list without background
+
+<ul class="zdss-horizontal-list">
+    <li>General</li>
+    <li>Filepath</li>
+    <li>Fields</li>
+    <li>Visualizations</li>
+</ul>
+
+*/
+
+@mixin zdss-horizontal-list(){
+    list-style: none;
+    > li {
+        @include zdss-light-block();
+        color: $gs1;
+        float: left;
+        margin: 0px;
+        background: inherit;
+        @include zdss-clickable();
+        @include zdss-rounded();
+    }
+    > li:hover {
+        color: white;
+        background-color: $zdss-color-zdgreen;
+    }
+}
+/*
+
 Vertical list of rounded light elements
 
 <ul class="zdss-vertical-list">
@@ -20,6 +49,42 @@ Vertical list of rounded light elements
         @include zdss-rounded-bottom();
     }
     > li {
+        @include zdss-clickable();
         @include zdss-light-block();
+        margin: 1px;
+        border-radius: 0;
+    }
+    > li:hover {
+        color: $font-color-green;
+        background-color: $dark-background;
+    }
+}
+
+
+/*
+
+The same, but darker
+
+<ul class="zdss-vertical-list-dark">
+    <li>Ene</li>
+    <li>Bene</li>
+    <li>Raba</li>
+</ul>
+
+*/
+
+
+
+@mixin zdss-vertical-list-dark(){
+    @include zdss-vertical-list();
+    > li {
+        @include zdss-dark-block();
+        background-color: $gs3;
+        margin: 1px;
+        border-radius: 0;
+    }
+    > li:hover {
+        color: $font-color-green;
+        background-color: $gs1;
     }
 }
