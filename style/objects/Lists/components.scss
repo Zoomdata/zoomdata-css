@@ -7,7 +7,7 @@ Horizontal list without background
     <li>General</li>
     <li>Filepath</li>
     <li>Fields</li>
-    <li>Visualizations</li>
+    <li disabled>Visualizations</li>
 </ul>
 
 */
@@ -26,6 +26,13 @@ Horizontal list without background
     > li:hover {
         color: white;
         background-color: $zdss-color-zdgreen;
+    }
+    > li[disabled] {
+        color: $gs7;
+    }
+    > li[disabled]:hover {
+        color: $gs7;
+        background: inherit;
     }
 }
 /*
@@ -86,5 +93,48 @@ The same, but darker
     > li:hover {
         color: $font-color-green;
         background-color: $gs1;
+    }
+}
+
+/*
+
+Accordion list
+
+<ul class="accordion">
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+</ul>
+
+*/
+
+@mixin accordion ($height: 40px){
+    $size: $height/4;
+    list-style: none;
+    > li {
+        @include zdss-clickable();
+        @include zdss-light-block();
+        @include zdss-rounded();
+        margin: 4px;
+        position: relative;
+        height: $height;
+    }
+    > li:hover {
+        color: $font-color-green;
+        background-color: $dark-background;
+    }
+    > li:after {
+        width: $size;
+        height: $size;
+        border-top: 2px solid $gs3;
+        border-right: 2px solid $gs3;
+        position: absolute;
+        right: $size;
+        top: ($height/2) - ($size/2);
+        content: ' ';
+        transform: rotate(45deg);
+    }
+    > li:hover:after {
+        border-color: white;
     }
 }
