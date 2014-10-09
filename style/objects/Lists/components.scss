@@ -1,12 +1,25 @@
-@mixin vertical-list(){
+
+/*
+
+Vertical list of rounded light elements
+
+<ul class="zdss-vertical-list">
+    <li>Ene</li>
+    <li>Bene</li>
+    <li>Raba</li>
+</ul>
+
+*/
+
+@mixin zdss-vertical-list(){
     list-style: none;
     > li:first-child {
-        @include rounded-top();
+        @include zdss-rounded-top();
     }
     > li:last-child {
-        @include rounded-bottom();
+        @include zdss-rounded-bottom();
     }
     > li {
-        
+        @include zdss-light-block();
     }
 }

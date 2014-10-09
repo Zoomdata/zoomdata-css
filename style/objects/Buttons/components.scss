@@ -98,9 +98,6 @@ Additional buttons that are useful for stuff.
     <div class="text">Attributes</div>
 </button>
 
-:hover          - Highlight the rail button when hovered.
-
-Styleguide 1.1.1
 */
 
 @mixin zdss-button-rail(){
@@ -138,10 +135,6 @@ Buttons meant to look like a circle.
     <i class="zd icon favorites"></i>
 </button>
 
-:hover     - Hover state for circular buttons
-.active    - Active state for circular buttons
-
-Styleguide 1.1.2
 */
 
 @mixin zdss-button-circular(){
@@ -177,9 +170,6 @@ Buttons meant to look rounded.
     <i class="zd icon pause"></i>
 </button>
 
-:hover    - Hover state for circular buttons
-
-Styleguide 1.1.3
 */
 @mixin zdss-button-rounded(){
     @include zdss-button();
@@ -205,10 +195,6 @@ Buttons for the axis of visualizations
 
 <button class="zdss-button-axis {$modifiers}">Button (button.button.axis)</button>
 
-.metric:hover    - Hover state for metric axis label buttons
-.attribute:hover - Hover state for attribute axis label buttons
-
-Styleguide 1.1.4
 */ 
 
 @mixin zdss-button-axis(){
@@ -245,7 +231,6 @@ A button group is a series of buttons laid out next to each other, all part of o
     <button type="button" class="zdss-button">Third</button>
 </div>
 
-Styleguide 1.1.5
 */
 
 @mixin zdss-button-group(){
@@ -268,10 +253,10 @@ Styleguide 1.1.5
         border-radius: 0px;
         margin-right: 1px;
         &:first-child {
-            @include rounded-left($border-radius);
+            @include zdss-rounded-left($border-radius);
         }
         &:last-child {
-            @include rounded-right($border-radius);
+            @include zdss-rounded-right($border-radius);
             margin-right: 0px;
         }
         &:hover{
