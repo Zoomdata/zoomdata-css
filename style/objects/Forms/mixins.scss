@@ -11,6 +11,9 @@
     @include zdss-rounded($height / 2);
 }
 @mixin zdss-range-thumb($size:28px){
+    &:hover{
+        background-color: $zdss-color-charcoal;
+    }
     -webkit-appearance: none;
     width: $size;
     height: $size;
