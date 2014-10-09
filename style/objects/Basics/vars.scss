@@ -1,2 +1,36 @@
+$zdss-color-lighten-percent: 5%;
+$zdss-color-darken-percent: 5%;
+
+$zdss-color-white: #FFFFFF;
+$zdss-color-black: #000000;
+
+$zdss-color-obsidian: #323232;
+$zdss-color-charcoal: #595959;
+$zdss-color-iron: #939393;
+$zdss-color-silver: #D2D2D2;
+$zdss-color-mercury: #E6E6E6;
+$zdss-color-chromium: #F1F1F1;
+
+$zdss-color-zdgreen: #68AD45;
+$zdss-color-zdgreen-dark: darken($zdss-color-zdgreen, $zdss-color-darken-percent);
+
+$zdss-color-green: #D6DF23;
+$zdss-color-green-dark: darken($zdss-color-green, $zdss-color-darken-percent);
+
+$zdss-color-blue: #0095B6;
+$zdss-color-blue-dark: darken($zdss-color-blue, $zdss-color-darken-percent);
+
+$zdss-color-skyblue: #87CEEB;
+$zdss-color-skyblue-dark: darken($zdss-color-skyblue, $zdss-color-darken-percent);
+
+$zdss-color-red: #E5683A;
+$zdss-color-red-dark: darken($zdss-color-red, $zdss-color-darken-percent);
+
+$zdss-color-gold: #FABC2D;
+$zdss-color-gold-dark: darken($zdss-color-gold, $zdss-color-darken-percent);
+
 $dark-background: #595959;
 $light-background: #E0E0E0;
+
+$border-radius: 12px;
+$default-button-height: 40px;
