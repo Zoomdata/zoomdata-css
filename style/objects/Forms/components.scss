@@ -39,7 +39,7 @@ Checkbox
         font-family: "Zoomdata";
         color: #ffffff;
         text-align: center;
-        border: 1px solid white;
+        border: 1px solid #aaa;
         background-color: white;
         border-radius: 4px;
     }
@@ -59,9 +59,13 @@ Checkbox
 
 Radio Button
 
-<div style="width: 40px; height: 40px; background: black; padding: 10px;">
-	<input class="zdss-radio" type="radio" id="radio">
-	<label for="radio"></label>
+<div style="width: 40px; background: black; padding: 9px;">
+    <input class="zdss-radio" type="radio" id="radio1" name="radio">
+    <label for="radio1"></label>
+    <input class="zdss-radio" type="radio" id="radio2" name="radio">
+    <label for="radio2"></label>
+    <input class="zdss-radio" type="radio" id="radio3" name="radio">
+    <label for="radio3"></label>
 </div>
 
 */
@@ -70,24 +74,37 @@ Radio Button
 @mixin zdss-radio(){
     &[type=radio]{
         display: none;
+        &+label{
+            cursor: pointer;
+            font-size: 0;
+            height: 0;
+        }
         &+label:before {
             user-select: none;
             border-radius: 50%;
-            content: "";
+            content: "\2022";
             display: inline-block;
-            width: 19px;
-            height: 19px;
+            font-size: 50px;
+            line-height: 20px;
+            width: 22px;
+            height: 22px;
             margin-right: 10px;
-            background-color: #FFF;
+            border: 1px solid #aaa;
+            background-color: #fff;
+            color: #fff;
         }
         &:checked{
+            &+label{
+                font-size: 0;
+                height: 0;
+            }
             &+label:before {
                 user-select: none;
                 content: "\2022";
                 color: #D6E100;
-                font-size: 30px;
+                font-size: 50px;
                 text-align: center;
-                line-height: 17px;
+                line-height: 20px;
                 background-color: black;
                 border: 1px solid #D6E100;
             }
@@ -135,6 +152,12 @@ Inputs
     -ms-user-select: text;
     box-sizing: border-box;
     transition: border linear .2s,box-shadow linear .2s;
+    &+label{
+        margin-bottom: 10px;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+    }
     &:focus{
         border-color: rgba(214,223,35,0.8);
         outline: 0;
