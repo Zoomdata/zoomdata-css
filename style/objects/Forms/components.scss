@@ -127,7 +127,11 @@ Radio Button
 Inputs
 
 <div>
-    <input class="zdss-input {$modifiers}" type="text" id="zdss-input" pattern="valid" placeholder="Zoomdata">
+    <input class="zdss-input" type="text" id="zdss-input" placeholder="Login">
+    <label for="zdss-input"></label>
+</div>
+<div>
+    <input class="zdss-input" type="text" id="zdss-input" pattern=".{8,32}" title="8 to 32 characters" placeholder="Password">
     <label for="zdss-input"></label>
 </div>
 
