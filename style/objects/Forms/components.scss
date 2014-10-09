@@ -55,95 +55,68 @@ Checkbox
     }
 }
 
-.zdss-checkbox{
-    @include zdss-checkbox();
-}
-
 /*
+
 Radio Button
 
-Radio Buttons
-
-
 <div style="width: 40px; height: 40px; background: black; padding: 10px;">
-	<input class="radio" type="radio" name="radio" {$modifiers}>
-	<label class="radio" for="radio"></label>
+	<input class="zdss-radio" type="radio" id="radio">
+	<label for="radio"></label>
 </div>
 
-checked          - Fill the Checkbox when checked.
-
-Styleguide 3.3.1
 */
 
-input[type=radio].radio {
-	display: none;
-}
 
-label.radio {
-	user-select: none;
-}
-
-input[type=radio].radio + label.radio:before {
-	border-radius: 50%;
-	content: "";
-	display: inline-block;
-	width: 19px;
-	height: 19px;
-	margin-right: 10px;
-	background-color: #FFF;
-}
-
-input[type=radio].radio:checked + label.radio:before {
-	content: "\2022";
-	color: #D6E100;
-	font-size: 30px;
-	text-align: center;
-	line-height: 17px;
-	background-color: black;
-	border: 1px solid #D6E100;
-}
-
-input[type=radio].radio.metric:checked + label.radio:before {
-	color: #0095B6;
-}
-
-input[type=radio].radio.attribute:checked + label.radio:before {
-	color: #FBBC00;
+@mixin zdss-radio(){
+    &[type=radio]{
+        display: none;
+        &+label:before {
+            user-select: none;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+            background-color: #FFF;
+        }
+        &:checked{
+            &+label:before {
+                user-select: none;
+                content: "\2022";
+                color: #D6E100;
+                font-size: 30px;
+                text-align: center;
+                line-height: 17px;
+                background-color: black;
+                border: 1px solid #D6E100;
+            }
+        }
+        &.metric:checked{
+            &+label:before{
+        	color: #0095B6;
+            }
+        }
+        &.attribute:checked{
+            &+label:before{
+        	color: #FBBC00;
+            }
+        }
+    }
 }
 
 /*
-Inputs and Textareas
 
-
-Styleguide 3.4
-*/
-/*
 Inputs
 
-
 <div>
-	<input class="zdss-input {$modifiers}" type="text" name="zdss-input" pattern="valid" placeholder="Zoomdata">
-	<label class="zdss-input" for="zdss-input"></label>
+    <input class="zdss-input {$modifiers}" type="text" id="zdss-input" pattern="valid" placeholder="Zoomdata">
+    <label for="zdss-input"></label>
 </div>
 
-Styleguide 3.4.1
 */
 
-textarea.zdss-input,
-input[type="text"].zdss-input,
-input[type="password"].zdss-input, 
-input[type="datetime"].zdss-input, 
-input[type="datetime-local"].zdss-input,
-input[type="date"],
-input[type="month"].zdss-input,
-input[type="time"].zdss-input,
-input[type="week"].zdss-input,
-input[type="number"].zdss-input,
-input[type="email"].zdss-input,
-input[type="url"].zdss-input,
-input[type="search"].zdss-input,
-input[type="tel"].zdss-input,
-input[type="color"].zdss-input {
+@mixin zdss-input(){
     border-radius: 12px;
     border: 1px solid #999;
     
@@ -162,29 +135,38 @@ input[type="color"].zdss-input {
     -ms-user-select: text;
     box-sizing: border-box;
     transition: border linear .2s,box-shadow linear .2s;
+    &:focus{
+        border-color: rgba(214,223,35,0.8);
+        outline: 0;
+        outline: thin dotted \9;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+        -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+        
+        &:invalid{
+            border-color: #e9322d;
+            -webkit-box-shadow: 0 0 6px #f8b9b7;
+            -moz-box-shadow: 0 0 6px #f8b9b7;
+            box-shadow: 0 0 6px #f8b9b7;
+        }
+    }
+    &:-webkit-autofill{
+        -webkit-box-shadow:0 0 0 50px white inset;
+    }
 }
 
-textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-    border-color: rgba(214,223,35,0.8);
-    outline: 0;
-    outline: thin dotted \9;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
-    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 5px rgba(214,223,35,0.6);
+/*
+
+Textarea
+
+<div>
+    <textarea class="zdss-textarea"></textarea>
+</div>
+
+*/
+
+@mixin zdss-textarea(){
+    @include zdss-input();
+    line-height: 14px;
+    height: 6em;
 }
-
-input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px white inset;
-}
-
-input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
-    border-color: #e9322d;
-    -webkit-box-shadow: 0 0 6px #f8b9b7;
-    -moz-box-shadow: 0 0 6px #f8b9b7;
-    box-shadow: 0 0 6px #f8b9b7;
-}
-
-
-
-
-
