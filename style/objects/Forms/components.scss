@@ -193,3 +193,24 @@ Textarea
     line-height: 14px;
     height: 6em;
 }
+
+/*
+
+Search
+
+<div>
+    <input class="zdss-search" placeholder="Search" id="search" type="search">
+</div>
+
+*/
+
+@mixin zdss-search(){
+    &[type=search]{
+        @include zdss-input();
+        
+        background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='20px' width='20px'> <defs> <font horiz-adv-x='2048' > <font-face font-family='ZD' units-per-em='2048' ascent='1638' descent='-410' /> <missing-glyph horiz-adv-x='614' /> <glyph unicode='r' d='M0 1181q0 178 69 337q67 160 185 277q116 117 276 184q159 69 337 69q175 0 337 -69t277 -184t184 -277q69 -159 69 -337q0 -269 -154 -491l423 -422q45 -45 45 -111q0 -65 -45 -110q-47 -47 -112 -47t-110 47l-422 421q-224 -153 -492 -153q-177 0 -337 68t-276 184 q-118 118 -185 279q-69 159 -69 335zM315 1181q0 -226 163 -389q158 -161 389 -161q228 0 389 161q163 165 163 389q0 227 -163 390q-161 162 -389 162q-231 0 -389 -162q-163 -162 -163 -390z' /> </font> </defs> <text x='0' y='20' fill='grey' font-size='16' font-family='ZD'>r</text> </svg>");
+        background-repeat: no-repeat;
+        background-position: 8px 2px;
+        padding-left: 30px;        
+    }
+}
