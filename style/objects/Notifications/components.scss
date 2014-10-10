@@ -1,0 +1,155 @@
+@import "../Basics/vars.scss";
+@import "../Basics/mixins.scss";
+@import "vars.scss";
+@import "mixins.scss";
+
+/*
+Nofitications
+*/
+
+/*
+
+Notification Alert (Info, Error, Success, Warning)
+(position: absolute;)
+
+<div class="zdss-notification-alert" style="position: inherit">Simple notification message.<div class="zd icon remove"></div></div>
+<div class="zdss-notification-alert error" style="position: inherit">Failed to save bookmark.<div class="zd icon remove"></div></div>
+<div class="zdss-notification-alert success" style="position: inherit">Bookmark has been saved.<div class="zd icon remove"></div></div>
+<div class="zdss-notification-alert warning" style="position: inherit">This bookmark name already exist.<div class="zd icon remove"></div></div>
+
+
+*/
+
+@mixin zdss-notification-alert() {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	line-height: 26px;
+	padding: 8px 35px 8px 14px;
+	border-radius: 0;
+	border: none;
+	z-index: 3000;
+
+	color: 				$zdss-nt-alert-text-color;
+	background-color: 	$zdss-nt-alert-backround;
+	border-color: 		$zdss-nt-alert-border-color;
+
+	&.error {
+		color: 				$zdss-nt-alert-error-text-color;
+		background-color: 	$zdss-nt-alert-error-backround;
+		border-color: 		$zdss-nt-alert-error-border-color;		
+	}
+
+	&.success {
+		color: 				$zdss-nt-alert-success-text-color;
+		background-color: 	$zdss-nt-alert-success-backround;
+		border-color: 		$zdss-nt-alert-success-border-color;		
+	}
+
+	&.warning {
+		color: 				$zdss-nt-alert-warning-text-color;
+		background-color: 	$zdss-nt-alert-warning-backround;
+		border-color: 		$zdss-nt-alert-warning-border-color;		
+	}
+
+}
+
+/*
+
+Nofitications Popup
+
+<div class="zdss-notification-popup" style="position: inherit">            
+	<div class="notification-head">                
+		<span>User Updated</span>                
+		<div class="notification-close" title="Close" style="position: inherit"></div>            
+	</div>            
+	<div class="notification-body">                
+		<div class="notification-icon"></div>                
+		<div class="notification-description">
+			<span>User has been successfull updated.</span>
+		</div>
+	</div>      
+</div>
+</br>
+<div class="zdss-notification-popup error" style="position: inherit">            
+	<div class="notification-head">                
+		<span>Validation Error</span>                
+		<div class="notification-close" title="Close" style="position: inherit"></div>            
+	</div>            
+	<div class="notification-body">                
+		<div class="notification-icon"></div>                
+		<div class="notification-description">
+			<span>Field <b>Timestamp</b> cannot be changed to <b>ATTRIBUTE</b> because it is being used in the visualizations.</span>
+		</div>
+	</div>      
+</div>
+
+*/
+
+@mixin zdss-notification-popup(){
+    position: absolute;
+	top: 46px;
+	right: 10px;
+	z-index: 1050;
+	width: 276px;
+	background: white;
+	border: solid;
+	border-width: 1px;
+	border-color: $zdss-nt-popup-border-color;
+	border-radius: 12px;
+	box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+	font-size: 14px;
+	color: #000000;
+	overflow: hidden;
+
+	.notification-head {
+		padding: 8px;
+		line-height: 20px;
+		font-size: 18px;
+		color: #FFFFFF;
+		text-align: center;
+		background: $zdss-nt-popup-border-color;
+		.notification-close {
+			cursor: pointer;
+			float: right;
+			margin-left: -20px;
+			color: #fff;
+			@include zdss-icon-x-circle();
+		}
+	}
+
+	.notification-body {
+		padding: 12px;
+
+		.notification-icon {
+			float: left;
+			width: 30px;
+			padding: 3px 0;
+			margin-right: 8px;
+			color: $zdss-nt-popup-border-color;
+			font-size: 20px;
+			text-align: center;
+			@include zdss-icon-checkmark();
+		}
+
+		.notification-description {
+
+		}
+	}
+
+	&.error {
+		border-color: $zdss-nt-popup-border-color-error;
+		
+		.notification-head {
+			background: $zdss-nt-popup-border-color-error;
+		}
+		.notification-body {
+
+			.notification-icon {
+				color: $zdss-nt-popup-border-color-error;
+			}
+		}
+	}
+}
