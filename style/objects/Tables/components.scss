@@ -60,3 +60,65 @@ Table
 		}
 	}
 }
+
+/*
+Light table
+
+Looks similar to list, doesn't need a table head
+
+<table class="zdss-table-light">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td>User Income</td>
+            <td>$0 to $25,000</td>
+        </tr>
+        <tr>
+            <td>Country Code</td>
+            <td>42071</td>
+        </tr>
+        <tr>
+            <td>Planned Sales</td>
+            <td>$215.62</td>
+        </tr>
+        <tr>
+            <td>County</td>
+            <td>Lancaster</td>
+        </tr>
+        <tr>
+            <td>User State</td>
+            <td>Pennsylvania</td>
+        </tr>
+    </tbody>
+</table>
+
+*/
+
+@mixin zdss-table-light() {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 0;
+
+	tbody {
+
+		td {
+			padding: 8px;
+			line-height: 20px;
+            font-size: 12px;
+			text-align: left;
+			vertical-align: middle;
+			border-top: 1px solid $zdss-color-silver;
+		}
+
+		tr:nth-child(even) td {
+			background-color: $zdss-color-chromium;
+		}
+		tr:nth-child(odd) td {
+			background-color: white;
+		}
+		tr:last-child td {
+			border-bottom: 1px solid $zdss-color-silver;
+		}
+	}
+}
