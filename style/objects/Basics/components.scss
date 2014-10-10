@@ -76,7 +76,8 @@ Modal popup
 */
 
 @mixin zdss-popup-modal(){
-    @include zdss-dark-block();
+    @include zdss-dark-block;
+    @include zdss-shadow();
     position: relative;
     &:after {
         @include zdss-dark-block();
@@ -93,5 +94,66 @@ Modal popup
         @include zdss-close-icon(8px, $zdss-color-mercury);
         float: right;
         margin: 3px;
+    }
+}
+
+
+
+@mixin zdss-tooltip(){
+    @include zdss-dark-block;
+    @include zdss-shadow-small();
+    position: relative;
+    padding: 10px 15px;
+    &:after {
+        @include zdss-dark-block();
+        border-radius: 0;
+        transform: rotate(45deg);
+        content: '';
+        position: absolute;
+        top: 6px;
+        width: 10px;
+        height: 10px;
+    }
+    .zdss-close {
+        @include zdss-close-icon(8px, $zdss-color-mercury);
+        float: right;
+        margin: 3px;
+    }
+}
+
+/*
+
+Tooltip(left)
+
+<div class="zdss-tooltip-left">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+
+@mixin zdss-tooltip-left(){
+    @include zdss-tooltip();
+    &:after {
+        left: -15px;
+    }
+}
+
+
+/*
+
+Tooltip(right)
+
+<div class="zdss-tooltip-right">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+
+@mixin zdss-tooltip-right(){
+    @include zdss-tooltip();
+    &:after {
+        right: -15px;
     }
 }
