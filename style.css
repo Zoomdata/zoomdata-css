@@ -1,0 +1,3488 @@
+/*!
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+/*------------------------------------*\
+    #BOX-SIZING
+\*------------------------------------*/
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  background-color: #fff;
+  color: #333;
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-text-size-adjust: 100%;
+  /* [4] */
+  -ms-text-size-adjust: 100%;
+  /* [4] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [5] */
+  -webkit-font-smoothing: antialiased;
+  /* [5] */ }
+
+body {
+  font-family: source-sans-pro, sans-serif !important; }
+
+/*
+Components
+*/
+/*
+
+Typical block
+
+<div class="zdss-basic-block">Lorem ipsum</div>
+
+*/
+/*
+
+Typical light block
+
+<div class="zdss-light-block">Lorem ipsum</div>
+
+*/
+/*
+
+Typical dark block
+
+<div class="zdss-dark-block">Lorem ipsum</div>
+
+*/
+/*
+
+Modal popup
+
+<div class="zdss-popup-modal">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+/*
+
+Tooltip(left)
+
+<div class="zdss-tooltip-left">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+/*
+
+Tooltip(right)
+
+<div class="zdss-tooltip-right">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+/*
+Buttons
+
+A majority of buttons in the site are built from the same base class.
+
+<button class="zdss-button">Button</button>
+<button class="zdss-button-primary">Button</button>
+<button class="zdss-button-danger">Button</button>
+<button class="zdss-button" disabled>Button</button>
+
+*/
+/*
+Rail Button
+
+Additional buttons that are useful for stuff.
+
+<button class="zdss-button-rail">
+    <i class="zdss-icon-palette"></i>
+    <div class="text">Attributes</div>
+</button>
+
+*/
+/*
+Circular Button
+
+Buttons meant to look like a circle.
+
+<button class="zdss-button-circular">
+    <i class="zdss-icon-favorites"></i>
+</button>
+<button class="zdss-button-circular active">
+    <i class="zdss-icon-favorites"></i>
+</button>
+
+*/
+/*
+Rounded Button
+
+Buttons meant to look rounded.
+
+<button class="zdss-button-rounded">
+    <i class="zdss-icon-pause"></i>
+</button>
+
+*/
+/*
+Axis Button
+
+Buttons for the axis of visualizations
+
+<button class="zdss-button-axis">
+    Button (button.button.axis)
+</button>
+
+*/
+/*
+Button Group
+
+A button group is a series of buttons laid out next to each other, all part of one visual button, but separated by rules to be separate.
+
+
+<div class="zdss-button-group">
+    <button type="button" class="zdss-button">First</button>
+    <button type="button" class="zdss-button">Second</button>
+    <button type="button" class="zdss-button">Third</button>
+</div>
+
+*/
+@font-face {
+  font-family: "Zoomdata";
+  src: url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.woff) format('woff'), url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+
+  to {
+    transform: rotate(360deg); } }
+
+/*
+
+Menu icon
+
+<i class="zdss-icon-menu"></i>
+
+*/
+/*
+
+Settings icon
+
+<i class="zdss-icon-settings"></i>
+
+*/
+/*
+
+Help icon
+
+<i class="zdss-icon-help"></i>
+
+*/
+/*
+
+User icon
+
+<i class="zdss-icon-user"></i>
+
+*/
+/*
+
+Back icon
+
+<i class="zdss-icon-back"></i>
+
+*/
+/*
+
+Connectors icon
+
+<i class="zdss-icon-connectors"></i>
+
+*/
+/*
+
+Collections icon
+
+<i class="zdss-icon-collections"></i>
+
+*/
+/*
+
+Favorites icon
+
+<i class="zdss-icon-favorites"></i>
+
+*/
+/*
+
+Share icon
+
+<i class="zdss-icon-share"></i>
+
+*/
+/*
+
+Download icon
+
+<i class="zdss-icon-download"></i>
+
+*/
+/*
+
+Upload icon
+
+<i class="zdss-icon-upload"></i>
+
+*/
+/*
+
+Full Circle icon
+
+<i class="zdss-icon-circle-filled"></i>
+
+*/
+/*
+
+Empty Circle icon
+
+<i class="zdss-icon-circle-empty"></i>
+
+*/
+/*
+
+Plus icon
+
+<i class="zdss-icon-plus"></i>
+
+*/
+/*
+
+Minus icon
+
+<i class="zdss-icon-minus"></i>
+
+*/
+/*
+
+X with Circle icon
+
+<i class="zdss-icon-x-circle"></i>
+
+*/
+/*
+
+X with Filled Circle icon
+
+<i class="zdss-icon-x-circle-filled"></i>
+
+*/
+/*
+
+X with Empty Circle icon
+
+<i class="zdss-icon-x-circle-empty"></i>
+
+*/
+/*
+
+Up Arrow icon
+
+<i class="zdss-icon-up-arrow"></i>
+
+*/
+/*
+
+Down Arrow icon
+
+<i class="zdss-icon-down-arrow"></i>
+
+*/
+/*
+
+Left Arrow icon
+
+<i class="zdss-icon-left-arrow"></i>
+
+*/
+/*
+
+Right Arrow icon
+
+<i class="zdss-icon-right-arrow"></i>
+
+*/
+/*
+
+Header icon
+
+<i class="zdss-icon-header"></i>
+
+*/
+/*
+
+Drag icon
+
+<i class="zdss-icon-drag"></i>
+
+*/
+/*
+
+Drag Corner icon
+
+<i class="zdss-icon-drag-corner"></i>
+
+*/
+/*
+
+Zoomdata Logo icon
+
+<i class="zdss-icon-zoomdata-logo"></i>
+
+*/
+/*
+
+Palette icon
+
+<i class="zdss-icon-palette"></i>
+
+*/
+/*
+
+Filter icon
+
+<i class="zdss-icon-filter"></i>
+
+*/
+/*
+
+Compare icon
+
+<i class="zdss-icon-compare"></i>
+
+*/
+/*
+
+Sort icon
+
+<i class="zdss-icon-sort"></i>
+
+*/
+/*
+
+Style icon
+
+<i class="zdss-icon-style"></i>
+
+*/
+/*
+
+Colors icon
+
+<i class="zdss-icon-colors"></i>
+
+*/
+/*
+
+Data icon
+
+<i class="zdss-icon-data"></i>
+
+*/
+/*
+
+KPI icon
+
+<i class="zdss-icon-kpi"></i>
+
+*/
+/*
+
+Info icon
+
+<i class="zdss-icon-info-circle-filled"></i>
+
+*/
+/*
+
+Time Control icon
+
+<i class="zdss-icon-time-control"></i>
+
+*/
+/*
+
+Add Element icon
+
+<i class="zdss-icon-add-element"></i>
+
+*/
+/*
+
+Clone icon
+
+<i class="zdss-icon-clone"></i>
+
+*/
+/*
+
+Fullscreen icon
+
+<i class="zdss-icon-fullscreen"></i>
+
+*/
+/*
+
+Exit Fullscreen icon
+
+<i class="zdss-icon-exit-fullscreen"></i>
+
+*/
+/*
+
+Info icon
+
+<i class="zdss-icon-info"></i>
+
+*/
+/*
+
+Zoom In icon
+
+<i class="zdss-icon-zoom-in"></i>
+
+*/
+/*
+
+Zoom Out icon
+
+<i class="zdss-icon-zoom-out"></i>
+
+*/
+/*
+
+Magnifying Glass icon
+
+<i class="zdss-icon-magnifying-glass"></i>
+
+*/
+/*
+
+Clock icon
+
+<i class="zdss-icon-clock"></i>
+
+*/
+/*
+
+Small Collections icon
+
+<i class="zdss-icon-collections-small"></i>
+
+*/
+/*
+
+Pencil icon
+
+<i class="zdss-icon-pencil"></i>
+
+*/
+/*
+
+Calendar icon
+
+<i class="zdss-icon-calendar"></i>
+
+*/
+/*
+
+Link icon
+
+<i class="zdss-icon-link"></i>
+
+*/
+/*
+
+Break Link icon
+
+<i class="zdss-icon-break-link"></i>
+
+*/
+/*
+
+Comment icon
+
+<i class="zdss-icon-comment"></i>
+
+*/
+/*
+
+Zoomdata Z icon
+
+<i class="zdss-icon-zoomdata-logo-z"></i>
+
+*/
+/*
+
+Square Outline icon
+
+<i class="zdss-icon-square-outline"></i>
+
+*/
+/*
+
+Square Filled icon
+
+<i class="zdss-icon-square-filled"></i>
+
+*/
+/*
+
+Stop icon
+
+<i class="zdss-icon-stop"></i>
+
+*/
+/*
+
+Play icon
+
+<i class="zdss-icon-play"></i>
+
+*/
+/*
+
+Pause icon
+
+<i class="zdss-icon-pause"></i>
+
+*/
+/*
+
+Fast Forward icon
+
+<i class="zdss-icon-fast-forward"></i>
+
+*/
+/*
+
+Faster Forward icon
+
+<i class="zdss-icon-faster-forward"></i>
+
+*/
+/*
+
+Faster Forward icon
+
+<i class="zdss-icon-fast-forward-outline"></i>
+
+*/
+/*
+
+Fasterer Forward icon
+
+<i class="zdss-icon-faster-forward-outline"></i>
+
+*/
+/*
+
+Checkmark icon
+
+<i class="zdss-icon-checkmark"></i>
+
+*/
+/*
+
+Sub Menu Down icon
+
+<i class="zdss-icon-sub-menu-down"></i>
+
+*/
+/*
+
+Sub Menu Right icon
+
+<i class="zdss-icon-sub-menu-right"></i>
+
+*/
+/*
+
+Zoomdata Logo Left icon
+
+<i class="zdss-icon-zoomdata-logo-left"></i>
+
+*/
+/*
+
+Zoomdata Logo Right icon
+
+<i class="zdss-icon-zoomdata-logo-right"></i>
+
+*/
+/*
+
+Warning icon
+
+<i class="zdss-icon-warning"></i>
+
+*/
+/*
+
+Sort Ascening icon
+
+<i class="zdss-icon-sort-asc"></i>
+
+*/
+/*
+
+Sort Descending icon
+
+<i class="zdss-icon-sort-desc"></i>
+
+*/
+/*
+
+Sort Percent Ascending icon
+
+<i class="zdss-icon-sort-percent-asc"></i>
+
+*/
+/*
+
+Sort Percent Descending icon
+
+<i class="zdss-icon-sort-percent-desc"></i>
+
+*/
+/*
+
+Sort Alphabetical Ascending icon
+
+<i class="zdss-icon-sort-alphabetical-asc"></i>
+
+*/
+/*
+
+Sort Alphabetical Descending icon
+
+<i class="zdss-icon-sort-alphabetical-desc"></i>
+
+*/
+/*
+
+Left Chevron icon
+
+<i class="zdss-icon-left-chevron"></i>
+
+*/
+/*
+
+Right Chevron icon
+
+<i class="zdss-icon-right-chevron"></i>
+
+*/
+/*
+
+Filled Minus with Circle icon
+
+<i class="zdss-icon-minus-circle-filled"></i>
+
+*/
+/*
+
+Filled Plus with Circle icon
+
+<i class="zdss-icon-plus-circle-filled"></i>
+
+*/
+/*
+
+Spinner icon
+
+<i class="zdss-icon-spinner"></i>
+
+*/
+/*
+
+Undo icon
+
+<i class="zdss-icon-undo"></i>
+
+*/
+/*
+
+Group icon
+
+<i class="zdss-icon-group"></i>
+
+*/
+/*
+
+Ellipsis icon
+
+<i class="zdss-icon-ellipsis"></i>
+
+*/
+/*
+
+Configure icon
+
+<i class="zdss-icon-configure"></i>
+
+*/
+/*
+
+Faceted Search icon
+
+<i class="zdss-icon-faceted-search"></i>
+
+*/
+/*
+
+Faceted Filter icon
+
+<i class="zdss-icon-faceted-filter"></i>
+
+*/
+/*
+Forms
+*/
+/*
+
+Checkbox
+
+<div style="width: 40px; height: 40px; background: rgba(0,0,0,0.7); padding: 10px;">
+    <input class="zdss-checkbox" id="checkbox" type="checkbox">
+    <label for="checkbox"></label>
+</div>
+
+*/
+/*
+
+Radio Button
+
+<div style="width: 40px; background: rgba(0,0,0,0.7); padding: 9px;">
+    <input class="zdss-radio" type="radio" id="radio1" name="radio">
+    <label for="radio1"></label>
+    <input class="zdss-radio" type="radio" id="radio2" name="radio">
+    <label for="radio2"></label>
+    <input class="zdss-radio" type="radio" id="radio3" name="radio">
+    <label for="radio3"></label>
+</div>
+
+*/
+/*
+
+Inputs
+
+<div>
+    <input class="zdss-input" type="text" id="zdss-input" placeholder="Login">
+    <label for="zdss-input"></label>
+</div>
+<div>
+    <input class="zdss-input" type="text" id="zdss-input" pattern=".{8,32}" title="8 to 32 characters" placeholder="Password">
+    <label for="zdss-input"></label>
+</div>
+
+*/
+/*
+
+Textarea
+
+<div>
+    <textarea class="zdss-textarea"></textarea>
+</div>
+
+*/
+/*
+
+Search
+
+<div>
+    <input class="zdss-search" placeholder="Search" id="search" type="search">
+</div>
+
+*/
+/*
+
+Range
+
+<div style="padding: 9px;">
+    <input class="zdss-range" type="range">
+</div>
+<div style="background: rgba(0,0,0,0.7); padding: 9px;">
+    <input class="zdss-range" type="range">
+</div>
+
+*/
+/*
+Basic table
+
+<table class="zdss-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Group</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Admin</td>
+            <td><i class="x-circle-filled"></i></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>Viewer</td>
+            <td><i class="x-circle-filled"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+*/
+/*
+Light table
+
+Looks similar to list, doesn't need a table head
+
+<table class="zdss-table-light">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td>User Income</td>
+            <td>$0 to $25,000</td>
+        </tr>
+        <tr>
+            <td>Country Code</td>
+            <td>42071</td>
+        </tr>
+        <tr>
+            <td>Planned Sales</td>
+            <td>$215.62</td>
+        </tr>
+        <tr>
+            <td>County</td>
+            <td>Lancaster</td>
+        </tr>
+        <tr>
+            <td>User State</td>
+            <td>Pennsylvania</td>
+        </tr>
+    </tbody>
+</table>
+
+*/
+/*
+
+Horizontal list without background
+
+<ul class="zdss-horizontal-list">
+    <li>General</li>
+    <li>Filepath</li>
+    <li>Fields</li>
+    <li disabled>Visualizations</li>
+</ul>
+
+*/
+/*
+
+Vertical list of rounded light elements
+
+<ul class="zdss-vertical-list">
+    <li>Ene</li>
+    <li>Bene</li>
+    <li>Raba</li>
+</ul>
+
+*/
+/*
+
+The same, but darker
+
+<ul class="zdss-vertical-list-dark">
+    <li>Ene</li>
+    <li>Bene</li>
+    <li>Raba</li>
+</ul>
+
+*/
+/*
+
+Accordion list
+
+<ul class="zdss-accordion">
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+</ul>
+
+*/
+/*
+
+Accordion list with arrows on the right
+
+<ul class="zdss-accordion-arrowed">
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+</ul>
+
+*/
+/*
+
+Horizontal menu
+
+<ul class="zdss-horizontal-menu">
+    <li>Sources</li>
+    <li>Visualization Studio</li>
+    <li>Users & Groups</li>
+</ul>
+
+*/
+/*
+
+Tabs
+
+<div class="zdss-light-block">
+    <ul class="zdss-tabs">
+        <li active>Favourites</li>
+        <li>Data Sources</li>
+        <li>Selected</li>
+        <li>All</li>
+    </ul>
+    <div class="zdss-tab-content">
+        Lorem ipsum
+    </div>
+</div>
+
+*/
+/*
+
+Links
+
+<a class="zdss-link" href="/">Link to current page</a>
+
+*/
+.zdss-basic-block {
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px; }
+
+.zdss-light-block {
+  background-color: #E6E6E6;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px; }
+
+.zdss-dark-block {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px; }
+
+.zdss-close-icon {
+  cursor: pointer;
+  width: 21px;
+  position: relative; }
+  .zdss-close-icon:after {
+    content: ' ';
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0px; }
+  .zdss-close-icon:before {
+    content: ' ';
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(135deg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0px; }
+
+.zdss-popup-modal {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px 0px #939393;
+  position: relative; }
+  .zdss-popup-modal:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: -15px;
+    right: 10px; }
+  .zdss-popup-modal .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-popup-modal .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-popup-modal .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+
+.zdss-tooltip {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 0px #939393;
+  position: relative;
+  padding: 10px 15px; }
+  .zdss-tooltip:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px; }
+  .zdss-tooltip .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-tooltip .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-tooltip .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+
+.zdss-tooltip-left {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 0px #939393;
+  position: relative;
+  padding: 10px 15px; }
+  .zdss-tooltip-left:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px; }
+  .zdss-tooltip-left .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-tooltip-left .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-tooltip-left .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+  .zdss-tooltip-left:after {
+    left: -15px; }
+
+.zdss-tooltip-right {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 0px #939393;
+  position: relative;
+  padding: 10px 15px; }
+  .zdss-tooltip-right:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px; }
+  .zdss-tooltip-right .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-tooltip-right .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-tooltip-right .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+  .zdss-tooltip-right:after {
+    right: -15px; }
+
+.zdss-clickable {
+  cursor: pointer; }
+
+.zdss-rounded {
+  border-radius: 12px; }
+
+.zdss-rounded-left {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px; }
+
+.zdss-rounded-right {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px; }
+
+.zdss-rounded-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px; }
+
+.zdss-rounded-bottom {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; }
+
+.zdss-arrow {
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid #939393;
+  border-right: 2px solid #939393;
+  content: ' ';
+  transform: rotate(45deg); }
+  .zdss-arrow:hover {
+    border-color: white; }
+
+.zdss-shadow {
+  box-shadow: 5px 5px 10px 0px #939393; }
+
+.zdss-shadow-small {
+  box-shadow: 2px 2px 5px 0px #939393; }
+
+.zdss-button {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none; }
+  .zdss-button:hover {
+    background-color: #595959; }
+  .zdss-button:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+
+.zdss-button-primary {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none;
+  background-color: #0095B6; }
+  .zdss-button-primary:hover {
+    background-color: #595959; }
+  .zdss-button-primary:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+  .zdss-button-primary:hover {
+    background-color: #00829d; }
+
+.zdss-button-danger {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none;
+  background-color: #E5683A; }
+  .zdss-button-danger:hover {
+    background-color: #595959; }
+  .zdss-button-danger:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+  .zdss-button-danger:hover {
+    background-color: #e25623; }
+
+.zdss-button-rail {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none;
+  height: 54px;
+  width: 72px;
+  background-color: #939393;
+  border-radius: 0;
+  padding: 7px 0; }
+  .zdss-button-rail:hover {
+    background-color: #595959; }
+  .zdss-button-rail:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+  .zdss-button-rail .text {
+    margin: 0 auto;
+    padding-top: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal; }
+  .zdss-button-rail:hover {
+    background-color: #595959; }
+
+.zdss-button-circular {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none;
+  font-size: 18px;
+  line-height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #939393;
+  box-shadow: 2px 2px rgba(89, 89, 89, 0.4), -1px -1px rgba(255, 255, 255, 0.5); }
+  .zdss-button-circular:hover {
+    background-color: #595959; }
+  .zdss-button-circular:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+  .zdss-button-circular:hover {
+    color: #FFFFFF;
+    background-color: #595959; }
+  .zdss-button-circular.active {
+    color: #FABC2D; }
+
+.zdss-button-rounded {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 38px;
+  padding: 0;
+  background-color: #939393;
+  box-shadow: 2px 2px rgba(89, 89, 89, 0.4), -1px -1px rgba(255, 255, 255, 0.5); }
+  .zdss-button-rounded:hover {
+    background-color: #595959; }
+  .zdss-button-rounded:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+  .zdss-button-rounded:hover {
+    background-color: #595959; }
+
+.zdss-button-axis {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  outline-style: none;
+  background-color: #939393;
+  -webkit-appearance: none;
+  padding: 0 12px;
+  background-color: #F1F1F1;
+  color: #939393;
+  z-index: 2;
+  text-transform: capitalize;
+  white-space: nowrap; }
+  .zdss-button-axis:hover {
+    background-color: #595959; }
+  .zdss-button-axis:disabled {
+    pointer-events: none;
+    background-color: #D2D2D2 !important;
+    color: #FFFFFF; }
+  .zdss-button-axis:hover {
+    color: #FFFFFF; }
+    .zdss-button-axis:hover.metric {
+      background-color: #0095B6; }
+    .zdss-button-axis:hover.attribute {
+      background-color: #FBBC00; }
+
+.zdss-button-group {
+  display: inline-block;
+  vertical-align: middle; }
+  .zdss-button-group:before {
+    display: table;
+    content: ""; }
+  .zdss-button-group:after {
+    display: table;
+    clear: both;
+    content: ""; }
+  .zdss-button-group .zdss-button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    margin-bottom: 0;
+    padding: 7px 12px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    vertical-align: middle;
+    white-space: nowrap;
+    white-space: nowrap;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    outline: none;
+    outline-style: none;
+    background-color: #939393;
+    -webkit-appearance: none;
+    position: relative;
+    float: left;
+    border-radius: 0px;
+    margin-right: 1px; }
+    .zdss-button-group .zdss-button:hover {
+      background-color: #595959; }
+    .zdss-button-group .zdss-button:disabled {
+      pointer-events: none;
+      background-color: #D2D2D2 !important;
+      color: #FFFFFF; }
+    .zdss-button-group .zdss-button:first-child {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; }
+    .zdss-button-group .zdss-button:last-child {
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      margin-right: 0px; }
+    .zdss-button-group .zdss-button:hover {
+      z-index: 2; }
+    .zdss-button-group .zdss-button:focus {
+      z-index: 2; }
+    .zdss-button-group .zdss-button:active {
+      z-index: 2;
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15); }
+    .zdss-button-group .zdss-button.selected {
+      z-index: 2;
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15); }
+  .zdss-button-group + .zdss-button-group {
+    margin-left: 5px; }
+
+.zdss-checkbox[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  padding: 0 3px;
+  border: 1px solid #949494;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 18px;
+  appearance: none;
+  display: none; }
+.zdss-checkbox + label:before {
+  cursor: pointer;
+  user-select: none;
+  content: "1";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Zoomdata";
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #aaa;
+  background-color: white;
+  border-radius: 4px; }
+.zdss-checkbox:checked + label:before {
+  cursor: pointer;
+  user-select: none;
+  content: "9";
+  color: #D6E100;
+  background-color: #313131;
+  border: 1px solid #D6E100; }
+
+.zdss-radio[type=radio] {
+  display: none; }
+  .zdss-radio[type=radio] + label {
+    cursor: pointer;
+    font-size: 0;
+    height: 0; }
+  .zdss-radio[type=radio] + label:before {
+    user-select: none;
+    border-radius: 50%;
+    content: "\2022";
+    display: inline-block;
+    font-size: 50px;
+    line-height: 20px;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    color: #fff; }
+  .zdss-radio[type=radio]:checked + label {
+    font-size: 0;
+    height: 0; }
+  .zdss-radio[type=radio]:checked + label:before {
+    user-select: none;
+    content: "\2022";
+    color: #D6E100;
+    font-size: 50px;
+    text-align: center;
+    line-height: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #D6E100; }
+  .zdss-radio[type=radio].metric:checked + label:before {
+    color: #0095B6; }
+  .zdss-radio[type=radio].attribute:checked + label:before {
+    color: #FBBC00; }
+
+.zdss-input {
+  border-radius: 12px;
+  border: 1px solid #999;
+  display: inline-block;
+  min-height: 30px;
+  padding: 4px 7px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  outline: 0;
+  outline: thin dotted \9;
+  -ms-user-select: text;
+  box-sizing: border-box;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
+  .zdss-input + label {
+    margin-bottom: 10px;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle; }
+  .zdss-input:focus {
+    border-color: rgba(214, 223, 35, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6); }
+    .zdss-input:focus:invalid {
+      border-color: #e9322d;
+      -webkit-box-shadow: 0 0 6px #f8b9b7;
+      -moz-box-shadow: 0 0 6px #f8b9b7;
+      box-shadow: 0 0 6px #f8b9b7; }
+  .zdss-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset; }
+
+.zdss-textarea {
+  border-radius: 12px;
+  border: 1px solid #999;
+  display: inline-block;
+  min-height: 30px;
+  padding: 4px 7px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  outline: 0;
+  outline: thin dotted \9;
+  -ms-user-select: text;
+  box-sizing: border-box;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  line-height: 14px;
+  height: 6em; }
+  .zdss-textarea + label {
+    margin-bottom: 10px;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle; }
+  .zdss-textarea:focus {
+    border-color: rgba(214, 223, 35, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6); }
+    .zdss-textarea:focus:invalid {
+      border-color: #e9322d;
+      -webkit-box-shadow: 0 0 6px #f8b9b7;
+      -moz-box-shadow: 0 0 6px #f8b9b7;
+      box-shadow: 0 0 6px #f8b9b7; }
+  .zdss-textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset; }
+
+.zdss-search[type=search] {
+  border-radius: 12px;
+  border: 1px solid #999;
+  display: inline-block;
+  min-height: 30px;
+  padding: 4px 7px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  outline: 0;
+  outline: thin dotted \9;
+  -ms-user-select: text;
+  box-sizing: border-box;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='20px' width='20px'> <defs> <font horiz-adv-x='2048' > <font-face font-family='ZD' units-per-em='2048' ascent='1638' descent='-410' /> <missing-glyph horiz-adv-x='614' /> <glyph unicode='r' d='M0 1181q0 178 69 337q67 160 185 277q116 117 276 184q159 69 337 69q175 0 337 -69t277 -184t184 -277q69 -159 69 -337q0 -269 -154 -491l423 -422q45 -45 45 -111q0 -65 -45 -110q-47 -47 -112 -47t-110 47l-422 421q-224 -153 -492 -153q-177 0 -337 68t-276 184 q-118 118 -185 279q-69 159 -69 335zM315 1181q0 -226 163 -389q158 -161 389 -161q228 0 389 161q163 165 163 389q0 227 -163 390q-161 162 -389 162q-231 0 -389 -162q-163 -162 -163 -390z' /> </font> </defs> <text x='0' y='20' fill='grey' font-size='16' font-family='ZD'>r</text> </svg>");
+  background-repeat: no-repeat;
+  background-position: 8px 2px;
+  padding-left: 30px; }
+  .zdss-search[type=search] + label {
+    margin-bottom: 10px;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle; }
+  .zdss-search[type=search]:focus {
+    border-color: rgba(214, 223, 35, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(214, 223, 35, 0.6); }
+    .zdss-search[type=search]:focus:invalid {
+      border-color: #e9322d;
+      -webkit-box-shadow: 0 0 6px #f8b9b7;
+      -moz-box-shadow: 0 0 6px #f8b9b7;
+      box-shadow: 0 0 6px #f8b9b7; }
+  .zdss-search[type=search]:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset; }
+
+.zdss-range[type="range"] {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  outline: none;
+  background: transparent;
+  height: 30px;
+  margin-bottom: 10px; }
+  .zdss-range[type="range"]::-webkit-slider-runnable-track {
+    box-sizing: border-box;
+    height: 16px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    border-width: 2px;
+    background: #939393;
+    cursor: pointer;
+    border-radius: 8px; }
+  .zdss-range[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-top: -8.5px;
+    border: 3px solid #E6E6E6;
+    background: #939393;
+    cursor: move; }
+    .zdss-range[type="range"]::-webkit-slider-thumb:hover {
+      background-color: #595959; }
+  .zdss-range[type="range"]::-moz-range-track {
+    box-sizing: border-box;
+    height: 16px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    border-width: 2px;
+    background: #939393;
+    cursor: pointer;
+    border-radius: 8px; }
+  .zdss-range[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-top: -8.5px;
+    border: 3px solid #E6E6E6;
+    background: #939393;
+    cursor: move; }
+    .zdss-range[type="range"]::-moz-range-thumb:hover {
+      background-color: #595959; }
+  .zdss-range[type="range"]::-moz-focus-inner {
+    border: 0; }
+  .zdss-range[type="range"]::-ms-track {
+    box-sizing: border-box;
+    height: 16px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    border-width: 2px;
+    background: #939393;
+    cursor: pointer;
+    border-radius: 8px; }
+  .zdss-range[type="range"]::-ms-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-top: -8.5px;
+    border: 3px solid #E6E6E6;
+    background: #939393;
+    cursor: move; }
+    .zdss-range[type="range"]::-ms-thumb:hover {
+      background-color: #595959; }
+
+.zdss-range-track {
+  box-sizing: border-box;
+  height: 16px;
+  border-style: solid;
+  border-color: #E6E6E6;
+  border-width: 2px;
+  background: #939393;
+  cursor: pointer;
+  border-radius: 8px; }
+
+.zdss-range-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-top: -8.5px;
+  border: 3px solid #E6E6E6;
+  background: #939393;
+  cursor: move; }
+  .zdss-range-thumb:hover {
+    background-color: #595959; }
+
+.zdss-icon {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon:after {
+    content: ''; }
+
+.zdss-icon-menu {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-menu:after {
+    content: 'A'; }
+
+.zdss-icon-settings {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-settings:after {
+    content: 'B'; }
+
+.zdss-icon-help {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-help:after {
+    content: 'C'; }
+
+.zdss-icon-user {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-user:after {
+    content: 'D'; }
+
+.zdss-icon-back {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-back:after {
+    content: 'E'; }
+
+.zdss-icon-connectors {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-connectors:after {
+    content: 'F'; }
+
+.zdss-icon-collections {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-collections:after {
+    content: 'G'; }
+
+.zdss-icon-favorites {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-favorites:after {
+    content: 'H'; }
+
+.zdss-icon-share {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-share:after {
+    content: 'I'; }
+
+.zdss-icon-download {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-download:after {
+    content: 'J'; }
+
+.zdss-icon-upload {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-upload:after {
+    content: 'K'; }
+
+.zdss-icon-circle-filled {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-circle-filled:after {
+    content: 'L'; }
+
+.zdss-icon-circle-empty {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-circle-empty:after {
+    content: 'M'; }
+
+.zdss-icon-plus {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-plus:after {
+    content: 'N'; }
+
+.zdss-icon-minus {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-minus:after {
+    content: 'O'; }
+
+.zdss-icon-x-circle {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-x-circle:after {
+    content: 'P'; }
+
+.zdss-icon-x-circle-filled {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-x-circle-filled:after {
+    content: 'Q'; }
+
+.zdss-icon-x-circle-empty {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-x-circle-empty:after {
+    content: 'R'; }
+
+.zdss-icon-up-arrow {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-up-arrow:after {
+    content: 'S'; }
+
+.zdss-icon-down-arrow {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-down-arrow:after {
+    content: 'T'; }
+
+.zdss-icon-left-arrow {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-left-arrow:after {
+    content: 'U'; }
+
+.zdss-icon-right-arrow {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-right-arrow:after {
+    content: 'V'; }
+
+.zdss-icon-header {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-header:after {
+    content: 'W'; }
+
+.zdss-icon-drag {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-drag:after {
+    content: 'X'; }
+
+.zdss-icon-drag-corner {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-drag-corner:after {
+    content: 'Y'; }
+
+.zdss-icon-zoomdata-logo {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-zoomdata-logo:after {
+    content: 'Z'; }
+
+.zdss-icon-palette {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-palette:after {
+    content: 'a'; }
+
+.zdss-icon-filter {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-filter:after {
+    content: 'b'; }
+
+.zdss-icon-compare {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-compare:after {
+    content: 'c'; }
+
+.zdss-icon-sort {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort:after {
+    content: 'd'; }
+
+.zdss-icon-style {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-style:after {
+    content: 'e'; }
+
+.zdss-icon-colors {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-colors:after {
+    content: 'f'; }
+
+.zdss-icon-data {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-data:after {
+    content: 'g'; }
+
+.zdss-icon-kpi {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-kpi:after {
+    content: 'h'; }
+
+.zdss-icon-info-circle-filled {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-info-circle-filled:after {
+    content: 'i'; }
+
+.zdss-icon-time-control {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-time-control:after {
+    content: 'j'; }
+
+.zdss-icon-add-element {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-add-element:after {
+    content: 'k'; }
+
+.zdss-icon-clone {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-clone:after {
+    content: 'l'; }
+
+.zdss-icon-fullscreen {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-fullscreen:after {
+    content: 'm'; }
+
+.zdss-icon-exit-fullscreen {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-exit-fullscreen:after {
+    content: 'n'; }
+
+.zdss-icon-info {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-info:after {
+    content: 'o'; }
+
+.zdss-icon-zoom-in {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-zoom-in:after {
+    content: 'p'; }
+
+.zdss-icon-zoom-out {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-zoom-out:after {
+    content: 'q'; }
+
+.zdss-icon-magnifying-glass {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-magnifying-glass:after {
+    content: 'r'; }
+
+.zdss-icon-clock {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-clock:after {
+    content: 's'; }
+
+.zdss-icon-collections-small {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-collections-small:after {
+    content: 't'; }
+
+.zdss-icon-pencil {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-pencil:after {
+    content: 'u'; }
+
+.zdss-icon-calendar {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-calendar:after {
+    content: 'v'; }
+
+.zdss-icon-link {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-link:after {
+    content: 'w'; }
+
+.zdss-icon-break-link {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-break-link:after {
+    content: 'x'; }
+
+.zdss-icon-comment {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-comment:after {
+    content: 'y'; }
+
+.zdss-icon-zoomdata-logo-z {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-zoomdata-logo-z:after {
+    content: 'z'; }
+
+.zdss-icon-square-outline {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-square-outline:after {
+    content: '0'; }
+
+.zdss-icon-square-filled {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-square-filled:after {
+    content: '1'; }
+
+.zdss-icon-stop {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-stop:after {
+    content: '2'; }
+
+.zdss-icon-play {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-play:after {
+    content: '3'; }
+
+.zdss-icon-pause {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-pause:after {
+    content: '4'; }
+
+.zdss-icon-fast-forward {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-fast-forward:after {
+    content: '5'; }
+
+.zdss-icon-faster-forward {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-faster-forward:after {
+    content: '6'; }
+
+.zdss-icon-fast-forward-outline {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-fast-forward-outline:after {
+    content: '7'; }
+
+.zdss-icon-faster-forward-outline {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-faster-forward-outline:after {
+    content: '8'; }
+
+.zdss-icon-checkmark {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-checkmark:after {
+    content: '9'; }
+
+.zdss-icon-sub-menu-down {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sub-menu-down:after {
+    content: '+'; }
+
+.zdss-icon-sub-menu-right {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sub-menu-right:after {
+    content: '='; }
+
+.zdss-icon-zoomdata-logo-left {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-zoomdata-logo-left:after {
+    content: '('; }
+
+.zdss-icon-zoomdata-logo-right {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-zoomdata-logo-right:after {
+    content: ')'; }
+
+.zdss-icon-warning {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-warning:after {
+    content: '!'; }
+
+.zdss-icon-sort-asc {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort-asc:after {
+    content: '@'; }
+
+.zdss-icon-sort-desc {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort-desc:after {
+    content: '#'; }
+
+.zdss-icon-sort-percent-asc {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort-percent-asc:after {
+    content: '$'; }
+
+.zdss-icon-sort-percent-desc {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort-percent-desc:after {
+    content: '%'; }
+
+.zdss-icon-sort-alphabetical-asc {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort-alphabetical-asc:after {
+    content: '^'; }
+
+.zdss-icon-sort-alphabetical-desc {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-sort-alphabetical-desc:after {
+    content: '&'; }
+
+.zdss-icon-left-chevron {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-left-chevron:after {
+    content: '<'; }
+
+.zdss-icon-right-chevron {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-right-chevron:after {
+    content: '>'; }
+
+.zdss-icon-minus-circle-filled {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-minus-circle-filled:after {
+    content: '-'; }
+
+.zdss-icon-plus-circle-filled {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-plus-circle-filled:after {
+    content: '_'; }
+
+.zdss-icon-spinner {
+  animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -ms-animation: spin 2s infinite linear;
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-spinner:after {
+    content: ','; }
+
+.zdss-icon-undo {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-undo:after {
+    content: '—'; }
+
+.zdss-icon-group {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-group:after {
+    content: '—'; }
+
+.zdss-icon-ellipsis {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-ellipsis:after {
+    content: '…'; }
+
+.zdss-icon-configure {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-configure:after {
+    content: '/'; }
+
+.zdss-icon-faceted-search {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-faceted-search:after {
+    content: '['; }
+
+.zdss-icon-faceted-filter {
+  display: inline-block;
+  font-family: 'Zoomdata';
+  font-style: inherit;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  background-image: none; }
+  .zdss-icon-faceted-filter:after {
+    content: ']'; }
+
+.zdss-horizontal-list {
+  list-style: none; }
+  .zdss-horizontal-list > li {
+    background-color: #E6E6E6;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    color: #323232;
+    float: left;
+    margin: 0px;
+    background: inherit;
+    cursor: pointer;
+    border-radius: 12px; }
+  .zdss-horizontal-list > li:hover {
+    color: white;
+    background-color: #68AD45; }
+  .zdss-horizontal-list > li[disabled] {
+    color: #E6E6E6; }
+  .zdss-horizontal-list > li[disabled]:hover {
+    color: #E6E6E6;
+    background: inherit; }
+
+.zdss-vertical-list {
+  list-style: none; }
+  .zdss-vertical-list > li:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .zdss-vertical-list > li:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; }
+  .zdss-vertical-list > li {
+    cursor: pointer;
+    background-color: #E6E6E6;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    margin: 1px;
+    border-radius: 0; }
+  .zdss-vertical-list > li:hover {
+    color: #D6DF23;
+    background-color: #595959; }
+
+.zdss-vertical-list-dark {
+  list-style: none; }
+  .zdss-vertical-list-dark > li:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .zdss-vertical-list-dark > li:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; }
+  .zdss-vertical-list-dark > li {
+    cursor: pointer;
+    background-color: #E6E6E6;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    margin: 1px;
+    border-radius: 0; }
+  .zdss-vertical-list-dark > li:hover {
+    color: #D6DF23;
+    background-color: #595959; }
+  .zdss-vertical-list-dark > li {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    background-color: #595959;
+    margin: 1px;
+    border-radius: 0; }
+  .zdss-vertical-list-dark > li:hover {
+    color: #D6DF23;
+    background-color: #323232; }
+
+.zdss-accordion {
+  list-style: none; }
+  .zdss-accordion > li {
+    cursor: pointer;
+    background-color: #E6E6E6;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 12px;
+    margin: 4px;
+    position: relative;
+    height: 40px; }
+  .zdss-accordion > li:hover {
+    color: #D6DF23;
+    background-color: #595959; }
+
+.zdss-accordion-arrowed {
+  list-style: none; }
+  .zdss-accordion-arrowed > li {
+    cursor: pointer;
+    background-color: #E6E6E6;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 12px;
+    margin: 4px;
+    position: relative;
+    height: 40px; }
+  .zdss-accordion-arrowed > li:hover {
+    color: #D6DF23;
+    background-color: #595959; }
+  .zdss-accordion-arrowed > li:after {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #939393;
+    border-right: 2px solid #939393;
+    content: ' ';
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    top: 15px; }
+    .zdss-accordion-arrowed > li:after:hover {
+      border-color: white; }
+  .zdss-accordion-arrowed > li:after:hover {
+    border-color: white; }
+
+.zdss-horizontal-menu {
+  list-style: none; }
+  .zdss-horizontal-menu > li {
+    background-color: #E6E6E6;
+    color: #323232;
+    float: left;
+    font-size: 13px;
+    padding: 0.5em 1em;
+    cursor: pointer; }
+  .zdss-horizontal-menu > li:hover {
+    color: #F1F1F1;
+    background-color: #323232; }
+
+.zdss-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .zdss-tabs > li {
+    cursor: pointer;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #939393;
+    color: #F1F1F1;
+    float: left;
+    padding: 10px;
+    font-size: 13px;
+    margin-right: 4px; }
+  .zdss-tabs > li[active] {
+    background-color: #595959;
+    color: #D6DF23; }
+  .zdss-tabs:after {
+    clear: both;
+    display: block;
+    content: ' '; }
+
+.zdss-tab-content {
+  background-color: #595959;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 10px;
+  color: #F1F1F1; }
+
+.zdss-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #D2D2D2;
+  border-collapse: separate;
+  border-radius: 4px; }
+  .zdss-table thead {
+    background-color: #585858; }
+    .zdss-table thead th {
+      cursor: pointer;
+      color: #F1F1F1;
+      padding: 8px 5px;
+      white-space: nowrap; }
+  .zdss-table tbody td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid #D2D2D2; }
+
+.zdss-table-light {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 0; }
+  .zdss-table-light tbody td {
+    padding: 8px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 1px solid #D2D2D2; }
+  .zdss-table-light tbody tr:nth-child(even) td {
+    background-color: #F1F1F1; }
+  .zdss-table-light tbody tr:nth-child(odd) td {
+    background-color: white; }
+  .zdss-table-light tbody tr:last-child td {
+    border-bottom: 1px solid #D2D2D2; }
+
+.zdss-link {
+  color: #0095B6;
+  text-decoration: none; }
+  .zdss-link:hover {
+    color: #00829d; }
