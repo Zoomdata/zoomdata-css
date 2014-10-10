@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 'cssmin' 
 //                'connect:livereload'
             ],
-            files: ['*', './style/objects/**/*.scss']
+            files: ['*', './style/objects/**/*.scss', './node_modules/grunt-mixdoc/**/*']
         },
         copy: {
             fonts: {

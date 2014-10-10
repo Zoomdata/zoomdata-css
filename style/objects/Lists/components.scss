@@ -159,7 +159,6 @@ Horizontal menu
     <li>Sources</li>
     <li>Visualization Studio</li>
     <li>Users & Groups</li>
-    <li>Preferences</li>
 </ul>
 
 */
@@ -178,5 +177,59 @@ Horizontal menu
         color: $zdss-color-chromium;
         background-color: $zdss-color-obsidian;
     }
+}
+
+
+$tabs-color1: $zdss-color-charcoal;
+
+/*
+
+Tabs
+
+<div class="zdss-light-block">
+    <ul class="zdss-tabs">
+        <li active>Favourites</li>
+        <li>Data Sources</li>
+        <li>Selected</li>
+        <li>All</li>
+    </ul>
+    <div class="zdss-tab-content">
+        Lorem ipsum
+    </div>
+</div>
+
+*/
+
+@mixin zdss-tabs(){
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+        @include zdss-clickable;
+        @include zdss-rounded-top;
+        background-color: $zdss-color-iron;
+        color: $zdss-color-chromium;
+        float: left;
+        padding: 10px;
+        font-size: 13px;
+        margin-right: 4px;
+    }
+    > li[active] {
+        background-color: $tabs-color1;
+        color: $zdss-color-green;
+    }
+    &:after {
+        clear:both;
+        display: block;
+        content: ' ';
+    }
+}
+
+@mixin zdss-tab-content(){
+    background-color: $tabs-color1;
+    @include zdss-rounded-bottom;
+    border-top-right-radius: $border-radius;
+    padding: 10px;
+    color: $zdss-color-chromium;
 }
 
