@@ -57,20 +57,12 @@ A majority of buttons in the site are built from the same base class.
     }
 }
 
-.zdss-button{
-    @include zdss-button();
-}
-
 @mixin zdss-button-primary(){
     @include zdss-button();
     background-color: $zdss-color-blue;
     &:hover{
         background-color: $zdss-color-blue-dark;
     }
-}
-
-.zdss-button-primary {
-    @include zdss-button-primary();
 }
 
 @mixin zdss-button-danger() {
@@ -80,11 +72,6 @@ A majority of buttons in the site are built from the same base class.
         background-color: $zdss-color-red-dark;
     }
 }
-
-.zdss-button-danger {
-    @include zdss-button-danger();
-}
-
 
 /*
 Rail Button
@@ -115,10 +102,6 @@ Additional buttons that are useful for stuff.
     &:hover{
         background-color: $zdss-color-charcoal;
     }
-}
-
-.zdss-button-rail {
-    @include zdss-button-rail();
 }
 
 /*
@@ -155,10 +138,6 @@ Buttons meant to look like a circle.
     }
 }
 
-.zdss-button-circular{
-    @include zdss-button-circular();
-}
-
 /*
 Rounded Button
 
@@ -182,9 +161,7 @@ Buttons meant to look rounded.
         background-color: $zdss-color-charcoal;
     }
 }
-.zdss-button-rounded{
-    @include zdss-button-rounded();
-}
+
 
 /*
 Axis Button
@@ -215,9 +192,7 @@ Buttons for the axis of visualizations
         }
     }
 }
-.zdss-button-axis{
-    @include zdss-button-axis();
-}
+
 
 /*
 Button Group
@@ -279,6 +254,3 @@ A button group is a series of buttons laid out next to each other, all part of o
     }
 }
 
-.zdss-button-group{
-    @include zdss-button-group();
-}

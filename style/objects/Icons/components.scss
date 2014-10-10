@@ -1,107 +1,25 @@
-/*
-Icons
-
-Stuff about icons and stuff.
-
-<i class="zd icon {$modifiers}"></i>
-
-.menu                   - Menu icon
-.settings               - Settings icon
-.help                   - Help icon
-.user                   - User icon
-.back                   - Back icon
-.connectors             - Connectors icon
-.collections            - Collections icon
-.favorites              - Favorites icon
-.share                  - Share icon
-.download               - Download icon
-.upload                 - Upload icon
-.circle-filled          - Full Circle icon
-.circle-empty           - Empty Circle icon
-.plus                   - Plus icon
-.minus                  - Minus icon
-.x-circle               - X with Circle icon
-.x-circle-filled        - X with Filled Circle icon
-.x-circle-empty         - X with Empty Circle icon
-.up-arrow               - Up Arrow icon
-.down-arrow             - Down Arrow icon
-.left-arrow             - Left Arrow icon
-.right-arrow            - Right Arrow icon
-.header                 - Header icon
-.drag                   - Drag icon
-.drag-corner            - Drag Corner icon
-.zoomdata-logo          - Zoomdata Logo icon
-.palette                - Palette icon
-.filter                 - Filter icon
-.compare                - Compare icon
-.sort                   - Sort icon
-.style                  - Style icon
-.colors                 - Colors icon
-.data                   - Data icon
-.kpi                    - KPI icon
-.info-circle-filled     - Info icon
-.time-control           - Time Control icon
-.add-element            - Add Element icon
-.clone                  - Clone icon
-.fullscreen             - Fullscreen icon
-.exit-fullscreen        - Exit Fullscreen icon
-.info                   - Info icon
-.zoom-in                - Zoom In icon
-.zoom-out               - Zoom Out icon
-.magnifying-glass       - Magnifying Glass icon
-.clock                  - Clock icon
-.collections-small      - Small Collections icon
-.pencil                 - Pencil icon
-.calendar               - Calendar icon
-.link                   - Link icon
-.break-link             - Break Link icon
-.comment                - Comment icon
-.zoomdata-logo-z        - Zoomdata Z icon
-.square-outline         - Square Outline icon
-.square-filled          - Square Filled icon
-.stop                   - Stop icon
-.play                   - Play icon
-.pause                  - Pause icon
-.fast-forward           - Fast Forward icon
-.faster-forward         - Faster Forward icon
-.fast-forward-outline   - Faster Forward icon
-.faster-forward-outline - Fasterer Forward icon
-.checkmark              - Checkmark icon
-.sub-menu-down          - Sub Menu Down icon
-.sub-menu-right         - Sub Menu Right icon
-.zoomdata-logo-left     - Zoomdata Logo Left icon
-.zoomdata-logo-right    - Zoomdata Logo Right icon
-.warning                - Warning icon
-.sort-asc               - Sort Ascening icon
-.sort-desc              - Sort Descending icon
-.sort-percent-asc       - Sort Percent Ascending icon
-.sort-percent-desc      - Sort Percent Descending icon
-.sort-alphabetical-asc  - Sort Alphabetical Ascending icon
-.sort-alphabetical-desc - Sort Alphabetical Descending icon
-.left-chevron           - Left Chevron icon
-.right-chevron          - Right Chevron icon
-.minus-circle-filled    - Filled Minus with Circle icon
-.plus-circle-filled     - Filled Plus with Circle icon
-.spinner                - Spinner icon
-.undo                   - Undo icon
-.group                  - Group icon
-.ellipsis               - Ellipsis icon
-.configure              - Configure icon
-.faceted-search         - Faceted Search icon
-.faceted-filter         - Faceted Filter icon
-
-Styleguide 2.1
-*/
-
 @font-face {
     font-family: "Zoomdata";
     src: url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.woff) format('woff'),
-         url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.ttf) format('truetype');
+        url(fonts/Zoomdata/zoomdatasymbol-regular-webfont.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-.zd.icon {
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@mixin zdss-icon($content: ''){
     display: inline-block;
     font-family: 'Zoomdata';
     font-style: inherit;
@@ -111,346 +29,1019 @@ Styleguide 2.1
 
     background:none;
     background-image:none;
+    &:after{
+        content: $content;
+    }
 }
 
-.zd.icon.menu:after {
-    content: 'A';
+/*
+
+Menu icon
+
+<i class="zdss-icon-menu"></i>
+
+*/
+
+@mixin zdss-icon-menu() {
+    @include zdss-icon('A');
 }
 
-.zd.icon.settings:after {
-    content: 'B';
+/*
+
+Settings icon
+
+<i class="zdss-icon-settings"></i>
+
+*/
+
+@mixin zdss-icon-settings() {  
+    @include zdss-icon('B');
 }
+
+/*
 
-.zd.icon.help:after {
-    content: 'C';
+Help icon
+
+<i class="zdss-icon-help"></i>
+
+*/
+
+@mixin zdss-icon-help() {
+    @include zdss-icon('C'); 
 }
+
+/*
+
+User icon
 
-.zd.icon.user:after {
-    content: 'D';
+<i class="zdss-icon-user"></i>
+
+*/
+
+@mixin zdss-icon-user() {  
+    @include zdss-icon('D');
 }
+
+/*
+
+Back icon
+
+<i class="zdss-icon-back"></i>
 
-.zd.icon.back:after {
-    content: 'E';
+*/
+
+@mixin zdss-icon-back() {  
+    @include zdss-icon('E'); 
 }
+
+/*
+
+Connectors icon
+
+<i class="zdss-icon-connectors"></i>
+
+*/
 
-.zd.icon.connectors:after {
-    content: 'F';
+@mixin zdss-icon-connectors() {  
+    @include zdss-icon('F'); 
 }
 
-.zd.icon.collections:after {
-    content: 'G';
+/*
+
+Collections icon
+
+<i class="zdss-icon-collections"></i>
+
+*/
+
+@mixin zdss-icon-collections() {  
+    @include zdss-icon('G'); 
 }
+
+/*
 
-.zd.icon.favorites:after {
-    content: 'H';
+Favorites icon
+
+<i class="zdss-icon-favorites"></i>
+
+*/
+
+@mixin zdss-icon-favorites() {  
+    @include zdss-icon('H'); 
 }
+
+/*
+
+Share icon
 
-.zd.icon.share:after {
-    content: 'I';
+<i class="zdss-icon-share"></i>
+
+*/
+
+@mixin zdss-icon-share() {  
+    @include zdss-icon('I'); 
 }
+
+/*
+
+Download icon
+
+<i class="zdss-icon-download"></i>
 
-.zd.icon.download:after {
-    content: 'J';
+*/
+
+@mixin zdss-icon-download() {
+    @include zdss-icon('J');
 }
+
+/*
+
+Upload icon
+
+<i class="zdss-icon-upload"></i>
 
-.zd.icon.upload:after {
-    content: 'K';
+*/
+
+@mixin zdss-icon-upload() {
+    @include zdss-icon('K');
 }
+
+/*
+
+Full Circle icon
+
+<i class="zdss-icon-circle-filled"></i>
+
+*/
 
-.zd.icon.circle-filled:after {
-    content: 'L';
+@mixin zdss-icon-circle-filled() {
+    @include zdss-icon('L');
 }
 
-.zd.icon.circle-empty:after {
-    content: 'M';
+/*
+
+Empty Circle icon
+
+<i class="zdss-icon-circle-empty"></i>
+
+*/
+
+@mixin zdss-icon-circle-empty() {
+    @include zdss-icon('M');
 }
+
+/*
 
-.zd.icon.plus:after {
-    content: 'N';
+Plus icon
+
+<i class="zdss-icon-plus"></i>
+
+*/
+
+@mixin zdss-icon-plus() {
+    @include zdss-icon('N');
 }
+
+/*
+
+Minus icon
 
-.zd.icon.minus:after {
-    content: 'O';
+<i class="zdss-icon-minus"></i>
+
+*/
+
+@mixin zdss-icon-minus() {
+    @include zdss-icon('O');
 }
+
+/*
+
+X with Circle icon
+
+<i class="zdss-icon-x-circle"></i>
 
-.zd.icon.x-circle:after {
-    content: 'P';
+*/
+
+@mixin zdss-icon-x-circle() {
+    @include zdss-icon('P');
 }
+
+/*
+
+X with Filled Circle icon
+
+<i class="zdss-icon-x-circle-filled"></i>
+
+*/
 
-.zd.icon.x-circle-filled:after {
-    content: 'Q';
+@mixin zdss-icon-x-circle-filled() {
+    @include zdss-icon('Q');
 }
 
-.zd.icon.x-circle-empty:after {
-    content: 'R';
+/*
+
+X with Empty Circle icon
+
+<i class="zdss-icon-x-circle-empty"></i>
+
+*/
+
+@mixin zdss-icon-x-circle-empty() {
+    @include zdss-icon('R');
 }
+
+/*
 
-.zd.icon.up-arrow:after {
-    content: 'S'
+Up Arrow icon
+
+<i class="zdss-icon-up-arrow"></i>
+
+*/
+
+@mixin zdss-icon-up-arrow() {
+    @include zdss-icon('S');
 }
+
+/*
+
+Down Arrow icon
 
-.zd.icon.down-arrow:after {
-    content: 'T'
+<i class="zdss-icon-down-arrow"></i>
+
+*/
+
+@mixin zdss-icon-down-arrow() {
+    @include zdss-icon('T');
 }
+
+/*
+
+Left Arrow icon
 
-.zd.icon.left-arrow:after {
-    content: 'U'
+<i class="zdss-icon-left-arrow"></i>
+
+*/
+
+@mixin zdss-icon-left-arrow() {
+    @include zdss-icon('U');
 }
+
+/*
+
+Right Arrow icon
+
+<i class="zdss-icon-right-arrow"></i>
 
-.zd.icon.right-arrow:after {
-    content: 'V'
+*/
+
+@mixin zdss-icon-right-arrow() {
+    @include zdss-icon('V');
 }
+
+/*
+
+Header icon
+
+<i class="zdss-icon-header"></i>
+
+*/
 
-.zd.icon.header:after {
-    content: 'W';
+@mixin zdss-icon-header() {
+    @include zdss-icon('W');
 }
 
-.zd.icon.drag:after {
-    content: 'X';
+/*
+
+Drag icon
+
+<i class="zdss-icon-drag"></i>
+
+*/
+
+@mixin zdss-icon-drag() {
+    @include zdss-icon('X');
 }
+
+/*
 
-.zd.icon.drag-corner:after {
-    content: 'Y';
+Drag Corner icon
+
+<i class="zdss-icon-drag-corner"></i>
+
+*/
+
+@mixin zdss-icon-drag-corner() {
+    @include zdss-icon('Y');
 }
+
+/*
+
+Zoomdata Logo icon
 
-.zd.icon.zoomdata-logo:after {
-    content: 'Z';
+<i class="zdss-icon-zoomdata-logo"></i>
+
+*/
+
+@mixin zdss-icon-zoomdata-logo() {
+    @include zdss-icon('Z');
 }
+
+/*
+
+Palette icon
+
+<i class="zdss-icon-palette"></i>
 
-.zd.icon.palette:after {
-    content: 'a';
+*/
+
+@mixin zdss-icon-palette() {
+    @include zdss-icon('a');
 }
+
+/*
+
+Filter icon
+
+<i class="zdss-icon-filter"></i>
+
+*/
 
-.zd.icon.filter:after {
-    content: 'b';
+@mixin zdss-icon-filter() {
+    @include zdss-icon('b');
 }
 
-.zd.icon.compare:after {
-    content: 'c';
+/*
+
+Compare icon
+
+<i class="zdss-icon-compare"></i>
+
+*/
+
+@mixin zdss-icon-compare() {
+    @include zdss-icon('c');
 }
+
+/*
 
-.zd.icon.sort:after {
-    content: 'd';
+Sort icon
+
+<i class="zdss-icon-sort"></i>
+
+*/
+
+@mixin zdss-icon-sort() {
+    @include zdss-icon('d');
 }
+
+/*
 
-.zd.icon.style:after {
-    content: 'e';
+Style icon
+
+<i class="zdss-icon-style"></i>
+
+*/
+
+@mixin zdss-icon-style() {
+    @include zdss-icon('e');
 }
+
+/*
+
+Colors icon
 
-.zd.icon.colors:after {
-    content: 'f';
+<i class="zdss-icon-colors"></i>
+
+*/
+
+@mixin zdss-icon-colors() {
+    @include zdss-icon('f');
 }
+
+/*
+
+Data icon
+
+<i class="zdss-icon-data"></i>
 
-.zd.icon.data:after {
-    content: 'g';
+*/
+
+@mixin zdss-icon-data() {
+    @include zdss-icon('g');
 }
+
+/*
+
+KPI icon
+
+<i class="zdss-icon-kpi"></i>
+
+*/
 
-.zd.icon.kpi:after {
-    content: 'h';
+@mixin zdss-icon-kpi() {
+    @include zdss-icon('h');
 }
 
-.zd.icon.info-circle-filled:after {
-    content: 'i';
+/*
+
+Info icon
+
+<i class="zdss-icon-info-circle-filled"></i>
+
+*/
+
+@mixin zdss-icon-info-circle-filled() {
+    @include zdss-icon('i');
 }
+
+/*
 
-.zd.icon.time-control:after {
-    content: 'j';
+Time Control icon
+
+<i class="zdss-icon-time-control"></i>
+
+*/
+
+@mixin zdss-icon-time-control() {
+    @include zdss-icon('j');
 }
+
+/*
+
+Add Element icon
 
-.zd.icon.add-element:after {
-    content: 'k';
+<i class="zdss-icon-add-element"></i>
+
+*/
+
+@mixin zdss-icon-add-element() {
+    @include zdss-icon('k');
 }
+
+/*
+
+Clone icon
+
+<i class="zdss-icon-clone"></i>
 
-.zd.icon.clone:after {
-    content: 'l';
+*/
+
+@mixin zdss-icon-clone() {
+    @include zdss-icon('l');
 }
+
+/*
+
+Fullscreen icon
+
+<i class="zdss-icon-fullscreen"></i>
+
+*/
 
-.zd.icon.fullscreen:after {
-    content: 'm';
+@mixin zdss-icon-fullscreen() {
+    @include zdss-icon('m');
 }
 
-.zd.icon.exit-fullscreen:after {
-    content: 'n';
+/*
+
+Exit Fullscreen icon
+
+<i class="zdss-icon-exit-fullscreen"></i>
+
+*/
+
+@mixin zdss-icon-exit-fullscreen() {
+    @include zdss-icon('n');
 }
 
-.zd.icon.info:after {
-    content: 'o';
+/*
+
+Info icon
+
+<i class="zdss-icon-info"></i>
+
+*/
+
+@mixin zdss-icon-info() {
+    @include zdss-icon('o');
 }
+
+/*
 
-.zd.icon.zoom-in:after {
-    content: 'p';
+Zoom In icon
+
+<i class="zdss-icon-zoom-in"></i>
+
+*/
+
+@mixin zdss-icon-zoom-in() {
+    @include zdss-icon('p');
 }
+
+/*
+
+Zoom Out icon
 
-.zd.icon.zoom-out:after {
-    content: 'q';
+<i class="zdss-icon-zoom-out"></i>
+
+*/
+
+@mixin zdss-icon-zoom-out() {
+    @include zdss-icon('q');
 }
+
+/*
+
+Magnifying Glass icon
+
+<i class="zdss-icon-magnifying-glass"></i>
 
-.zd.icon.magnifying-glass:after {
-    content: 'r';
+*/
+
+@mixin zdss-icon-magnifying-glass() {
+    @include zdss-icon('r');
 }
+
+/*
+
+Clock icon
+
+<i class="zdss-icon-clock"></i>
+
+*/
 
-.zd.icon.clock:after {
-    content: 's';
+@mixin zdss-icon-clock() {
+    @include zdss-icon('s');
 }
 
-.zd.icon.collections-small:after {
-    content: 't';
+/*
+
+Small Collections icon
+
+<i class="zdss-icon-collections-small"></i>
+
+*/
+
+@mixin zdss-icon-collections-small() {
+    @include zdss-icon('t');
 }
+
+/*
 
-.zd.icon.pencil:after {
-    content: 'u';
+Pencil icon
+
+<i class="zdss-icon-pencil"></i>
+
+*/
+
+@mixin zdss-icon-pencil() {
+    @include zdss-icon('u');
 }
+
+/*
+
+Calendar icon
 
-.zd.icon.calendar:after {
-    content: 'v';
+<i class="zdss-icon-calendar"></i>
+
+*/
+
+@mixin zdss-icon-calendar() {
+    @include zdss-icon('v');
 }
+
+/*
+
+Link icon
+
+<i class="zdss-icon-link"></i>
 
-.zd.icon.link:after {
-    content: 'w';
+*/
+
+@mixin zdss-icon-link() {
+    @include zdss-icon('w');
 }
+
+/*
+
+Break Link icon
+
+<i class="zdss-icon-break-link"></i>
 
-.zd.icon.break-link:after {
-    content: 'x';
+*/
+
+@mixin zdss-icon-break-link() {
+    @include zdss-icon('x');
 }
+
+/*
+
+Comment icon
+
+<i class="zdss-icon-comment"></i>
+
+*/
 
-.zd.icon.comment:after {
-    content: 'y';
+@mixin zdss-icon-comment() {
+    @include zdss-icon('y');
 }
 
-.zd.icon.zoomdata-logo-z:after {
-    content: 'z';
+/*
+
+Zoomdata Z icon
+
+<i class="zdss-icon-zoomdata-logo-z"></i>
+
+*/
+
+@mixin zdss-icon-zoomdata-logo-z() {
+    @include zdss-icon('z');
 }
+
+/*
 
-.zd.icon.square-outline:after {
-    content: '0';
+Square Outline icon
+
+<i class="zdss-icon-square-outline"></i>
+
+*/
+
+@mixin zdss-icon-square-outline() {
+    @include zdss-icon('0');
 }
+
+/*
+
+Square Filled icon
 
-.zd.icon.square-filled:after {
-    content: '1';
+<i class="zdss-icon-square-filled"></i>
+
+*/
+
+@mixin zdss-icon-square-filled() {
+    @include zdss-icon('1');
 }
+
+/*
+
+Stop icon
+
+<i class="zdss-icon-stop"></i>
 
-.zd.icon.stop:after {
-    content: '2';
+*/
+
+@mixin zdss-icon-stop() {
+    @include zdss-icon('2');
 }
+
+/*
+
+Play icon
+
+<i class="zdss-icon-play"></i>
+
+*/
 
-.zd.icon.play:after {
-    content: '3';
+@mixin zdss-icon-play() {
+    @include zdss-icon('3');
 }
 
-.zd.icon.pause:after {
-    content: '4';
+/*
+
+Pause icon
+
+<i class="zdss-icon-pause"></i>
+
+*/
+
+@mixin zdss-icon-pause() {
+    @include zdss-icon('4');
 }
+
+/*
 
-.zd.icon.fast-forward:after {
-    content: '5';
+Fast Forward icon
+
+<i class="zdss-icon-fast-forward"></i>
+
+*/
+
+@mixin zdss-icon-fast-forward() {
+    @include zdss-icon('5');
 }
+
+/*
+
+Faster Forward icon
 
-.zd.icon.faster-forward:after {
-    content: '6';
+<i class="zdss-icon-faster-forward"></i>
+
+*/
+
+@mixin zdss-icon-faster-forward() {
+    @include zdss-icon('6');
 }
+
+/*
+
+Faster Forward icon
 
-.zd.icon.fast-forward-outline:after {
-    content: '7';
+<i class="zdss-icon-fast-forward-outline"></i>
+
+*/
+
+@mixin zdss-icon-fast-forward-outline() {
+    @include zdss-icon('7');
 }
+
+/*
+
+Fasterer Forward icon
+
+<i class="zdss-icon-faster-forward-outline"></i>
 
-.zd.icon.faster-forward-outline:after {
-    content: '8';
+*/
+
+@mixin zdss-icon-faster-forward-outline() {
+    @include zdss-icon('8');
 }
+
+/*
+
+Checkmark icon
+
+<i class="zdss-icon-checkmark"></i>
+
+*/
 
-.zd.icon.checkmark:after {
-    content: '9';
+@mixin zdss-icon-checkmark() {
+    @include zdss-icon('9');
 }
 
-.zd.icon.sub-menu-down:after {
-    content: '+';
+/*
+
+Sub Menu Down icon
+
+<i class="zdss-icon-sub-menu-down"></i>
+
+*/
+
+@mixin zdss-icon-sub-menu-down() {
+    @include zdss-icon('+');
 }
+
+/*
 
-.zd.icon.sub-menu-right:after {
-    content: '=';
+Sub Menu Right icon
+
+<i class="zdss-icon-sub-menu-right"></i>
+
+*/
+
+@mixin zdss-icon-sub-menu-right() {
+    @include zdss-icon('=');
 }
+
+/*
+
+Zoomdata Logo Left icon
 
-.zd.icon.zoomdata-logo-left:after {
-    content: '(';
+<i class="zdss-icon-zoomdata-logo-left"></i>
+
+*/
+
+@mixin zdss-icon-zoomdata-logo-left() {
+    @include zdss-icon('(');
 }
+
+/*
+
+Zoomdata Logo Right icon
+
+<i class="zdss-icon-zoomdata-logo-right"></i>
 
-.zd.icon.zoomdata-logo-right:after {
-    content: ')';
+*/
+
+@mixin zdss-icon-zoomdata-logo-right() {
+    @include zdss-icon(')');
 }
+
+/*
+
+Warning icon
+
+<i class="zdss-icon-warning"></i>
+
+*/
 
-.zd.icon.warning:after {
-    content: '!';
+@mixin zdss-icon-warning() {
+    @include zdss-icon('!');
 }
 
-.zd.icon.sort-asc:after {
-    content: '@';
+/*
+
+Sort Ascening icon
+
+<i class="zdss-icon-sort-asc"></i>
+
+*/
+
+@mixin zdss-icon-sort-asc() {
+    @include zdss-icon('@');
 }
+
+/*
 
-.zd.icon.sort-desc:after {
-    content: '#';
+Sort Descending icon
+
+<i class="zdss-icon-sort-desc"></i>
+
+*/
+
+@mixin zdss-icon-sort-desc() {
+    @include zdss-icon('#');
 }
+
+/*
 
-.zd.icon.sort-percent-asc:after {
-    content: '$';
+Sort Percent Ascending icon
+
+<i class="zdss-icon-sort-percent-asc"></i>
+
+*/
+
+@mixin zdss-icon-sort-percent-asc() {
+    @include zdss-icon('$');
 }
+
+/*
+
+Sort Percent Descending icon
 
-.zd.icon.sort-percent-desc:after {
-    content: '%';
+<i class="zdss-icon-sort-percent-desc"></i>
+
+*/
+
+@mixin zdss-icon-sort-percent-desc() {
+    @include zdss-icon('%');
 }
+
+/*
+
+Sort Alphabetical Ascending icon
+
+<i class="zdss-icon-sort-alphabetical-asc"></i>
 
-.zd.icon.sort-alphabetical-asc:after {
-    content: '^';
+*/
+
+@mixin zdss-icon-sort-alphabetical-asc() {
+    @include zdss-icon('^');
 }
+
+/*
+
+Sort Alphabetical Descending icon
+
+<i class="zdss-icon-sort-alphabetical-desc"></i>
+
+*/
 
-.zd.icon.sort-alphabetical-desc:after {
-    content: '&';
+@mixin zdss-icon-sort-alphabetical-desc() {
+    @include zdss-icon('&');
 }
 
-.zd.icon.left-chevron:after {
-    content: '<';
+/*
+
+Left Chevron icon
+
+<i class="zdss-icon-left-chevron"></i>
+
+*/
+
+@mixin zdss-icon-left-chevron() {
+    @include zdss-icon('<');
 }
+
+/*
 
-.zd.icon.right-chevron:after {
-    content: '>';
+Right Chevron icon
+
+<i class="zdss-icon-right-chevron"></i>
+
+*/
+
+@mixin zdss-icon-right-chevron() {
+    @include zdss-icon('>');
 }
+
+/*
+
+Filled Minus with Circle icon
 
-.zd.icon.minus-circle-filled:after {
-    content: '-';
+<i class="zdss-icon-minus-circle-filled"></i>
+
+*/
+
+@mixin zdss-icon-minus-circle-filled() {
+    @include zdss-icon('-');
 }
+
+/*
+
+Filled Plus with Circle icon
+
+<i class="zdss-icon-plus-circle-filled"></i>
 
-.zd.icon.plus-circle-filled:after {
-    content: '_';
+*/
+
+@mixin zdss-icon-plus-circle-filled() {
+    @include zdss-icon('_');
 }
+
+/*
+
+Spinner icon
+
+<i class="zdss-icon-spinner"></i>
+
+*/
 
-.zd.icon.spinner {
+@mixin zdss-icon-spinner() {
     animation: spin 2s infinite linear;
     -webkit-animation: spin 2s infinite linear;
     -moz-animation: spin 2s infinite linear;
     -ms-animation: spin 2s infinite linear;
-}
-.zd.icon.spinner:after {
-    content: ',';
+    @include zdss-icon(',');
 }
 
-.zd.icon.undo:after {
-    content: '—';
+/*
+
+Undo icon
+
+<i class="zdss-icon-undo"></i>
+
+*/
+
+@mixin zdss-icon-undo() {
+    @include zdss-icon('—');
 }
 
-.zd.icon.group:after {
-    content: '–';
+/*
+
+Group icon
+
+<i class="zdss-icon-group"></i>
+
+*/
+
+@mixin zdss-icon-group() {
+    @include zdss-icon('—');
 }
 
-.zd.icon.ellipsis:after {
-    content: '…';
+/*
+
+Ellipsis icon
+
+<i class="zdss-icon-ellipsis"></i>
+
+*/
+
+@mixin zdss-icon-ellipsis() {
+    @include zdss-icon('…');
 }
 
-.zd.icon.configure:after {
-    content: '/';
+/*
+
+Configure icon
+
+<i class="zdss-icon-configure"></i>
+
+*/
+
+@mixin zdss-icon-configure() {
+    @include zdss-icon('/');
 }
 
-.zd.icon.faceted-search:after {
-    content: '[';
+/*
+
+Faceted Search icon
+
+<i class="zdss-icon-faceted-search"></i>
+
+*/
+
+@mixin zdss-icon-faceted-search() {
+    @include zdss-icon('[');
 }
 
-.zd.icon.faceted-filter:after {
-    content: ']';
+/*
+
+Faceted Filter icon
+
+<i class="zdss-icon-faceted-filter"></i>
+
+*/
+
+@mixin zdss-icon-faceted-filter() {
+    @include zdss-icon(']');
 }

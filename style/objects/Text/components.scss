@@ -1,0 +1,19 @@
+
+@import "../Basics/vars.scss";
+@import "../Basics/mixins.scss";
+
+/*
+
+Links
+
+<a class="zdss-link" href="/">Link to current page</a>
+
+*/
+
+@mixin zdss-link(){
+    color: $zdss-color-blue;
+    text-decoration: none;
+    &:hover{
+        color: $zdss-color-blue-dark;
+    }
+}
