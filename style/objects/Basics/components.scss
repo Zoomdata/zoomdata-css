@@ -36,3 +36,62 @@ Typical dark block
     color: white;
     @include zdss-basic-block();
 }
+
+
+@mixin zdss-close-icon($size: 10px, $color: white){
+    @include zdss-clickable;
+    width: ($size*2) + ($size/10);
+    position: relative;
+    &:after {
+        content: ' ';
+        border-top: 2px solid $color;        
+        border-left: 2px solid $color;
+        transform: rotate(-45deg);
+        position: absolute;
+        width: $size;
+        height: $size;
+        right:0px;
+    }
+    &:before {
+        content: ' ';
+        border-top: 2px solid $color;        
+        border-left: 2px solid $color;
+        transform: rotate(135deg);
+        position: absolute;
+        width: $size;
+        height: $size;
+        left:0px;
+    }
+}
+
+/*
+
+Modal popup
+
+<div class="zdss-popup-modal">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+
+@mixin zdss-popup-modal(){
+    @include zdss-dark-block();
+    position: relative;
+    &:after {
+        @include zdss-dark-block();
+        border-radius: 0;
+        transform: rotate(45deg);
+        content: ' ';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: -15px;
+        right: 10px;
+    }
+    .zdss-close {
+        @include zdss-close-icon(8px, $zdss-color-mercury);
+        float: right;
+        margin: 3px;
+    }
+}
