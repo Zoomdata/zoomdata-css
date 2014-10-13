@@ -34,7 +34,7 @@ Notification Alert (Info, Error, Success, Warning)
 
 	.close {
 		cursor: pointer;
-		font-size: 1.2em;
+		font-size: $zdss-fs-large;
 		float: right;
 		margin-right: -20px;
 		@include zdss-icon-x-circle-empty();
@@ -108,14 +108,14 @@ Nofitications Popup
 	border-color: $zdss-nt-popup-border-color;
 	border-radius: 12px;
 	box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
-	font-size: 14px;
+	font-size: $zdss-fs-normal;
 	color: #000000;
 	overflow: hidden;
 
 	.notification-head {
 		padding: 8px;
 		line-height: 20px;
-		font-size: 18px;
+		font-size: $zdss-fs-large;
 		color: #FFFFFF;
 		text-align: center;
 		background: $zdss-nt-popup-border-color;
@@ -137,7 +137,7 @@ Nofitications Popup
 			padding: 3px 0;
 			margin-right: 8px;
 			color: $zdss-nt-popup-border-color;
-			font-size: 20px;
+			font-size: $zdss-fs-larger;
 			text-align: center;
 			@include zdss-icon-checkmark();
 		}
@@ -180,7 +180,7 @@ Notification Error Message
 	right: 5px;
 	top: 38px;
 	width: 300px;
-	font-size: 14px;
+	font-size: $zdss-fs-normal;
 	max-width: calc(100% - 60px);
 	margin-bottom: 0px;
 	border-radius: 4px;
@@ -193,7 +193,7 @@ Notification Error Message
 		position: relative;
 		top: -2px;
 		cursor: pointer;
-		font-size: 1.4em;
+		font-size: $zdss-fs-normal;
 		float: right;
 		margin-right: -20px;
 		line-height: 24px;
@@ -377,7 +377,7 @@ Pop-up Dialog
 	.close {
 		position: absolute;
 		cursor: pointer;
-		font-size: 1.4em;
+		font-size: $zdss-fs-large;
 		right: 10px;
 		line-height: 24px;
 		@include zdss-icon-x-circle();
@@ -392,7 +392,7 @@ Pop-up Dialog
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		font-size: 20px;
+		font-size: $zdss-fs-larger;
 		line-height: 22px;
 		width: 92%;
 	}
@@ -404,7 +404,7 @@ Pop-up Dialog
 		.subhead {
 			color: $zdss-color-silver;
 			font-weight: bold;
-			font-size: 13px;
+			font-size: $zdss-fs-normal;
 			letter-spacing: 0.2em;
 			margin: 7px 3px 5px;
 			text-transform: uppercase;

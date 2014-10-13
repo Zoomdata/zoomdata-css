@@ -170,7 +170,7 @@ Horizontal menu
         background-color: $zdss-color-mercury;
         color: $zdss-color-obsidian;
         float: left;
-        font-size: 13px;
+        font-size: $zdss-fs-normal;
         padding: 0.5em 1em;
         @include zdss-clickable;
     }
@@ -212,7 +212,7 @@ Tabs
         color: $zdss-color-chromium;
         float: left;
         padding: 10px;
-        font-size: 13px;
+        font-size: $zdss-fs-normal;
         margin-right: 4px;
     }
     > li[active] {

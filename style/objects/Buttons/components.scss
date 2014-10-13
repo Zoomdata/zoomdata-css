@@ -18,9 +18,9 @@ A majority of buttons in the site are built from the same base class.
 */
 
 @mixin zdss-button(){
-    font-size: 14px;
+    font-size: $zdss-fs-normal;
     font-weight: 700;
-    line-height: 14px;
+    line-height: $zdss-fs-normal;
 
     position: relative;
 
@@ -100,7 +100,7 @@ Additional buttons that are useful for stuff.
         margin: 0 auto;
         padding-top: 0;
         text-align: center;
-        font-size: 12px;
+        font-size: $zdss-fs-small;
         font-weight: normal;
     }
     &.active {
@@ -127,7 +127,7 @@ Buttons meant to look like a circle.
 
 @mixin zdss-button-circular(){
     @include zdss-button();
-    font-size: 18px;
+    font-size: $zdss-fs-large;
     line-height: $default-button-height - 2px;
     padding: 0;
     border-radius: 50%;
@@ -160,7 +160,7 @@ Buttons meant to look rounded.
     @include zdss-button();
     width: $default-button-height;
     height: $default-button-height;
-    font-size: 18px;
+    font-size: $zdss-fs-large;
     line-height: $default-button-height - 2px;
     padding: 0;
     background-color: $zdss-color-iron;

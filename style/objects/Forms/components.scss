@@ -26,8 +26,8 @@ Checkbox
         padding: 0 3px;
         border: 1px solid #949494;
         border-radius: 6px;
-        font-size: 12px;
-        line-height: 18px;
+        font-size: $zdss-fs-small;
+        line-height: $zdss-fs-large;
         appearance: none;
         display: none;
     }
@@ -38,7 +38,7 @@ Checkbox
         width: 20px;
         height: 20px;
         display: inline-block;
-        font-size: 14px;
+        font-size: $zdss-fs-normal;
         font-family: "Zoomdata";
         color: #ffffff;
         text-align: center;
@@ -149,8 +149,8 @@ Inputs
     min-height: 30px;
     padding: 4px 7px;
     margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: $zdss-fs-normal;
+    line-height: $zdss-fs-larger;
     color: #555;
     vertical-align: middle;
 
@@ -292,6 +292,10 @@ A simple typical form
         Used memory
         <input type="text" name="">
     </label>
+    <label>
+        Other info
+        <textarea></textarea>
+    </label>
     <div class="submit-controls">
         <button>Validate</button>
     </div>
@@ -305,7 +309,7 @@ A simple typical form
     padding: 10px 20px;
     color: $zdss-color-charcoal;
     h3 {
-        font-size: 15px;
+        font-size: $zdss-fs-normal;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -325,14 +329,14 @@ A simple typical form
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 1.5em;
+        font-size: $zdss-fs-normal;
     }
     
     label {
         display: block;
-        font-size: 13px;
+        font-size: $zdss-fs-normal;
         font-weight: bold;
-        input {
+        input, textarea, select {
             display: block;
         }
         > *.caption {
