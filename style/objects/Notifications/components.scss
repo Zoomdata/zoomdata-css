@@ -12,11 +12,10 @@ Nofitications
 Notification Alert (Info, Error, Success, Warning)
 (position: absolute;)
 
-<div class="zdss-notification-alert" style="position: inherit">Simple notification message.<div class="zd icon remove"></div></div>
-<div class="zdss-notification-alert error" style="position: inherit">Failed to save bookmark.<div class="zd icon remove"></div></div>
-<div class="zdss-notification-alert success" style="position: inherit">Bookmark has been saved.<div class="zd icon remove"></div></div>
-<div class="zdss-notification-alert warning" style="position: inherit">This bookmark name already exist.<div class="zd icon remove"></div></div>
-
+<div class="zdss-notification-alert" style="position: inherit">Simple notification message.<div class="close"></div></div>
+<div class="zdss-notification-alert-error" style="position: inherit">Failed to save bookmark.<div class="close"></div></div>
+<div class="zdss-notification-alert-success" style="position: inherit">Bookmark has been saved.<div class="close"></div></div>
+<div class="zdss-notification-alert-warning" style="position: inherit">This bookmark name already exist.<div class="close"></div></div>
 
 */
 
@@ -28,6 +27,7 @@ Notification Alert (Info, Error, Success, Warning)
 	right: 0;
 	line-height: 26px;
 	padding: 8px 35px 8px 14px;
+	margin-bottom: 5px;
 	border-radius: 0;
 	border: none;
 	z-index: 3000;
@@ -36,24 +36,36 @@ Notification Alert (Info, Error, Success, Warning)
 	background-color: 	$zdss-nt-alert-backround;
 	border-color: 		$zdss-nt-alert-border-color;
 
-	&.error {
-		color: 				$zdss-nt-alert-error-text-color;
-		background-color: 	$zdss-nt-alert-error-backround;
-		border-color: 		$zdss-nt-alert-error-border-color;		
+	.close {
+		cursor: pointer;
+		font-size: 1.2em;
+		float: right;
+		margin-right: -20px;
+		@include zdss-icon-x-circle-empty();
 	}
 
-	&.success {
-		color: 				$zdss-nt-alert-success-text-color;
-		background-color: 	$zdss-nt-alert-success-backround;
-		border-color: 		$zdss-nt-alert-success-border-color;		
-	}
+}
 
-	&.warning {
-		color: 				$zdss-nt-alert-warning-text-color;
-		background-color: 	$zdss-nt-alert-warning-backround;
-		border-color: 		$zdss-nt-alert-warning-border-color;		
-	}
+@mixin zdss-notification-alert-error(){
+	@include zdss-notification-alert();
+	color: 				$zdss-nt-alert-error-text-color;
+	background-color: 	$zdss-nt-alert-error-backround;
+	border-color: 		$zdss-nt-alert-error-border-color;	
+}
 
+@mixin zdss-notification-alert-success(){
+	@include zdss-notification-alert();
+	color: 				$zdss-nt-alert-success-text-color;
+	background-color: 	$zdss-nt-alert-success-backround;
+	border-color: 		$zdss-nt-alert-success-border-color;
+
+}
+
+@mixin zdss-notification-alert-warning(){
+	@include zdss-notification-alert();
+	color: 				$zdss-nt-alert-warning-text-color;
+	background-color: 	$zdss-nt-alert-warning-backround;
+	border-color: 		$zdss-nt-alert-warning-border-color;
 }
 
 /*
@@ -72,8 +84,7 @@ Nofitications Popup
 		</div>
 	</div>      
 </div>
-</br>
-<div class="zdss-notification-popup error" style="position: inherit">            
+<div class="zdss-notification-popup-error" style="position: inherit">            
 	<div class="notification-head">                
 		<span>Validation Error</span>                
 		<div class="notification-close" title="Close" style="position: inherit"></div>            
@@ -95,6 +106,7 @@ Nofitications Popup
 	z-index: 1050;
 	width: 276px;
 	background: white;
+	margin: 4px;
 	border: solid;
 	border-width: 1px;
 	border-color: $zdss-nt-popup-border-color;
@@ -138,18 +150,65 @@ Nofitications Popup
 
 		}
 	}
+}
 
-	&.error {
-		border-color: $zdss-nt-popup-border-color-error;
+@mixin zdss-notification-popup-error(){
+	@include zdss-notification-popup();
+
+	border-color: $zdss-nt-popup-border-color-error;
 		
-		.notification-head {
-			background: $zdss-nt-popup-border-color-error;
-		}
-		.notification-body {
-
-			.notification-icon {
-				color: $zdss-nt-popup-border-color-error;
-			}
+	.notification-head {
+		background: $zdss-nt-popup-border-color-error;
+	}
+	.notification-body {
+		.notification-icon {
+			color: $zdss-nt-popup-border-color-error;
 		}
 	}
 }
+
+/*
+
+Notification Error Message
+
+<div class="zdss-notification-msg" style="position: inherit">
+  	<div class="close" value="close"></div>
+	<text>Internar Server Error</text>
+</div>
+
+*/ 
+
+
+@mixin zdss-notification-msg() {
+	position: absolute;
+	right: 5px;
+	top: 38px;
+	width: 300px;
+	font-size: 14px;
+	max-width: calc(100% - 60px);
+	margin-bottom: 0px;
+	border-radius: 4px;
+	padding: 8px 35px 8px 14px;
+	color: $zdss-nt-error-msg-text-color;
+	background: $zdss-nt-error-msg-backround;
+	border-color: $zdss-nt-error-msg-border-color;
+
+	.close {
+		position: relative;
+		top: -2px;
+		cursor: pointer;
+		font-size: 1.4em;
+		float: right;
+		margin-right: -20px;
+		line-height: 24px;
+		@include zdss-icon-x-circle-empty();
+	}
+
+	.text {
+		line-height: 24px;
+	}
+
+}
+
+
+
