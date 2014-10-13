@@ -82,6 +82,10 @@ Additional buttons that are useful for stuff.
     <i class="zdss-icon-palette"></i>
     <div class="text">Attributes</div>
 </button>
+<button class="zdss-button-rail active">
+    <i class="zdss-icon-filter"></i>
+    <div class="text">Filters</div>
+</button>
 
 */
 
@@ -99,8 +103,11 @@ Additional buttons that are useful for stuff.
         font-size: 12px;
         font-weight: normal;
     }
-    &:hover{
+    &.active {
         background-color: $zdss-color-charcoal;
+    }
+    &:hover{
+        background-color: #767676;
     }
 }
 
@@ -135,6 +142,7 @@ Buttons meant to look like a circle.
     }
     &.active{
         color: $zdss-color-gold;
+        background-color: $zdss-color-charcoal;
     }
 }
 
@@ -201,7 +209,7 @@ A button group is a series of buttons laid out next to each other, all part of o
 
 
 <div class="zdss-button-group">
-    <button type="button" class="zdss-button">First</button>
+    <button type="button" class="zdss-button selected">First</button>
     <button type="button" class="zdss-button">Second</button>
     <button type="button" class="zdss-button">Third</button>
 </div>
@@ -246,6 +254,7 @@ A button group is a series of buttons laid out next to each other, all part of o
         }
         &.selected{
             z-index: 2;
+            background-color: $zdss-color-charcoal;
             box-shadow: $zdss-btn-pressed-shadow;
         }
     }
