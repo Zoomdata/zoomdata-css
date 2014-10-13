@@ -3,7 +3,7 @@
 
 Horizontal list without background
 
-<ul class="zdss-horizontal-list">
+<ul class="zdss-list-horizontal">
     <li>General</li>
     <li>Filepath</li>
     <li>Fields</li>
@@ -12,10 +12,10 @@ Horizontal list without background
 
 */
 
-@mixin zdss-horizontal-list(){
+@mixin zdss-list-horizontal(){
     list-style: none;
     > li {
-        @include zdss-light-block();
+        @include zdss-block-light();
         color: $zdss-color-obsidian;
         float: left;
         margin: 0px;
@@ -39,7 +39,7 @@ Horizontal list without background
 
 Vertical list of rounded light elements
 
-<ul class="zdss-vertical-list">
+<ul class="zdss-list-vertical">
     <li>Ene</li>
     <li>Bene</li>
     <li>Raba</li>
@@ -47,7 +47,7 @@ Vertical list of rounded light elements
 
 */
 
-@mixin zdss-vertical-list(){
+@mixin zdss-list-vertical(){
     list-style: none;
     > li:first-child {
         @include zdss-rounded-top();
@@ -57,7 +57,7 @@ Vertical list of rounded light elements
     }
     > li {
         @include zdss-clickable();
-        @include zdss-light-block();
+        @include zdss-block-light();
         margin: 1px;
         border-radius: 0;
     }
@@ -72,7 +72,7 @@ Vertical list of rounded light elements
 
 The same, but darker
 
-<ul class="zdss-vertical-list-dark">
+<ul class="zdss-list-vertical-dark">
     <li>Ene</li>
     <li>Bene</li>
     <li>Raba</li>
@@ -82,10 +82,10 @@ The same, but darker
 
 
 
-@mixin zdss-vertical-list-dark(){
-    @include zdss-vertical-list();
+@mixin zdss-list-vertical-dark(){
+    @include zdss-list-vertical();
     > li {
-        @include zdss-dark-block();
+        @include zdss-block-dark();
         background-color: $zdss-color-charcoal;
         margin: 1px;
         border-radius: 0;
@@ -113,7 +113,7 @@ Accordion list
     list-style: none;
     > li {
         @include zdss-clickable();
-        @include zdss-light-block();
+        @include zdss-block-light();
         @include zdss-rounded();
         margin: 4px;
         position: relative;
@@ -146,7 +146,7 @@ Accordion list with arrows on the right
         right: $size;
         top: ($height/2) - ($size/2);
     }
-    > li:after:hover {
+    > li:hover:after {
         border-color: white;
     }
 }
@@ -155,7 +155,7 @@ Accordion list with arrows on the right
 
 Horizontal menu
 
-<ul class="zdss-horizontal-menu">
+<ul class="zdss-menu-horizontal">
     <li>Sources</li>
     <li>Visualization Studio</li>
     <li>Users & Groups</li>
@@ -163,7 +163,7 @@ Horizontal menu
 
 */
 
-@mixin zdss-horizontal-menu(){
+@mixin zdss-menu-horizontal(){
     list-style: none;
     > li {
         background-color: $zdss-color-mercury;
@@ -186,7 +186,7 @@ $tabs-color1: $zdss-color-charcoal;
 
 Tabs
 
-<div class="zdss-light-block">
+<div class="zdss-block-light">
     <ul class="zdss-tabs">
         <li active>Favourites</li>
         <li>Data Sources</li>

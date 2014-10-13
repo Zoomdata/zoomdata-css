@@ -2,10 +2,10 @@
 
 Typical block
 
-<div class="zdss-basic-block">Lorem ipsum</div>
+<div class="zdss-block">Lorem ipsum</div>
 
 */
-@mixin zdss-basic-block(){
+@mixin zdss-block(){
     display: block;
     margin: 0.5em;
     padding: 0.5em;
@@ -15,30 +15,30 @@ Typical block
 
 Typical light block
 
-<div class="zdss-light-block">Lorem ipsum</div>
+<div class="zdss-block-light">Lorem ipsum</div>
 
 */
 
-@mixin zdss-light-block(){
+@mixin zdss-block-light(){
     background-color: $light-background;
-    @include zdss-basic-block();
+    @include zdss-block();
 }
 /*
 
 Typical dark block
 
-<div class="zdss-dark-block">Lorem ipsum</div>
+<div class="zdss-block-dark">Lorem ipsum</div>
 
 */
 
-@mixin zdss-dark-block(){
+@mixin zdss-block-dark(){
     background-color: $dark-background;
     color: white;
-    @include zdss-basic-block();
+    @include zdss-block();
 }
 
 
-@mixin zdss-close-icon($size: 10px, $color: white){
+@mixin zdss-icon-close($size: 10px, $color: white){
     @include zdss-clickable;
     width: ($size*2) + ($size/10);
     position: relative;
@@ -76,11 +76,11 @@ Modal popup
 */
 
 @mixin zdss-popup-modal(){
-    @include zdss-dark-block;
+    @include zdss-block-dark;
     @include zdss-shadow();
     position: relative;
     &:after {
-        @include zdss-dark-block();
+        @include zdss-block-dark();
         border-radius: 0;
         transform: rotate(45deg);
         content: ' ';
@@ -91,7 +91,7 @@ Modal popup
         right: 10px;
     }
     .zdss-close {
-        @include zdss-close-icon(8px, $zdss-color-mercury);
+        @include zdss-icon-close(8px, $zdss-color-mercury);
         float: right;
         margin: 3px;
     }
@@ -100,12 +100,12 @@ Modal popup
 
 
 @mixin zdss-tooltip(){
-    @include zdss-dark-block;
+    @include zdss-block-dark;
     @include zdss-shadow-small();
     position: relative;
     padding: 10px 15px;
     &:after {
-        @include zdss-dark-block();
+        @include zdss-block-dark();
         border-radius: 0;
         transform: rotate(45deg);
         content: '';
@@ -115,7 +115,7 @@ Modal popup
         height: 10px;
     }
     .zdss-close {
-        @include zdss-close-icon(8px, $zdss-color-mercury);
+        @include zdss-icon-close(8px, $zdss-color-mercury);
         float: right;
         margin: 3px;
     }
