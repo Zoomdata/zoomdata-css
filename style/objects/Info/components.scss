@@ -232,6 +232,7 @@ Modal popup
         height: 20px;
         bottom: -15px;
         right: 10px;
+        z-index: -1;
     }
     .zdss-close {
         @include zdss-icon-close(8px, $zdss-color-mercury);
@@ -374,7 +375,7 @@ Pop-up Dialog
 	background-color: $zdss-color-obsidian;
 	margin: 10px;
 	opacity: 0.9;
-	max-width: 250px;
+	max-width: 280px;
 
 	.close {
 		position: absolute;

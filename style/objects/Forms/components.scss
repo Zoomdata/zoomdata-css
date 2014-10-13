@@ -10,9 +10,11 @@ Forms
 
 Checkbox
 
-<div style="width: 40px; height: 40px; background: rgba(0,0,0,0.7); padding: 10px;">
-    <input class="zdss-checkbox" id="checkbox" type="checkbox">
-    <label for="checkbox"></label>
+<div style="width: 40px; height: 65px; background: rgba(0,0,0,0.7); padding: 10px;">
+    <input class="zdss-checkbox" id="checkbox1" type="checkbox">
+    <label for="checkbox1"></label>
+    <input class="zdss-checkbox" id="checkbox2" type="checkbox" checked>
+    <label for="checkbox2"></label>
 </div>
 
 */
@@ -61,7 +63,7 @@ Checkbox
 Radio Button
 
 <div style="width: 40px; background: rgba(0,0,0,0.7); padding: 9px;">
-    <input class="zdss-radio" type="radio" id="radio1" name="radio">
+    <input class="zdss-radio" type="radio" id="radio1" name="radio" checked>
     <label for="radio1"></label>
     <input class="zdss-radio" type="radio" id="radio2" name="radio">
     <label for="radio2"></label>
