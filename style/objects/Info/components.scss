@@ -240,6 +240,31 @@ Modal popup
     }
 }
 
+/*
+
+Modal popup light
+
+<div class="zdss-popup-modal-light">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+
+@mixin zdss-popup-modal-light() {
+	@include zdss-popup-modal();
+	@include zdss-block-light;
+
+	color: #333333;
+
+	&:after {
+		background-color: inherit;
+	}
+
+	.zdss-close {
+		@include zdss-icon-close(8px, $zdss-color-charcoal);
+	}
+}
 
 
 @mixin zdss-tooltip(){
@@ -302,4 +327,170 @@ Tooltip(right)
 }
 
 
+/*
+Pop-up Dialog
 
+<div class="zdss-popup-dialog">
+	<div class="close"></div>
+	<div class="dialog-header">
+		<span>Time Control</span>
+	</div>
+	<div class="dialog-body">
+		<div class="subhead">TIME WINDOW</div>
+		<div>
+			<dl>
+				<dt title="Time Window">Time Window:</dt>
+				<dd>10/13/2014, 2:37:45 PM</dd>
+				<dd>10/13/2014, 3:37:44 PM</dd>
+				<dt title="Volume ">Volume :</dt>
+				<dd>770</dd>
+			</dl>
+		</div>
+		<ul>
+			<li>Custom</li>
+			<li class="selected">Rolling Hour</li>
+			<li>Today</li>
+		</ul>
+	</div>
+	<div class="dialog-actions">
+		<button>Details</button>
+	</div>
+</div>
+<div class="zdss-popup-dialog">
+	<div class="dialog-body">
+		<ul>
+			<li>avg</li>
+			<li class="selected">min</li>
+			<li>max</li>
+			<li>sum</li>
+		</ul>
+	</div>
+</div>
+
+*/
+
+@mixin zdss-popup-dialog() {
+	@include zdss-popup-modal();
+	background-color: $zdss-color-obsidian;
+	margin: 10px;
+	opacity: 0.9;
+	max-width: 250px;
+
+	.close {
+		position: absolute;
+		cursor: pointer;
+		font-size: 1.4em;
+		right: 10px;
+		line-height: 24px;
+		@include zdss-icon-x-circle();
+	}
+
+	.dialog-header {
+		color: $zdss-popup-header;
+		text-align: center;
+		margin: 0 0 10px 0;
+		font-weight: normal;
+		word-wrap: break-word;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-size: 20px;
+		line-height: 22px;
+		width: 92%;
+	}
+
+	.dialog-body {
+		// background-color: $zdss-color-obsidian;
+		border-radius: 12px;
+
+		.subhead {
+			color: $zdss-color-silver;
+			font-weight: bold;
+			font-size: 13px;
+			letter-spacing: 0.2em;
+			margin: 7px 3px 5px;
+			text-transform: uppercase;
+		}
+
+		ul {
+			@include zdss-list-vertical();
+			background-color: $zdss-color-mercury;
+			border-radius: inherit;
+			border: 1px solid $zdss-color-obsidian;
+			margin: 0px;
+
+			li {
+				background: inherit;
+				margin: 0px;
+				border-bottom: 1px solid $zdss-color-obsidian;
+				text-transform: capitalize;
+				color: $zdss-color-obsidian;
+
+				&:hover {
+					color: $zdss-color-obsidian;
+					background: inherit;
+					font-weight: bold;
+				}
+
+				&.selected {
+					color: $zdss-color-obsidian;
+					font-weight: bold;
+				}
+			}
+
+			li:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.dialog-actions {
+		padding-top: 8px;
+
+		button {
+			@include zdss-button-primary();
+		}
+	}
+
+	&:after {
+		background-color: inherit;
+	}
+}
+
+/*
+Pop-up Dialog Light
+
+<div class="zdss-popup-dialog-light">
+	<div class="dialog-body">
+		<ul>
+			<li>avg</li>
+			<li class="selected">min</li>
+			<li>max</li>
+			<li>sum</li>
+		</ul>
+	</div>
+</div>
+*/
+
+@mixin zdss-popup-dialog-light() {
+	@include zdss-popup-dialog();
+	background: $zdss-color-silver;
+
+	.dialog-body {
+		background: $zdss-color-obsidian;
+		ul {
+			background-color: $zdss-color-obsidian;
+			border-color: $zdss-color-silver;
+			li {
+				color: $zdss-color-white;
+				border-color: inherit;
+				&:hover {
+					color: $zdss-color-white;
+				}
+				&.selected {
+					color: $zdss-color-green;
+				}
+			}
+		}
+	}
+}

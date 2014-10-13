@@ -49,6 +49,7 @@ Vertical list of rounded light elements
 
 @mixin zdss-list-vertical(){
     list-style: none;
+    padding-left: 0px;
     > li:first-child {
         @include zdss-rounded-top();
     }
