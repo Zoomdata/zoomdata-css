@@ -232,7 +232,6 @@ Modal popup
         height: 20px;
         bottom: -15px;
         right: 10px;
-        z-index: -1;
     }
     .zdss-close {
         @include zdss-icon-close(8px, $zdss-color-mercury);
@@ -333,11 +332,9 @@ Pop-up Dialog
 
 <div class="zdss-popup-dialog">
 	<div class="close"></div>
-	<div class="dialog-header">
-		<span>Time Control</span>
-	</div>
+	<h3 class="dialog-header">Time Control</h3>
 	<div class="dialog-body">
-		<div class="subhead">TIME WINDOW</div>
+		<h4 class="subhead">TIME WINDOW</h4>
 		<div>
 			<dl>
 				<dt title="Time Window">Time Window:</dt>
@@ -391,7 +388,6 @@ Pop-up Dialog
 		text-align: center;
 		margin: 0 0 10px 0;
 		font-weight: normal;
-		word-wrap: break-word;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
@@ -426,6 +422,7 @@ Pop-up Dialog
 				border-bottom: 1px solid $zdss-color-obsidian;
 				text-transform: capitalize;
 				color: $zdss-color-obsidian;
+				height: 36px;
 
 				&:hover {
 					color: $zdss-color-obsidian;
@@ -455,6 +452,7 @@ Pop-up Dialog
 
 	&:after {
 		background-color: inherit;
+		z-index: -1;
 	}
 }
 
