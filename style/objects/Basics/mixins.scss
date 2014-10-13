@@ -3,6 +3,12 @@
     cursor: pointer;
 }
 
+/*
+
+Makes any element rounded
+
+*/
+
 @mixin zdss-rounded($radius: $border-radius){
     border-radius: $radius;
 }
@@ -49,5 +55,21 @@
 
 @mixin zdss-shadow-small(){
     box-shadow: 2px 2px 5px 0px $zdss-color-iron;
+}
+
+/*
+    
+Makes the text shorten with dots, if it exeeds the size of container
+
+<div class="zdss-overflow-with-dots zdss-block-dark" style="width: 150px;">
+    Lorem ipsum dolor, sit amet. Lorem ipsum dolor, sit amet. 
+</div>
+
+*/
+
+@mixin zdss-overflow-with-dots(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 

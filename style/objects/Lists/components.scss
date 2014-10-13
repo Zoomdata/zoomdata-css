@@ -298,3 +298,56 @@ Dropdown list
     }
 }
 
+/*
+
+A list that can be used in popups(or elsewhere)
+<div style="width:250px;">
+    <ul class="zdss-list-vertical-popup">
+        <li>
+            Money
+        </li>
+        <li>
+            Number
+        </li>
+        <li>
+            Integer
+        </li>
+        <li>
+            Time
+        </li>
+    </ul>
+</div>
+    
+*/
+
+@mixin zdss-list-vertical-popup(){
+    @include zdss-list-vertical();
+    @include zdss-rounded();
+    background-color: $zdss-color-mercury;
+    border: 1px solid $zdss-color-obsidian;
+    margin: 0px;
+
+    li {
+        background: inherit;
+        margin: 0px;
+        border-bottom: 1px solid $zdss-color-obsidian;
+        text-transform: capitalize;
+        color: $zdss-color-obsidian;
+
+        &:hover {
+            color: $zdss-color-obsidian;
+            background: inherit;
+            font-weight: bold;
+        }
+
+        &.selected {
+            color: $zdss-color-obsidian;
+            font-weight: bold;
+        }
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+}
+

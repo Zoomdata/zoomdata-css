@@ -384,6 +384,7 @@ Pop-up Dialog
 	}
 
 	.dialog-header {
+        @include zdss-overflow-with-dots;
 		color: $zdss-popup-header;
 		text-align: center;
 		margin: 0 0 10px 0;
@@ -410,41 +411,12 @@ Pop-up Dialog
 		}
 
 		ul {
-			@include zdss-list-vertical();
-			background-color: $zdss-color-mercury;
-			border-radius: inherit;
-			border: 1px solid $zdss-color-obsidian;
-			margin: 0px;
-
-			li {
-				background: inherit;
-				margin: 0px;
-				border-bottom: 1px solid $zdss-color-obsidian;
-				text-transform: capitalize;
-				color: $zdss-color-obsidian;
-				height: 36px;
-
-				&:hover {
-					color: $zdss-color-obsidian;
-					background: inherit;
-					font-weight: bold;
-				}
-
-				&.selected {
-					color: $zdss-color-obsidian;
-					font-weight: bold;
-				}
-			}
-
-			li:last-child {
-				border-bottom: none;
-			}
+			@include zdss-list-vertical-popup();
 		}
 	}
 
 	.dialog-actions {
 		padding-top: 8px;
-
 		button {
 			@include zdss-button-primary();
 		}
