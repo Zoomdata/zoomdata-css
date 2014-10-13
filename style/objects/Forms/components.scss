@@ -268,3 +268,82 @@ Range
         
     }
 }
+
+/*
+
+A simple typical form
+
+<form class="zdss-form">
+    <h3>
+        "Sparkit" settings
+    </h3>
+    <div class="help">
+    </div>
+    <label>
+        Spark Master URL
+        <input type="text" name="">
+    </label>
+    <label>
+        Spark home directory
+        <input type="text" name="">
+        <div class="caption">Compatible with Spark 1.0.0</div>
+    </label>
+    <label>
+        Used memory
+        <input type="text" name="">
+    </label>
+    <div class="submit-controls">
+        <button>Validate</button>
+    </div>
+</form>
+
+*/
+
+@mixin zdss-form(){
+    @include zdss-block-light;
+    position: relative;
+    padding: 10px 20px;
+    color: $zdss-color-charcoal;
+    h3 {
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    input {
+        @include zdss-input;
+    }
+    textarea {
+        @include zdss-textarea;
+    }
+    input[type=search] {
+        @include zdss-search;
+    }
+    
+    .help {
+        @include zdss-icon-help;
+        @include zdss-clickable;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    label {
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        input {
+            display: block;
+        }
+        > *.caption {
+            font-weight: normal;
+            margin: 10px 0px;
+            margin-top: -10px;
+        }
+    }
+    .submit-controls {
+        text-align: center;
+    }
+    button {
+        @include zdss-button-primary;
+    }
+}
