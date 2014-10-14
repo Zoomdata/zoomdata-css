@@ -187,7 +187,7 @@ Buttons for the axis of visualizations
     padding: 0 12px;
     background-color: $zdss-color-chromium;
     color: $zdss-color-iron;
-    z-index: 2;
+    z-index: 1;
     text-transform: capitalize;
     white-space: nowrap;
     &:hover{
@@ -243,17 +243,17 @@ A button group is a series of buttons laid out next to each other, all part of o
             margin-right: 0px;
         }
         &:hover{
-            z-index: 2;
+            z-index: 1;
         }
         &:focus{
-            z-index: 2;
+            z-index: 1;
         }
         &:active{
-            z-index: 2;
+            z-index: 1;
             box-shadow: $zdss-btn-pressed-shadow;
         }
         &.selected{
-            z-index: 2;
+            z-index: 1;
             background-color: $zdss-color-charcoal;
             box-shadow: $zdss-btn-pressed-shadow;
         }
