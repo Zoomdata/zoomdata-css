@@ -17,3 +17,23 @@ Links
         color: $zdss-color-blue-dark;
     }
 }
+
+/*
+
+Headings
+
+<h1 class="zdss-h">Heading 1</h1>
+<h2 class="zdss-h">Heading 2</h2>
+<h3 class="zdss-h">Heading 3</h3>
+<h4 class="zdss-h">Heading 4</h4>
+<h5 class="zdss-h">Heading 5</h5>
+<h6 class="zdss-h">Heading 6</h6>
+
+*/
+
+@mixin zdss-h(){
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-weight: bold;
+}
