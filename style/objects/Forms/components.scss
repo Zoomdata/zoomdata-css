@@ -141,7 +141,7 @@ Inputs
 */
 
 @mixin zdss-input(){
-    border-radius: 12px;
+    border-radius: 4px;
     border: 1px solid #999;
     
     display: inline-block;
@@ -216,11 +216,32 @@ Search
     &[type=search]{
         @include zdss-input();
         
-        background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='20px' width='20px'> <defs> <font horiz-adv-x='2048' > <font-face font-family='ZD' units-per-em='2048' ascent='1638' descent='-410' /> <missing-glyph horiz-adv-x='614' /> <glyph unicode='r' d='M0 1181q0 178 69 337q67 160 185 277q116 117 276 184q159 69 337 69q175 0 337 -69t277 -184t184 -277q69 -159 69 -337q0 -269 -154 -491l423 -422q45 -45 45 -111q0 -65 -45 -110q-47 -47 -112 -47t-110 47l-422 421q-224 -153 -492 -153q-177 0 -337 68t-276 184 q-118 118 -185 279q-69 159 -69 335zM315 1181q0 -226 163 -389q158 -161 389 -161q228 0 389 161q163 165 163 389q0 227 -163 390q-161 162 -389 162q-231 0 -389 -162q-163 -162 -163 -390z' /> </font> </defs> <text x='0' y='20' fill='grey' font-size='16' font-family='ZD'>r</text> </svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='20px' width='20px'> <defs> <style type='text/css' > <![CDATA[ @font-face { font-family: 'zdregular'; src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff'); font-weight: normal; font-style: normal; } text{ font-family: 'zdregular' } ]]> </style> <font horiz-adv-x='2048' > <font-face font-family='ZD' units-per-em='2048' ascent='1638' descent='-410' /> <missing-glyph horiz-adv-x='614' /> <glyph unicode='r' d='M0 1181q0 178 69 337q67 160 185 277q116 117 276 184q159 69 337 69q175 0 337 -69t277 -184t184 -277q69 -159 69 -337q0 -269 -154 -491l423 -422q45 -45 45 -111q0 -65 -45 -110q-47 -47 -112 -47t-110 47l-422 421q-224 -153 -492 -153q-177 0 -337 68t-276 184 q-118 118 -185 279q-69 159 -69 335zM315 1181q0 -226 163 -389q158 -161 389 -161q228 0 389 161q163 165 163 389q0 227 -163 390q-161 162 -389 162q-231 0 -389 -162q-163 -162 -163 -390z' /> </font> </defs> <text x='0' y='20' fill='grey' font-size='16' font-family='ZD'>r</text> </svg>");
         background-repeat: no-repeat;
         background-position: 8px 2px;
         padding-left: 30px;        
     }
+}
+
+/*
+
+Select
+
+<div style="padding: 9px;">
+    <select class="zdss-select">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+</div>
+
+*/
+@mixin zdss-select(){
+    @include zdss-input();
+    height: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: $zdss-color-white;
 }
 
 /*
