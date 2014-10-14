@@ -91,11 +91,6 @@ Attention! This grid is build on "display-block" param, so be careful, don't use
     display: inline-block; 
     width: unquote(round(($size/$colnum)*100) + '%');
     vertical-align: top;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
 }
 
 @mixin zdss-col1() {
@@ -158,11 +153,6 @@ Responsive grid column. Should be used by other mixins.
 @mixin zdss-rcol($big-size: 1, $medium-size: 3, $small-size: 12, $colnum: 12){
     display: inline-block; 
     vertical-align: top;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
     @media screen and (max-width: 639px){ 
         width: unquote(floor(($small-size/$colnum)*100) + '%');
     }
@@ -171,6 +161,28 @@ Responsive grid column. Should be used by other mixins.
     }
     @media screen and (min-width: 1024px){
         width: unquote(floor(($big-size/$colnum)*100) + '%');
+    }
+}
+
+/*
+
+The same mixin, but it acceps percent values of width
+
+ 
+
+*/
+    
+@mixin zdss-rcolp($big-size: 100, $medium-size: 33, $small-size: 100){
+    display: inline-block; 
+    vertical-align: top;
+    @media screen and (max-width: 639px){ 
+        width: unquote($small-size + '%');
+    }
+    @media screen and (max-width: 1023px) and (min-width: 640px){
+        width: unquote($medium-size + '%');
+    }
+    @media screen and (min-width: 1024px){
+        width: unquote($big-size + '%');
     }
 }
 
@@ -194,4 +206,7 @@ An example of responsive grid. Classname "zdss-rcol-4-6-12" means that the colum
     @include zdss-rcol(4, 6, 12);
 }
 
+@mixin zdss-rcolp-33-50-100(){
+    @include zdss-rcolp(33, 50, 100);
+}
 
