@@ -130,6 +130,94 @@ Makes the text shorten with dots, if it exeeds the size of container
                             <div style="clear:both;"></div>
                         </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-overflow-with-dots zdss-block-dark&quot; style=&quot;width: 150px;&quot;&gt;
     Lorem ipsum dolor, sit amet. Lorem ipsum dolor, sit amet. 
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-col</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Default grid
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code">Attention! This grid is build on "display-block" param, so be careful, don't use whitespaces between the columns!
+<div class="grid" style="border:1px solid #ddd">
+    <div class="zdss-col3" style="border:1px solid #ddd">3/12 width column
+</div><div class="zdss-col5" style="border:1px solid #ddd">5/12 width column
+</div><div class="zdss-col4" style="border:1px solid #ddd">4/12 width column</div> 
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">Attention! This grid is build on &quot;display-block&quot; param, so be careful, don&#039;t use whitespaces between the columns!
+&lt;div class=&quot;grid&quot; style=&quot;border:1px solid #ddd&quot;&gt;
+    &lt;div class=&quot;zdss-col3&quot; style=&quot;border:1px solid #ddd&quot;&gt;3/12 width column
+&lt;/div&gt;&lt;div class=&quot;zdss-col5&quot; style=&quot;border:1px solid #ddd&quot;&gt;5/12 width column
+&lt;/div&gt;&lt;div class=&quot;zdss-col4&quot; style=&quot;border:1px solid #ddd&quot;&gt;4/12 width column&lt;/div&gt; 
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-rcol</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Responsive grid column. Should be used by other mixins.
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"> 
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html"></code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-rcolp</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">The same mixin, but it acceps percent values of width
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"> 
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html"></code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-rcol-4-6-12</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold"></div>
+                                <div class="descr">
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code">An example of responsive grid. Classname "zdss-rcol-4-6-12" means that the column will be 4/12 width on the large screens, 
+6/12(a half) on the medium screens(640 to 1024px), and 12/12(full width) on the small screens.
+<div>
+    <div class="zdss-rcol-4-6-12" style="border:1px solid #ddd">1/3, 1/2, 1</div><div 
+        class="zdss-rcol-4-6-12" style="border:1px solid #ddd">1/3, 1/2, 1</div><div 
+        class="zdss-rcol-4-12-12" style="border:1px solid #ddd">1/3, 1, 1</div>
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">An example of responsive grid. Classname &quot;zdss-rcol-4-6-12&quot; means that the column will be 4/12 width on the large screens, 
+6/12(a half) on the medium screens(640 to 1024px), and 12/12(full width) on the small screens.
+&lt;div&gt;
+    &lt;div class=&quot;zdss-rcol-4-6-12&quot; style=&quot;border:1px solid #ddd&quot;&gt;1/3, 1/2, 1&lt;/div&gt;&lt;div 
+        class=&quot;zdss-rcol-4-6-12&quot; style=&quot;border:1px solid #ddd&quot;&gt;1/3, 1/2, 1&lt;/div&gt;&lt;div 
+        class=&quot;zdss-rcol-4-12-12&quot; style=&quot;border:1px solid #ddd&quot;&gt;1/3, 1, 1&lt;/div&gt;
 &lt;/div&gt;</code></pre></div></div></div><div style="clear:both;"></div><h2 id="cButtons">Buttons</h2><div class="doc-mixin"><div class="mixin">
                             <span>zdss-button</span>
                             <div style="padding:5px">
@@ -416,6 +504,35 @@ Button Group
                             <div style="clear:both;"></div>
                         </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div&gt;
     &lt;input class=&quot;zdss-search&quot; placeholder=&quot;Search&quot; id=&quot;search&quot; type=&quot;search&quot;&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-select</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Select
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"><div style="padding: 9px;">
+    <select class="zdss-select">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div style=&quot;padding: 9px;&quot;&gt;
+    &lt;select class=&quot;zdss-select&quot;&gt;
+        &lt;option&gt;Option 1&lt;/option&gt;
+        &lt;option&gt;Option 2&lt;/option&gt;
+        &lt;option&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
 &lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
                             <span>zdss-range</span>
                             <div style="padding:5px">
@@ -2695,4 +2812,31 @@ Light table
 
 </div>
                             <div style="clear:both;"></div>
-                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;a class=&quot;zdss-link&quot; href=&quot;/&quot;&gt;Link to current page&lt;/a&gt;</code></pre></div></div></div><div style="clear:both;"></div></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;a class=&quot;zdss-link&quot; href=&quot;/&quot;&gt;Link to current page&lt;/a&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-h</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Headings
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"><h1 class="zdss-h">Heading 1</h1>
+<h2 class="zdss-h">Heading 2</h2>
+<h3 class="zdss-h">Heading 3</h3>
+<h4 class="zdss-h">Heading 4</h4>
+<h5 class="zdss-h">Heading 5</h5>
+<h6 class="zdss-h">Heading 6</h6>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;h1 class=&quot;zdss-h&quot;&gt;Heading 1&lt;/h1&gt;
+&lt;h2 class=&quot;zdss-h&quot;&gt;Heading 2&lt;/h2&gt;
+&lt;h3 class=&quot;zdss-h&quot;&gt;Heading 3&lt;/h3&gt;
+&lt;h4 class=&quot;zdss-h&quot;&gt;Heading 4&lt;/h4&gt;
+&lt;h5 class=&quot;zdss-h&quot;&gt;Heading 5&lt;/h5&gt;
+&lt;h6 class=&quot;zdss-h&quot;&gt;Heading 6&lt;/h6&gt;</code></pre></div></div></div><div style="clear:both;"></div></div>
