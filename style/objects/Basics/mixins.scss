@@ -73,3 +73,125 @@ Makes the text shorten with dots, if it exeeds the size of container
     text-overflow: ellipsis;
 }
 
+/*
+
+Default grid
+
+Attention! This grid is build on "display-block" param, so be careful, don't use whitespaces between the columns!
+<div class="grid" style="border:1px solid #ddd">
+    <div class="zdss-col3" style="border:1px solid #ddd">3/12 width column
+</div><div class="zdss-col5" style="border:1px solid #ddd">5/12 width column
+</div><div class="zdss-col4" style="border:1px solid #ddd">4/12 width column</div> 
+</div>
+
+*/
+
+    
+@mixin zdss-col($size: 1, $colnum: 12){
+    display: inline-block; 
+    width: unquote(round(($size/$colnum)*100) + '%');
+    vertical-align: top;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+@mixin zdss-col1() {
+    @include zdss-col();
+}
+
+@mixin zdss-col2() {
+    @include zdss-col(2);
+}
+
+@mixin zdss-col3() {
+    @include zdss-col(3);
+}
+
+@mixin zdss-col4() {
+    @include zdss-col(4);
+}
+
+@mixin zdss-col5() {
+    @include zdss-col(5);
+}
+
+@mixin zdss-col6() {
+    @include zdss-col(6);
+}
+
+@mixin zdss-col7() {
+    @include zdss-col(7);
+}
+
+@mixin zdss-col8() {
+    @include zdss-col(8);
+}
+
+@mixin zdss-col9() {
+    @include zdss-col(9);
+}
+
+@mixin zdss-col10() {
+    @include zdss-col(10);
+}
+
+@mixin zdss-col11() {
+    @include zdss-col(11);
+}
+
+@mixin zdss-col12() {
+    @include zdss-col(12);
+}
+
+/*
+
+Responsive grid column. Should be used by other mixins.
+
+ 
+
+*/
+
+    
+@mixin zdss-rcol($big-size: 1, $medium-size: 3, $small-size: 12, $colnum: 12){
+    display: inline-block; 
+    vertical-align: top;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    @media screen and (max-width: 639px){ 
+        width: unquote(floor(($small-size/$colnum)*100) + '%');
+    }
+    @media screen and (max-width: 1023px) and (min-width: 640px){
+        width: unquote(floor(($medium-size/$colnum)*100) + '%');
+    }
+    @media screen and (min-width: 1024px){
+        width: unquote(floor(($big-size/$colnum)*100) + '%');
+    }
+}
+
+/*
+
+An example of responsive grid. Classname "zdss-rcol-4-6-12" means that the column will be 4/12 width on the large screens, 
+6/12(a half) on the medium screens(640 to 1024px), and 12/12(full width) on the small screens.
+<div>
+    <div class="zdss-rcol-4-6-12" style="border:1px solid #ddd">1/3, 1/2, 1</div><div 
+        class="zdss-rcol-4-6-12" style="border:1px solid #ddd">1/3, 1/2, 1</div><div 
+        class="zdss-rcol-4-12-12" style="border:1px solid #ddd">1/3, 1, 1</div>
+</div>
+
+*/
+
+@mixin zdss-rcol-4-6-12(){
+    @include zdss-rcol(4, 6, 12);
+}
+
+@mixin zdss-rcol-4-12-12(){
+    @include zdss-rcol(4, 6, 12);
+}
+
+

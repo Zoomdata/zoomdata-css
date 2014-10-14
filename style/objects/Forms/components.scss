@@ -199,6 +199,7 @@ Textarea
     @include zdss-input();
     line-height: 14px;
     height: 6em;
+    width: 100%;
 }
 
 /*
@@ -329,7 +330,7 @@ A simple typical form
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: $zdss-fs-normal;
+        font-size: $zdss-fs-large;
     }
     
     label {
