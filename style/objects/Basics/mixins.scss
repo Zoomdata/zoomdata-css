@@ -57,6 +57,10 @@ Makes any element rounded
     box-shadow: 2px 2px 5px 0px $zdss-color-iron;
 }
 
+@mixin zdss-disabled() {
+    color: $zdss-color-iron;
+}
+
 /*
     
 Makes the text shorten with dots, if it exeeds the size of container

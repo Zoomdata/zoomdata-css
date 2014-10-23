@@ -305,9 +305,9 @@ A simple typical form
         Spark Master URL
         <input type="text" name="">
     </label>
-    <label>
+    <label disabled>
         Spark home directory
-        <input type="text" name="">
+        <input type="text" name="" disabled>
         <div class="caption">Compatible with Spark 1.0.0</div>
     </label>
     <label>
@@ -352,6 +352,10 @@ A simple typical form
         top: 20px;
         right: 20px;
         font-size: $zdss-fs-large;
+    }
+    
+    [disabled] {
+        @include zdss-disabled;
     }
     
     label {
