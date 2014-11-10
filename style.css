@@ -380,8 +380,29 @@ html {
   -webkit-font-smoothing: antialiased;
   /* [5] */ }
 
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Light.otf.woff) format('woff'), url(fonts/Source Sans Pro/TTF/SourceSansPro-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Regular.otf.woff) format('woff'), url(fonts/Source Sans Pro/TTF/SourceSansPro-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Bold.otf.woff) format('woff'), url(fonts/Source Sans Pro/TTF/SourceSansPro-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal; }
+
 body {
-  font-family: source-sans-pro, sans-serif !important; }
+  font-family: 'Source Sans Pro', sans-serif !important; }
 
 /*
 Components
@@ -1297,9 +1318,9 @@ A simple typical form
         Spark Master URL
         <input type="text" name="">
     </label>
-    <label>
+    <label disabled>
         Spark home directory
-        <input type="text" name="">
+        <input type="text" name="" disabled>
         <div class="caption">Compatible with Spark 1.0.0</div>
     </label>
     <label>
@@ -1857,10 +1878,10 @@ Pop-up Dialog Light
     border-color: white; }
 
 .zdss-shadow {
-  box-shadow: 5px 5px 10px 0px #939393; }
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3); }
 
-.zdss-shadow-small {
-  box-shadow: 2px 2px 5px 0px #939393; }
+.zdss-disabled {
+  color: #939393; }
 
 .zdss-overflow-with-dots {
   overflow: hidden;
@@ -2003,7 +2024,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2033,7 +2054,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2066,7 +2087,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2099,7 +2120,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2144,7 +2165,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2188,7 +2209,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2227,7 +2248,7 @@ Pop-up Dialog Light
   line-height: 14px;
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 32px;
   margin-bottom: 0;
   padding: 7px 12px;
   cursor: pointer;
@@ -2279,7 +2300,7 @@ Pop-up Dialog Light
     line-height: 14px;
     position: relative;
     display: inline-block;
-    height: 40px;
+    height: 32px;
     margin-bottom: 0;
     padding: 7px 12px;
     cursor: pointer;
@@ -2765,6 +2786,8 @@ Pop-up Dialog Light
     font-size: 17px; }
     .zdss-form .help:after {
       content: 'C'; }
+  .zdss-form [disabled] {
+    color: #939393; }
   .zdss-form label {
     display: block;
     font-size: 14px;
@@ -2783,7 +2806,7 @@ Pop-up Dialog Light
     line-height: 14px;
     position: relative;
     display: inline-block;
-    height: 40px;
+    height: 32px;
     margin-bottom: 0;
     padding: 7px 12px;
     cursor: pointer;
@@ -4002,10 +4025,10 @@ Pop-up Dialog Light
   border-width: 1px;
   border-color: #68AD45;
   border-radius: 12px;
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   font-size: 14px;
   color: #000000;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3); }
   .zdss-notification-popup .notification-head {
     padding: 8px;
     line-height: 20px;
@@ -4061,10 +4084,10 @@ Pop-up Dialog Light
   border-width: 1px;
   border-color: #68AD45;
   border-radius: 12px;
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   font-size: 14px;
   color: #000000;
   overflow: hidden;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   border-color: #E46839; }
   .zdss-notification-popup-error .notification-head {
     padding: 8px;
@@ -4154,7 +4177,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 5px 5px 10px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative; }
   .zdss-popup-modal:after {
     background-color: #595959;
@@ -4203,7 +4226,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 5px 5px 10px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   background-color: #E6E6E6;
   display: block;
@@ -4282,7 +4305,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 2px 2px 5px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   padding: 10px 15px; }
   .zdss-tooltip:after {
@@ -4331,7 +4354,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 2px 2px 5px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   padding: 10px 15px; }
   .zdss-tooltip-left:after {
@@ -4382,7 +4405,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 2px 2px 5px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   padding: 10px 15px; }
   .zdss-tooltip-right:after {
@@ -4433,7 +4456,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 5px 5px 10px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   background-color: #323232;
   margin: 10px;
@@ -4569,7 +4592,7 @@ Pop-up Dialog Light
       line-height: 14px;
       position: relative;
       display: inline-block;
-      height: 40px;
+      height: 32px;
       margin-bottom: 0;
       padding: 7px 12px;
       cursor: pointer;
@@ -4597,7 +4620,8 @@ Pop-up Dialog Light
         background-color: #00829d; }
   .zdss-popup-dialog:after {
     background-color: inherit;
-    z-index: -1; }
+    z-index: -1;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3); }
 
 .zdss-popup-dialog-light {
   background-color: #595959;
@@ -4606,7 +4630,7 @@ Pop-up Dialog Light
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 5px 5px 10px 0px #939393;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   background-color: #323232;
   margin: 10px;
@@ -4743,7 +4767,7 @@ Pop-up Dialog Light
       line-height: 14px;
       position: relative;
       display: inline-block;
-      height: 40px;
+      height: 32px;
       margin-bottom: 0;
       padding: 7px 12px;
       cursor: pointer;
@@ -4771,7 +4795,8 @@ Pop-up Dialog Light
         background-color: #00829d; }
   .zdss-popup-dialog-light:after {
     background-color: inherit;
-    z-index: -1; }
+    z-index: -1;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3); }
   .zdss-popup-dialog-light .dialog-body {
     background: #323232; }
     .zdss-popup-dialog-light .dialog-body ul {
@@ -4797,6 +4822,7 @@ Pop-up Dialog Light
     float: left;
     margin: 0px;
     background: inherit;
+    padding: 0.1em 0.5em;
     cursor: pointer;
     border-radius: 12px; }
   .zdss-list-horizontal > li:hover {
