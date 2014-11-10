@@ -20,6 +20,7 @@ Horizontal list without background
         float: left;
         margin: 0px;
         background: inherit;
+        padding: 0.1em 0.5em;
         @include zdss-clickable();
         @include zdss-rounded();
     }

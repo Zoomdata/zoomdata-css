@@ -50,11 +50,7 @@ Makes any element rounded
 }
 
 @mixin zdss-shadow(){
-    box-shadow: 5px 5px 10px 0px $zdss-color-iron;
-}
-
-@mixin zdss-shadow-small(){
-    box-shadow: 2px 2px 5px 0px $zdss-color-iron;
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
 }
 
 @mixin zdss-disabled() {

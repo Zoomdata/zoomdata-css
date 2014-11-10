@@ -107,10 +107,10 @@ Nofitications Popup
 	border-width: 1px;
 	border-color: $zdss-nt-popup-border-color;
 	border-radius: 12px;
-	box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
 	font-size: $zdss-fs-normal;
 	color: #000000;
 	overflow: hidden;
+	@include zdss-shadow();
 
 	.notification-head {
 		padding: 8px;
@@ -269,7 +269,7 @@ Modal popup light
 
 @mixin zdss-tooltip(){
     @include zdss-block-dark;
-    @include zdss-shadow-small();
+    @include zdss-shadow();
     position: relative;
     padding: 10px 15px;
     &:after {
@@ -425,6 +425,7 @@ Pop-up Dialog
 	&:after {
 		background-color: inherit;
 		z-index: -1;
+		@include zdss-shadow();
 	}
 }
 
