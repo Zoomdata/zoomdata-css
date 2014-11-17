@@ -14,7 +14,7 @@
     "grunt-contrib-copy": "^0.6.0",
     "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-mixdoc": "^0.1.0",
+    "grunt-mixdoc": "latest",
     "grunt-gh-pages": "^0.9.1",
     "grunt-kss": "^0.4.0",
     "grunt-sass": "^0.14.2",
