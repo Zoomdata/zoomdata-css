@@ -385,20 +385,24 @@ Button Group
                             </div>
                         </div>
                         <div class="doc-description">
-                            <div class="doc-code"><div style="width: 40px; height: 65px; background: rgba(0,0,0,0.7); padding: 10px;">
+                            <div class="doc-code"><div style="width: 40px; height: 85px; background: rgba(0,0,0,0.7); padding: 10px;">
     <input class="zdss-checkbox" id="checkbox1" type="checkbox">
     <label for="checkbox1"></label>
     <input class="zdss-checkbox" id="checkbox2" type="checkbox" checked>
     <label for="checkbox2"></label>
+    <input disabled class="zdss-checkbox" id="checkbox3" type="checkbox">
+    <label for="checkbox3"></label>
 </div>
 
 </div>
                             <div style="clear:both;"></div>
-                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div style=&quot;width: 40px; height: 65px; background: rgba(0,0,0,0.7); padding: 10px;&quot;&gt;
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div style=&quot;width: 40px; height: 85px; background: rgba(0,0,0,0.7); padding: 10px;&quot;&gt;
     &lt;input class=&quot;zdss-checkbox&quot; id=&quot;checkbox1&quot; type=&quot;checkbox&quot;&gt;
     &lt;label for=&quot;checkbox1&quot;&gt;&lt;/label&gt;
     &lt;input class=&quot;zdss-checkbox&quot; id=&quot;checkbox2&quot; type=&quot;checkbox&quot; checked&gt;
     &lt;label for=&quot;checkbox2&quot;&gt;&lt;/label&gt;
+    &lt;input disabled class=&quot;zdss-checkbox&quot; id=&quot;checkbox3&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label for=&quot;checkbox3&quot;&gt;&lt;/label&gt;
 &lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
                             <span>zdss-radio</span>
                             <div style="padding:5px">
@@ -419,6 +423,8 @@ Button Group
     <label for="radio2"></label>
     <input class="zdss-radio" type="radio" id="radio3" name="radio">
     <label for="radio3"></label>
+    <input disabled class="zdss-radio" type="radio" id="radio3" name="radio">
+    <label for="radio3"></label>
 </div>
 
 </div>
@@ -429,6 +435,8 @@ Button Group
     &lt;input class=&quot;zdss-radio&quot; type=&quot;radio&quot; id=&quot;radio2&quot; name=&quot;radio&quot;&gt;
     &lt;label for=&quot;radio2&quot;&gt;&lt;/label&gt;
     &lt;input class=&quot;zdss-radio&quot; type=&quot;radio&quot; id=&quot;radio3&quot; name=&quot;radio&quot;&gt;
+    &lt;label for=&quot;radio3&quot;&gt;&lt;/label&gt;
+    &lt;input disabled class=&quot;zdss-radio&quot; type=&quot;radio&quot; id=&quot;radio3&quot; name=&quot;radio&quot;&gt;
     &lt;label for=&quot;radio3&quot;&gt;&lt;/label&gt;
 &lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
                             <span>zdss-input</span>
@@ -2215,6 +2223,52 @@ Button Group
     &lt;a class=&quot;zdss-close&quot;&gt;&lt;/a&gt;
     Lorem ipsum
 &lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-popup-left</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Popup (left)
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"><div class="zdss-popup-left">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-popup-left&quot;&gt;
+    &lt;a class=&quot;zdss-close&quot;&gt;&lt;/a&gt;
+    Lorem ipsum
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-popup-right</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Popup (right)
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"><div class="zdss-popup-right">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-popup-right&quot;&gt;
+    &lt;a class=&quot;zdss-close&quot;&gt;&lt;/a&gt;
+    Lorem ipsum
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
                             <span>zdss-tooltip-left</span>
                             <div style="padding:5px">
                                 <div class="title" style="font-weight:bold">
@@ -2228,15 +2282,13 @@ Button Group
                         </div>
                         <div class="doc-description">
                             <div class="doc-code"><div class="zdss-tooltip-left">
-    <a class="zdss-close"></a>
-    Lorem ipsum
+    I am tooltip!
 </div>
 
 </div>
                             <div style="clear:both;"></div>
                         </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-tooltip-left&quot;&gt;
-    &lt;a class=&quot;zdss-close&quot;&gt;&lt;/a&gt;
-    Lorem ipsum
+    I am tooltip!
 &lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
                             <span>zdss-tooltip-right</span>
                             <div style="padding:5px">
@@ -2251,15 +2303,55 @@ Button Group
                         </div>
                         <div class="doc-description">
                             <div class="doc-code"><div class="zdss-tooltip-right">
-    <a class="zdss-close"></a>
-    Lorem ipsum
+    I am right tooltip!
 </div>
 
 </div>
                             <div style="clear:both;"></div>
                         </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-tooltip-right&quot;&gt;
-    &lt;a class=&quot;zdss-close&quot;&gt;&lt;/a&gt;
-    Lorem ipsum
+    I am right tooltip!
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-tooltip-top</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Tooltip(top)
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"><div class="zdss-tooltip-top">
+    I am top tooltip!
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-tooltip-top&quot;&gt;
+    I am top tooltip!
+&lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
+                            <span>zdss-tooltip-bottom</span>
+                            <div style="padding:5px">
+                                <div class="title" style="font-weight:bold">
+
+</div>
+                                <div class="descr">Tooltip(bottom)
+
+</div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <div class="doc-description">
+                            <div class="doc-code"><div class="zdss-tooltip-bottom">
+    I am bottom tooltip!
+</div>
+
+</div>
+                            <div style="clear:both;"></div>
+                        </div><div style="width:45%;float:left;padding:0px;"><div class="source"><pre><code class="html">&lt;div class=&quot;zdss-tooltip-bottom&quot;&gt;
+    I am bottom tooltip!
 &lt;/div&gt;</code></pre></div></div></div><div class="doc-mixin"><div class="mixin">
                             <span>zdss-popup-dialog</span>
                             <div style="padding:5px">
