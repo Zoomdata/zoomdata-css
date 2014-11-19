@@ -267,7 +267,7 @@ Modal popup light
 }
 
 
-@mixin zdss-tooltip(){
+@mixin zdss-popup(){
     @include zdss-block-dark;
     @include zdss-shadow();
     position: relative;
@@ -291,17 +291,17 @@ Modal popup light
 
 /*
 
-Tooltip(left)
+Popup (left)
 
-<div class="zdss-tooltip-left">
+<div class="zdss-popup-left">
     <a class="zdss-close"></a>
     Lorem ipsum
 </div>
 
 */
 
-@mixin zdss-tooltip-left(){
-    @include zdss-tooltip();
+@mixin zdss-popup-left(){
+    @include zdss-popup();
     &:after {
         left: -15px;
     }
@@ -310,11 +310,68 @@ Tooltip(left)
 
 /*
 
+Popup (right)
+
+<div class="zdss-popup-right">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+
+@mixin zdss-popup-right(){
+    @include zdss-popup();
+    &:after {
+        right: -15px;
+    }
+}
+
+
+@mixin zdss-tooltip(){
+    @include zdss-block();
+    position: relative;
+    background-color: white;
+    border: 1px solid $zdss-color-iron;
+    border-radius: $border-radius-small;
+    font-size: $zdss-fs-small;
+    &:after {
+        @include zdss-block-dark();
+        border-radius: 0;
+        background-color: $zdss-color-iron;
+        transform: rotate(45deg);
+        content: '';
+        position: absolute;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        opacity: 0.99;
+        z-index: -2;
+    }
+}
+
+/*
+
+Tooltip(left)
+
+<div class="zdss-tooltip-left">
+    I am tooltip!
+</div>
+
+*/
+
+@mixin zdss-tooltip-left(){
+    @include zdss-tooltip();
+    &:after {
+        left: -12px;
+    }
+}
+
+/*
+
 Tooltip(right)
 
 <div class="zdss-tooltip-right">
-    <a class="zdss-close"></a>
-    Lorem ipsum
+    I am right tooltip!
 </div>
 
 */
@@ -322,10 +379,9 @@ Tooltip(right)
 @mixin zdss-tooltip-right(){
     @include zdss-tooltip();
     &:after {
-        right: -15px;
+        right: -12px;
     }
 }
-
 
 /*
 Pop-up Dialog
