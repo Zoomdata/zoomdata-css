@@ -341,7 +341,6 @@ Popup (right)
         transform: rotate(45deg);
         content: '';
         position: absolute;
-        top: 3px;
         width: 10px;
         height: 10px;
         opacity: 0.99;
@@ -362,6 +361,7 @@ Tooltip(left)
 @mixin zdss-tooltip-left(){
     @include zdss-tooltip();
     &:after {
+        top: 3px;
         left: -12px;
     }
 }
@@ -379,7 +379,44 @@ Tooltip(right)
 @mixin zdss-tooltip-right(){
     @include zdss-tooltip();
     &:after {
+        top: 3px;
         right: -12px;
+    }
+}
+
+/*
+
+Tooltip(top)
+
+<div class="zdss-tooltip-top">
+    I am top tooltip!
+</div>
+
+*/
+
+@mixin zdss-tooltip-top(){
+    @include zdss-tooltip();
+    &:after {
+        bottom: -12px;
+        left: 12px;
+    }
+}
+
+/*
+
+Tooltip(bottom)
+
+<div class="zdss-tooltip-bottom">
+    I am bottom tooltip!
+</div>
+
+*/
+
+@mixin zdss-tooltip-bottom(){
+    @include zdss-tooltip();
+    &:after {
+        top: -12px;
+        left: 12px;
     }
 }
 
