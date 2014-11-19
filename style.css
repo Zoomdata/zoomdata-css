@@ -1225,11 +1225,13 @@ Forms
 
 Checkbox
 
-<div style="width: 40px; height: 65px; background: rgba(0,0,0,0.7); padding: 10px;">
+<div style="width: 40px; height: 85px; background: rgba(0,0,0,0.7); padding: 10px;">
     <input class="zdss-checkbox" id="checkbox1" type="checkbox">
     <label for="checkbox1"></label>
     <input class="zdss-checkbox" id="checkbox2" type="checkbox" checked>
     <label for="checkbox2"></label>
+    <input disabled class="zdss-checkbox" id="checkbox3" type="checkbox">
+    <label for="checkbox3"></label>
 </div>
 
 */
@@ -1243,6 +1245,8 @@ Radio Button
     <input class="zdss-radio" type="radio" id="radio2" name="radio">
     <label for="radio2"></label>
     <input class="zdss-radio" type="radio" id="radio3" name="radio">
+    <label for="radio3"></label>
+    <input disabled class="zdss-radio" type="radio" id="radio3" name="radio">
     <label for="radio3"></label>
 </div>
 
@@ -1722,11 +1726,30 @@ Modal popup light
 */
 /*
 
+Popup (left)
+
+<div class="zdss-popup-left">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+/*
+
+Popup (right)
+
+<div class="zdss-popup-right">
+    <a class="zdss-close"></a>
+    Lorem ipsum
+</div>
+
+*/
+/*
+
 Tooltip(left)
 
 <div class="zdss-tooltip-left">
-    <a class="zdss-close"></a>
-    Lorem ipsum
+    I am tooltip!
 </div>
 
 */
@@ -1735,8 +1758,25 @@ Tooltip(left)
 Tooltip(right)
 
 <div class="zdss-tooltip-right">
-    <a class="zdss-close"></a>
-    Lorem ipsum
+    I am right tooltip!
+</div>
+
+*/
+/*
+
+Tooltip(top)
+
+<div class="zdss-tooltip-top">
+    I am top tooltip!
+</div>
+
+*/
+/*
+
+Tooltip(bottom)
+
+<div class="zdss-tooltip-bottom">
+    I am bottom tooltip!
 </div>
 
 */
@@ -2383,6 +2423,8 @@ Pop-up Dialog Light
   color: #D6E100;
   background-color: #313131;
   border: 1px solid #D6E100; }
+.zdss-checkbox:disabled + label:before {
+  cursor: not-allowed; }
 
 .zdss-radio[type=radio] {
   display: none; }
@@ -2403,6 +2445,8 @@ Pop-up Dialog Light
     border: 1px solid #aaa;
     background-color: #fff;
     color: #fff; }
+  .zdss-radio[type=radio]:disabled + label:before {
+    cursor: not-allowed; }
   .zdss-radio[type=radio]:checked + label {
     font-size: 0;
     height: 0; }
@@ -4298,7 +4342,7 @@ Pop-up Dialog Light
       height: 8px;
       left: 0px; }
 
-.zdss-tooltip {
+.zdss-popup {
   background-color: #595959;
   color: white;
   display: block;
@@ -4308,6 +4352,157 @@ Pop-up Dialog Light
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   padding: 10px 15px; }
+  .zdss-popup:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px; }
+  .zdss-popup .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-popup .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-popup .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+
+.zdss-popup-left {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 10px 15px; }
+  .zdss-popup-left:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px; }
+  .zdss-popup-left .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-popup-left .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-popup-left .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+  .zdss-popup-left:after {
+    left: -15px; }
+
+.zdss-popup-right {
+  background-color: #595959;
+  color: white;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 10px 15px; }
+  .zdss-popup-right:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px; }
+  .zdss-popup-right .zdss-close {
+    cursor: pointer;
+    width: 16.8px;
+    position: relative;
+    float: right;
+    margin: 3px; }
+    .zdss-popup-right .zdss-close:after {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: 0px; }
+    .zdss-popup-right .zdss-close:before {
+      content: ' ';
+      border-top: 2px solid #E6E6E6;
+      border-left: 2px solid #E6E6E6;
+      transform: rotate(135deg);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0px; }
+  .zdss-popup-right:after {
+    right: -15px; }
+
+.zdss-tooltip {
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #939393;
+  border-radius: 6px;
+  font-size: 12px; }
   .zdss-tooltip:after {
     background-color: #595959;
     color: white;
@@ -4316,47 +4511,25 @@ Pop-up Dialog Light
     padding: 0.5em;
     border-radius: 12px;
     border-radius: 0;
+    background-color: #939393;
     transform: rotate(45deg);
     content: '';
     position: absolute;
-    top: 6px;
     width: 10px;
-    height: 10px; }
-  .zdss-tooltip .zdss-close {
-    cursor: pointer;
-    width: 16.8px;
-    position: relative;
-    float: right;
-    margin: 3px; }
-    .zdss-tooltip .zdss-close:after {
-      content: ' ';
-      border-top: 2px solid #E6E6E6;
-      border-left: 2px solid #E6E6E6;
-      transform: rotate(-45deg);
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      right: 0px; }
-    .zdss-tooltip .zdss-close:before {
-      content: ' ';
-      border-top: 2px solid #E6E6E6;
-      border-left: 2px solid #E6E6E6;
-      transform: rotate(135deg);
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      left: 0px; }
+    height: 10px;
+    opacity: 0.99;
+    z-index: -2; }
 
 .zdss-tooltip-left {
-  background-color: #595959;
-  color: white;
   display: block;
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
-  padding: 10px 15px; }
+  background-color: white;
+  border: 1px solid #939393;
+  border-radius: 6px;
+  font-size: 12px; }
   .zdss-tooltip-left:after {
     background-color: #595959;
     color: white;
@@ -4365,49 +4538,28 @@ Pop-up Dialog Light
     padding: 0.5em;
     border-radius: 12px;
     border-radius: 0;
+    background-color: #939393;
     transform: rotate(45deg);
     content: '';
     position: absolute;
-    top: 6px;
     width: 10px;
-    height: 10px; }
-  .zdss-tooltip-left .zdss-close {
-    cursor: pointer;
-    width: 16.8px;
-    position: relative;
-    float: right;
-    margin: 3px; }
-    .zdss-tooltip-left .zdss-close:after {
-      content: ' ';
-      border-top: 2px solid #E6E6E6;
-      border-left: 2px solid #E6E6E6;
-      transform: rotate(-45deg);
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      right: 0px; }
-    .zdss-tooltip-left .zdss-close:before {
-      content: ' ';
-      border-top: 2px solid #E6E6E6;
-      border-left: 2px solid #E6E6E6;
-      transform: rotate(135deg);
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      left: 0px; }
+    height: 10px;
+    opacity: 0.99;
+    z-index: -2; }
   .zdss-tooltip-left:after {
-    left: -15px; }
+    top: 3px;
+    left: -12px; }
 
 .zdss-tooltip-right {
-  background-color: #595959;
-  color: white;
   display: block;
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 12px;
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
   position: relative;
-  padding: 10px 15px; }
+  background-color: white;
+  border: 1px solid #939393;
+  border-radius: 6px;
+  font-size: 12px; }
   .zdss-tooltip-right:after {
     background-color: #595959;
     color: white;
@@ -4416,38 +4568,77 @@ Pop-up Dialog Light
     padding: 0.5em;
     border-radius: 12px;
     border-radius: 0;
+    background-color: #939393;
     transform: rotate(45deg);
     content: '';
     position: absolute;
-    top: 6px;
     width: 10px;
-    height: 10px; }
-  .zdss-tooltip-right .zdss-close {
-    cursor: pointer;
-    width: 16.8px;
-    position: relative;
-    float: right;
-    margin: 3px; }
-    .zdss-tooltip-right .zdss-close:after {
-      content: ' ';
-      border-top: 2px solid #E6E6E6;
-      border-left: 2px solid #E6E6E6;
-      transform: rotate(-45deg);
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      right: 0px; }
-    .zdss-tooltip-right .zdss-close:before {
-      content: ' ';
-      border-top: 2px solid #E6E6E6;
-      border-left: 2px solid #E6E6E6;
-      transform: rotate(135deg);
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      left: 0px; }
+    height: 10px;
+    opacity: 0.99;
+    z-index: -2; }
   .zdss-tooltip-right:after {
-    right: -15px; }
+    top: 3px;
+    right: -12px; }
+
+.zdss-tooltip-top {
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #939393;
+  border-radius: 6px;
+  font-size: 12px; }
+  .zdss-tooltip-top:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    background-color: #939393;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.99;
+    z-index: -2; }
+  .zdss-tooltip-top:after {
+    bottom: -12px;
+    left: 12px; }
+
+.zdss-tooltip-bottom {
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 12px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #939393;
+  border-radius: 6px;
+  font-size: 12px; }
+  .zdss-tooltip-bottom:after {
+    background-color: #595959;
+    color: white;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 12px;
+    border-radius: 0;
+    background-color: #939393;
+    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.99;
+    z-index: -2; }
+  .zdss-tooltip-bottom:after {
+    top: -12px;
+    left: 12px; }
 
 .zdss-popup-dialog {
   background-color: #595959;
