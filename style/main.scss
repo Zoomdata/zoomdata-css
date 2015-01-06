@@ -1,12 +1,12 @@
-@import "style/inuit/inuit-defaults/settings.defaults";
+@import "inuit/inuit-defaults/settings.defaults";
 
-@import "style/inuit/inuit-functions/tools.functions";
-@import "style/inuit/inuit-mixins/tools.mixins";
+@import "inuit/inuit-functions/tools.functions";
+@import "inuit/inuit-mixins/tools.mixins";
 
-@import "style/inuit/inuit-normalize/generic.normalize";
-@import "style/inuit/inuit-box-sizing/generic.box-sizing";
+@import "inuit/inuit-normalize/generic.normalize";
+@import "inuit/inuit-box-sizing/generic.box-sizing";
 
-@import "style/inuit/inuit-page/base.page";
+@import "inuit/inuit-page/base.page";
 
 @font-face {
     font-family: "Source Sans Pro";
@@ -42,11 +42,11 @@ body{
 /*
 Components
 */
-@import "style/objects/Basics/components.scss";
-@import "style/objects/Buttons/components.scss";
-@import "style/objects/Icons/components.scss";
-@import "style/objects/Forms/components.scss";
-@import "style/objects/Tables/components.scss";
-@import "style/objects/Lists/components.scss";
-@import "style/objects/Text/components.scss";
-@import "style/objects/Info/components.scss";
+@import "objects/Basics/components.scss";
+@import "objects/Buttons/components.scss";
+@import "objects/Icons/components.scss";
+@import "objects/Forms/components.scss";
+@import "objects/Tables/components.scss";
+@import "objects/Lists/components.scss";
+@import "objects/Text/components.scss";
+@import "objects/Info/components.scss";
