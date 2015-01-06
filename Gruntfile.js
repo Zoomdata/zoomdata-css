@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         cssmin: {
             combine: {
                 files: {
-                    'style/style.css': ['./style/style.css']
+                    './dest/style.min.css': ['./dest/style.css']
                 }
             }
         },
@@ -99,6 +99,9 @@ module.exports = function (grunt) {
         'sass',
         'cssmin',
         'copy:fonts',
+    ]);
+    grunt.registerTask('dev', [
+        'default',
         'connect:livereload',
         'watch'
     ]);
