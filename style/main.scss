@@ -1,42 +1,40 @@
-@import "inuit/inuit-defaults/settings.defaults";
+.zdss-app {
+    @import "inuit/inuit-defaults/settings.defaults";
 
-@import "inuit/inuit-functions/tools.functions";
-@import "inuit/inuit-mixins/tools.mixins";
+    @import "inuit/inuit-functions/tools.functions";
+    @import "inuit/inuit-mixins/tools.mixins";
 
-@import "inuit/inuit-normalize/generic.normalize";
-@import "inuit/inuit-box-sizing/generic.box-sizing";
+    @import "inuit/inuit-normalize/generic.normalize";
+    @import "inuit/inuit-box-sizing/generic.box-sizing";
 
-@import "inuit/inuit-page/base.page";
+    @import "inuit/inuit-page/base.page";
 
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Light.otf.woff) format('woff'),
-        url(fonts/Source Sans Pro/TTF/SourceSansPro-Light.ttf) format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-}
+    @font-face {
+        font-family: "Source Sans Pro";
+        src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Light.otf.woff) format('woff'),
+            url(fonts/Source Sans Pro/TTF/SourceSansPro-Light.ttf) format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+    }
 
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Regular.otf.woff) format('woff'),
-        url(fonts/Source Sans Pro/TTF/SourceSansPro-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
+    @font-face {
+        font-family: "Source Sans Pro";
+        src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Regular.otf.woff) format('woff'),
+            url(fonts/Source Sans Pro/TTF/SourceSansPro-Regular.ttf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+    }
 
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Bold.otf.woff) format('woff'),
-        url(fonts/Source Sans Pro/TTF/SourceSansPro-Bold.ttf) format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-body{
-    font-family: 'Source Sans Pro', sans-serif !important;
+    @font-face {
+        font-family: "Source Sans Pro";
+        src: url(fonts/Source Sans Pro/WOFF/OTF/SourceSansPro-Bold.otf.woff) format('woff'),
+            url(fonts/Source Sans Pro/TTF/SourceSansPro-Bold.ttf) format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: normal;
+    }
 }
 
 /*
