@@ -17,7 +17,6 @@
     "grunt-mixdoc": "latest",
     "grunt-gh-pages": "^0.9.1",
     "grunt-kss": "^0.4.0",
-    "grunt-sass": "^0.14.2",
     "node-sass": "0.9.3",
     "grunt-contrib-sass": "~0.8.1"
   },
