@@ -986,7 +986,7 @@ Undo icon
 */
 
 @mixin zdss-icon-undo() {
-    @include zdss-icon('—');
+    @include zdss-icon('-');
 }
 
 /*
@@ -998,7 +998,7 @@ Group icon
 */
 
 @mixin zdss-icon-group() {
-    @include zdss-icon('—');
+    @include zdss-icon('-');
 }
 
 /*
@@ -1010,7 +1010,7 @@ Ellipsis icon
 */
 
 @mixin zdss-icon-ellipsis() {
-    @include zdss-icon('…');
+    @include zdss-icon('...');
 }
 
 /*
