@@ -352,3 +352,35 @@ A list that can be used in popups(or elsewhere)
     }
 }
 
+/*
+
+Vertical list with line-separated items
+
+
+<div style="width:250px;">
+    <ul class="zdss-list-underlined">
+        <li>
+            Money
+        </li>
+        <li>
+            Number
+        </li>
+        <li>
+            Integer
+        </li>
+        <li>
+            Time
+        </li>
+    </ul>
+</div>
+
+*/
+
+@mixin zdss-list-underlined(){
+    list-style: none;
+    > * {
+        padding: 10px;
+        border-bottom: 1px solid $zdss-color-mercury;
+    }
+}
+

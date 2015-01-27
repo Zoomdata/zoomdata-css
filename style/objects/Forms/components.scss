@@ -388,3 +388,73 @@ A simple typical form
         @include zdss-button-primary;
     }
 }
+
+/*
+
+Aligned form
+
+<form class="zdss-form-aligned">
+    <h3>
+        Form title
+    </h3>
+    <div>
+        <label>
+            Spark Master URL
+        </label>
+        <input type="text" name="">
+    </div>
+    <div>
+        <label>
+            Spark Master URL
+        </label>
+        <input type="text" name="">
+    </div>
+    <div>
+        <label disabled>
+            Spark home directory
+        </label>
+        <input type="text" name="" disabled>
+        <div class="caption">Compatible with Spark 1.0.0</div>
+    </div>
+</form>
+
+*/
+
+@mixin zdss-form-aligned(){
+    @include zdss-list-underlined();
+    font-size: $zdss-fs-small;
+    h3 {
+        margin: 0px;
+    }
+    & > * {
+        padding: 5px 0px;
+        box-sizing: border-box;
+        & > * {
+            vertical-align: bottom;
+            display: inline-block;
+            &:first-child {
+                width: 40%;
+                @include zdss-input();
+                border: none;
+                margin-bottom: 0px;
+                padding-left: 0px;
+            }
+            &:nth-child(2) {
+                width: 58%;
+            }
+            &.caption {
+                text-align: right;
+                display: block;
+                padding: 2px;
+                color: $zdss-color-iron;
+                font-size: $zdss-fs-small;
+            }
+        }
+        input {
+            @include zdss-input();
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
