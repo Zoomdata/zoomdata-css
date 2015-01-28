@@ -263,3 +263,24 @@ A button group is a series of buttons laid out next to each other, all part of o
     }
 }
 
+/*
+
+Another button for vis popup
+
+<button class="zdss-button-vis-popup">
+    Add a reference line
+</button>
+
+*/
+
+@mixin zdss-button-vis-popup() {
+    @include zdss-button();
+    background-color: #0389a7;
+    color: white;
+    border-radius: $border-radius-small;
+    &:hover {
+        background-color: #0389a7;
+        color: white;
+    }
+}
+
