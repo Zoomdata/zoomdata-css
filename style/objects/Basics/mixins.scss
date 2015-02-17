@@ -25,8 +25,8 @@ Makes any element rounded
     border-top-right-radius: $radius;
 }
 @mixin zdss-rounded-bottom($radius: $border-radius){
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
 }
 
 @mixin zdss-arrow($size: 40px){
