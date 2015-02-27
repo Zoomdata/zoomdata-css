@@ -430,17 +430,14 @@ Aligned form
         padding: 5px 0px;
         box-sizing: border-box;
         & > * {
-            vertical-align: bottom;
             display: inline-block;
             &:first-child {
                 width: 40%;
                 @include zdss-input();
                 border: none;
                 margin-bottom: 0px;
-                padding-left: 0px;
-            }
-            &:nth-child(2) {
-                width: 58%;
+                padding-left: 0px; 
+                vertical-align: top;
             }
             &.caption {
                 text-align: right;

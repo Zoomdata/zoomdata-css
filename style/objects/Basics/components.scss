@@ -63,3 +63,9 @@ Typical dark block
         left:0px;
     }
 }
+
+@mixin fifty(){
+    float: left;
+    width: 49%;
+    box-sizing: border-box;
+}
