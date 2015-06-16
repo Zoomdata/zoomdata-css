@@ -228,15 +228,17 @@ Modal popup
         transform: rotate(45deg);
         content: ' ';
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
         bottom: -15px;
         right: 10px;
+        z-index: -1;
     }
     .zdss-close {
         @include zdss-icon-close(8px, $zdss-color-mercury);
         float: right;
         margin: 3px;
+        width: 21px;
     }
 }
 
@@ -263,6 +265,7 @@ Modal popup light
 
 	.zdss-close {
 		@include zdss-icon-close(8px, $zdss-color-charcoal);
+                width: 21px;
 	}
 }
 
@@ -286,6 +289,7 @@ Modal popup light
         @include zdss-icon-close(8px, $zdss-color-mercury);
         float: right;
         margin: 3px;
+        width: 21px;
     }
 }
 
@@ -304,6 +308,7 @@ Popup (left)
     @include zdss-popup();
     &:after {
         left: -15px;
+        z-index: -1;
     }
 }
 
@@ -322,6 +327,7 @@ Popup (right)
 @mixin zdss-popup-right(){
     @include zdss-popup();
     &:after {
+        z-index: -1;
         right: -15px;
     }
 }
