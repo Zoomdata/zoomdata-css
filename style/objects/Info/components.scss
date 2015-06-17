@@ -218,22 +218,24 @@ Modal popup
 
 */
 
-@mixin zdss-popup-modal(){
+@mixin zdss-popup-modal($show-arrow: false){
     @include zdss-block-dark;
     @include zdss-shadow();
     position: relative;
-    &:after {
-        @include zdss-block-dark();
-        border-radius: 0;
-        transform: rotate(45deg);
-        content: ' ';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        bottom: -15px;
-        right: 10px;
-        z-index: -1;
-    }
+    @if $show-arrow {
+        &:after {
+            @include zdss-block-dark();
+            border-radius: 0;
+            transform: rotate(45deg);
+            content: ' ';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            bottom: -15px;
+            right: 10px;
+            z-index: -1;
+        }
+    } 
     .zdss-close {
         @include zdss-icon-close(8px, $zdss-color-mercury);
         float: right;
