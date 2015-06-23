@@ -67,7 +67,7 @@ Checkbox
 
 Radio Button
 
-<div style="width: 40px; background: rgba(0,0,0,0.7); padding: 9px;">
+<div style="width: 22px; background: rgba(0,0,0,0.7); padding: 4px;">
     <input class="zdss-radio" type="radio" id="radio1" name="radio" checked>
     <label for="radio1"></label>
     <input class="zdss-radio" type="radio" id="radio2" name="radio">
@@ -90,15 +90,16 @@ Radio Button
             height: 0;
         }
         &+label:before {
+            font-family: sans-serif;
+            content: "\2022";
             user-select: none;
             border-radius: 50%;
-            content: "\2022";
+            text-align: center;
             display: inline-block;
-            font-size: 50px;
-            line-height: 20px;
-            width: 22px;
-            height: 22px;
-            margin-right: 10px;
+            line-height: 21px;
+            width: 20px;
+            height: 20px;
+            font-size: 30px;
             border: 1px solid #aaa;
             background-color: #fff;
             color: #fff;
@@ -112,12 +113,7 @@ Radio Button
                 height: 0;
             }
             &+label:before {
-                user-select: none;
-                content: "\2022";
                 color: #D6E100;
-                font-size: 50px;
-                text-align: center;
-                line-height: 20px;
                 background-color: rgba(0,0,0,0.7);
                 border: 1px solid #D6E100;
             }
